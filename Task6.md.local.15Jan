@@ -1,0 +1,144 @@
+# Task 6: Umbrella Policy for Site300
+The goal of this Task is to create Umbrella Policies that will:
+
+* Use Firewall Policy (i.e., Cloud Delivered Firewall / CDFW) on Umbrella to block any icmp traffic to Google IP address of **8.8.8.8** 
+* Use Web Policy (i.e., Secure Web Gateway / SWG) on Umbrella to block web traffic to social media websites.
+
+## Step 1 - Firewall Policy 
+
+In this step, a Firewall Policy on Umbrella Dashboard will be configured to block ICMP traffic.
+
+* On the RDP session (jumphost), logon to Umbrella Dashboard by clicking on Google Chrome Browser bookmark named `Umbrella SSO`.  It will open the Umbrella dashboard and auto-login using single-sign-on.
+
+* On Umbrella dashboard, go to **Policies > Management > Firewall Policy**. At the top-right corner, click **Add**
+![](pics/umbrella-p1.png)
+	* Create a **Rule Name** of `Block ICMP Google`. 
+	* Under **Rule Action** select `Block` from drop-down menu
+![](pics/umbrella-p2.png)
+	* Under **Rule Criteria > Protocol** select `ICMP` as the protocol
+	* Further under **Destinations** (under **Rule Criteria**) select `Specify IP` from drop-down menu:
+		-	Enter **CIDR IP Address**: `8.8.8.8`
+![](pics/umbrella-p3.png)
+-	Scroll down on the page and **Logging Enabled** and then **Save** the policy
+![](pics/umbrella-p4.png)
+ 
+
+## Step 2 - Web Policy
+In this step, we will configure an Umbrella Web Policy to block web traffic to one social media website i.e., Facebook.
+
+* On Umbrella dashboard, go to **Policies > Management > Web Policy** and click **Add** on the top right as shown in below screenshot:
+![](pics/umbrella-p5.png)
+
+* Click **ADD RULE** under *`Ruleset Rules`*. 
+
+* Give the **Rule Name** of `Block Facebook`.  The default **Rule Action** is `Block`.  Then click **Add Identity** as shown below:
+![](pics/umbrella-p6.png)
+
+*	On the `IDENTITIES` page, scroll down, select the **Network Tunnels** and hit **Apply** as shown in below screenshot.  This will result in selecting the two network tunnels between Umbrella cloud and SD-WAN Site-300:
+![](pics/umbrella-p7.png)
+
+*	Next, Click on **Add Destination** in the same `Add Rule` step:
+![](pics/umbrella-p8.png)
+
+*	Click on **Application Settings** (on the right side at the right arrow **>**), then Scroll down to **`Social Networking`** and Click on the right arrow **>** of the **Social Networking**.
+![](pics/umbrella-p9.png)
+
+* Next, select **Facebook** and **Facebook Messenger** and hit **Apply**
+![](pics/umbrella-p11.png)
+
+* On the main Rule screen, Click **Save** at the right side of the newly created Rule:
+![](pics/umbrella-p12.png)
+
+* Click three dots and then **Enable Rule**
+![](pics/umbrella-p13.png)
+
+* Confirm by clicking **Update**
+![](pics/umbrella-p14.png)
+
+* Under **Ruleset Settings**, go to the **Ruleset Identities** section and click **Edit**
+![](pics/umbrella-p15.png)
+
+* Select **Tunnels** under `All Identities` and click **Save**
+![](pics/umbrella-p16.png)
+ 
+* Under **Ruleset Settings**, go to the **HTTPS Inspection** section and click **Edit** 
+![](pics/umbrella-p17.png)
+
+* Select **Enable HTTPS Inspection**, then **Save**
+![](pics/umbrella-p18.png)
+ 
+* Scroll down and click Close
+![](pics/umbrella-p19.png)
+
+
+## Step 3 - Web Policy Tester
+Let's go through the steps to test the newly created Web policies by using "Policy Tester" on  Umbrella.
+
+* On Umbrella Dashboard, navigate to **Policies > Management Web Policy**.  Click on **Policy Tester** at the top right corner: 
+![](pics/umbrella-web-policy-test.png)
+
+* On the `Web Policy Tester` page,
+	-	Under the **Primary Identity** search box type **`Site`** and then select any of the tunnels for **Site300** 
+	-	Under **Destination**, enter **`facebook.com`**
+	-   Then click **Run Test** button: 
+![](pics/umbrella-web-policy-test-result.png)
+
+* The result of this test appears on the page and as expected it shows the Ruleset and rule being matched by the Web policy. 
+
+* Explore the Web Policy Tester further by testing traffic to different destination website such as cisco.com, google.com etc.
+
+## Step 4 - Verify Policies
+
+Now lets validate the impact of both Firewall and Web Policies from the SD-WAN Site-300.
+
+*  First validate if traffic is being redirected to Umbrella.
+	-	Launch console access to ubuntu **Site300 VPN10** host by using **mRemoteNG** application.
+	-	Use Chromium to navigate to `welcome.umbrella.com`. A green check mark should appear, confirming that traffic from VPN 10 is being successfully redirected to Umbrella.
+
+* Verify Firewall policy enforcement on Umbrella by launching the **Terminal** application on **Site300 VPN10** host.  As per our policy ICMP traffic to 8.8.8.8 should not be allowed.
+	-	From the Ubuntu Host on VPN 10, use Terminal issue `ping 8.8.8.8` command.  Use `Ctrl+C` to stop the ping.  This ping should fail (as expected).
+	-	From the Ubuntu Host on VPN 10, use Terminal issue `ping 1.1.1.1` command.  Use `Ctrl+C` to stop the ping.  This ping should fail (as expected).
+
+
+* Verify Web Policy by using Chromium Web Browser on **Site300 VPN10** host.  Just like previous step, use the console of ubuntu **Site300 VPN10** host by using **mRemoteNG** application.
+	-	Use Chromium to navigate onto traditional websites, such as `www.cisco.com`.  Access to this website should work.
+	-	Use Chromium to navigate to `cnn.com`.  Access to this website should work.
+	-	Use Chromium to navigate onto `www.facebook.com`.  As per our Umbrella Web Policy, this site should be blocked and, as expected, Cisco Umbrella block page will appear. 
+
+## Step 5 - Block sites using Destination List
+In this step we will create a destination list to block customs sites.
+
+* Logon on ubuntu host on Site 300 and access cnn.com & bbc.com
+* On Umbrella dashboard, navigate to **Policy > Policy Componenet > Destination Lists** and Click **Add** on the top right corner
+![](pics/umbrella-destination-01.png)
+	- Enter **Name** : **`Custom Block List`**
+	- On **Destination List Type** select **Web Policy** from the dropdown menu
+	- Enter **`cnn.com`** and click **Add**
+	![](pics/umbrella-destination-03.png)
+	- Verify `cnn.com` is added and Click **Save**
+	![](pics/umbrella-destination-04.png)
+	- Now Navigate to **Policy > Management > Web Policy** and expand on **RuleSet 1**
+	![](pics/umbrella-destination-05.png)
+	- Click **Add Rule**
+	![](pics/umbrella-destination-06.png)
+	- Enter Rule name : **`Custom List`** and click **Add Identity**
+	![](pics/umbrella-destination-07.png) 
+	- Enable **Inherit Ruleset Identities** and click **Apply**
+	![](pics/umbrella-destination-08.png) 
+	- Click on **Add Destination** and then click on **1** next to **Destination Lists**
+	![](pics/umbrella-destination-09.png) 
+	- Select **Custom Block List** and then click **Apply** 
+	![](pics/umbrella-destination-10.png)
+	- Click **Save** to save this new rule
+	![](pics/umbrella-destination-11.png)
+	- Click on `3 Dots` (**...**) on this newly created rule and toggle the **Enable Rule** button
+	![](pics/umbrella-destination-12.png)
+	- Click **Update** on the next message
+	![](pics/umbrella-destination-13.png)
+
+* Let's verify this policy.  Launch console access to ubuntu **Site300 VPN10** host by using **mRemoteNG** application. 
+* Logon on ubuntu host on Site-300 and access website `cnn.com` again.  As expected this site should not be accessible anymore.
+* Follow the same steps and block bbc.com and validate on Ubuntu host on site-300.
+
+
+

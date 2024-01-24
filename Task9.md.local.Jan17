@@ -1,0 +1,90 @@
+# Task 9 - Monitoring on Umbrella
+
+In this task reports on Cisco Umbrella will be used to monitor it's usage, traffic detection, policy enforcement and the SD-WAN integration. 
+
+As a **Pre-requisite:**, all the prior tasks must be completed successfully.  
+Earlier tasks, that include integration of SD-WAN sites to Umbrella, configuraiton of Umbrella policies such as Firewall, Web etc. must be completed successfully as a pre-requisite to this task.  The traffic monitored by Umbrella, as per those policies, will be viewed in this task.
+
+## Step 1: Traffic from SD-WAN sites
+
+In this step, traffic must be initiated for Umbrella monitoring as per below steps:
+
+* On the RDP session, use `mRemoteNG` application to logon the console of VM named `Site300-VPN10`.  This VM exists on VPN #10 of this site.
+* From the Chromium Web browser initiate traffic to `facebook.com` and `cisco.com`.  As per earlier tasks, the traffic to `facebook.com` should be blocked by Umbrella on Site-300. 
+* On the `mRemoteNG` application launch the **Terminal** application in the RDP session of the `Site300-Ubuntu-VPN10`.  Then initiate ICMP traffic by issuing below `ping` command.  After few seconds stop the ping by issuing `Control-C`.  This ping should result in 100% success and it also confirms the connectivity to Internet via Umbrella
+~~~
+ping 1.1.1.1
+~~~
+
+* On the same terminal of `Site300-VPN10` host, issue the below command.  After few seconds stop the ping by issuing `Control-C`.  As per configuration in earlier task, this traffic should be blocked by Umbrella:
+~~~
+ping 8.8.8.8
+~~~
+
+
+Next,
+* On the RDP session, use `mRemoteNG` application to logon the console of VM named `Site400-Ubuntu-VPN10`.  This VM exists on VPN #10 of this site.
+* From the Chromium Web browser initiate traffic to `www.cnn.com` and `cisco.com`.   As per earlier task, the traffic to `www.cnn.com` should be blocked by Umbrella. 
+
+## Step 2 - Activity Reports for Web URLs
+
+The web and other IP traffic activity from the SD-WAN branch sites over a selected time period can be viewed from `Activity Search` on Cisco Umbrella.  These reports can be filtered by various categories such as identity name, destination, source IP, etc.  
+
+* On the RDP session (jumphost), access the Umbrella web page by clicking on `Umbrella SSO` bookmark on Google Chrome browser.
+
+* Go to **Reporting > Core Reports** and click on **Activity Search**:
+
+![](pics/t9-s1-activity3.png)
+
+Here you can view the result of every DNS, URL, and IP request from your various SD-WAN sites and other identities.  Browse through to view some of the past results.
+
+* Click on **Filter** to close the filter tab and then click on **Advanced** button in the `Search` field.  
+
+* On the `Advanced Search` page, navigate to to the **URL** section and enter `cnn.com`.  Then click **Apply** as shown in below screenshot:
+
+![](pics/t9-s1-adv-url.png)
+
+You will now see all the search results matching URL of `cnn.com`.  Note:
+
+* The search results are all ***Web*** Requests i.e., Secure Web Gateway (or Web Proxy) of Umbrella logged these requests.
+* Further review the `Action`, `Categories` and `Ruleset or Rule` fields of the results shown on this page.  Do they match the configurations performed in earlier tasks?
+
+* Click on **Advanced** button in the `Search` field again.  Enter `facebook.com` as the second URL and click **Apply** button as shown below:
+
+![](pics/t9-s1-adv-url2.png)
+
+* View the updated Activity results as shown below:
+
+![](pics/t9-s1-adv-results.png)
+
+## Step 2 - Activity Reports for Firewall
+
+In this task, results of  Umbrella monitoring 
+
+## Step 3 - Top Identities
+The list of most activity identities (devices) that are making DNS, Proxy and IP requests over a period of time are identified by Cisco Umbrella. 
+
+* Log on to Cisco Umbrella using the short link on Google Chrome Browser on RDP session.
+
+* Navgiate to **Reporting > Additional Reports** and then Click on Top Desitinations.  It will 
+
+## Step 4 - Top Destinations
+
+* Log on to Cisco Umbrella using the short link on Google Chrome Browser on RDP session.
+
+* Navgiate to **Reporting > Additional Reports** and then Click on **Top Desitinations**.  It will show the most visited destinations.   
+
+* If in previous tasks, on Ubuntu Virtual Machines at some of the SD-WAN sites, you had browsed to various websites then as Ubuntu VM settings the DNS queries will be routed via DNS Resolver with IP address of `1.1.1.1`.  Below Figure shows an example screenshot from a lab system.  Your screen may not have the same output. Click on **`1.1.1.1`** among the list of destinations as shown below:
+
+![](pics/t9-s4-top-dest.png)
+
+* Once `1.1.1.1` is clicked it will show below screenshot.  Click on **`VIEW 1.1.1.1 IN INVESTIGATE`** to view more details of this IP address as shown below
+
+![](pics/t9-s4-investigate.png)
+
+* The investigate page shows more details about this IP address as shown in below screenshot.  Click on **Talos** to view the reputation and other intelligence from Cisco Talos about this IP address.
+![](pics/t9-s4-talos.png)
+
+Here is the screenshot from Cisco Talos about this IP address
+![](pics/t9-s4-talos-reput.png)
+

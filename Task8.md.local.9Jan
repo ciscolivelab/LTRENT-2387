@@ -1,0 +1,70 @@
+# Task 8 - Umbrella Policies for Regional Sites
+
+In this task, Umbrella policies will be created to block all Web Traffic to News websites from Site 100 and Site 400 (i.e., regional site).  Further use custom-list to few other block websites.
+
+
+## Step 1 - Umbrella Web Policy
+Configure an Umbrella Web Policy to block social media websites.
+
+* Go to **Policies > Management >Web Policy** and click **Add**
+![](pics/umbrella-p5.png)
+
+* Click **Add Rule**. Give the rule a Name and click **Add Identity**
+
+* Select **Inherit Ruleset Identities**, then **Apply**
+![](pics/umbrella-s1-p1.png)
+
+*	Click **Add Destination**
+![](pics/umbrella-s1-p3.png)
+
+*	Click **Application Settings**, then search for **Social Networkingk**. Select **Social Networking**, then **Apply**
+![](pics/umbrella-s1-p4.png)
+![](pics/umbrella-s1-p5.png)
+
+* Click **Save**
+![](pics/umbrella-s1-p2.png)
+
+* Click three dots and then **Enable Rule**
+![](pics/umbrella-s1-p6.png)
+
+* Confirm by clicking Update
+![](pics/umbrella-p14.png)
+
+*	Under **Ruleset Settings**, go to the **Ruleset Identities** section and click **Edit**
+![](pics/umbrella-s1-p7.png)
+*	Click on number **4**  and then select **Tunnel** for Site100, click **Save**
+![](pics/umbrella-s1-p8.png)
+![](pics/umbrella-s1-p9.png) 
+* Go to the **HTTPS Inspection** section and click **Edit** 
+![](pics/umbrella-s1-p10.png)
+* Select **Enable HTTPS Inspection**, then **Save**
+![](pics/umbrella-p18.png) 
+*	Scroll down and click Close
+![](pics/umbrella-p19.png)
+
+## Step 2 - Create Customs-list Web Policy
+* On Umbrella dashboard, navigate to **Policy > Policy Component > Destination lists**, click **Add** on the top right corner
+![](pics/umbrella-s1-p11.png)
+	- List Name : Custom-Filter
+	- Destination List type : Web Proxy
+	- Destination : www.cnn.com
+	- Click **Add**
+![](pics/umbrella-s1-p12.png)
+	-	Click **Save**
+	![](pics/umbrella-s1-p13.png)
+
+* Navigate to **Policies>Management>Web Proxy** and expand on **RuleSet2**
+	![](pics/umbrella-s1-p14.png)
+
+* Click three dot and then click **Edit**
+ ![](pics/umbrella-s1-p15.png)
+
+* Click on **Edit Destinations** and then on **Destiniation Lists**
+![](pics/umbrella-s1-p16.png)
+
+* Click on **Customer-Filter** and then on **Apply**
+![](pics/umbrella-s1-p17.png)
+
+* Click on **Save** and **Close** the **RuleSet2**
+![](pics/umbrella-s1-p18.png)
+
