@@ -520,8 +520,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1--verify-internet-access-on-site300-and-site-400-vpn-10" class="md-nav__link">
-    Step 1 – Verify internet access on Site300 and Site 400 VPN 10
+  <a href="#step-1--verify-no-internet-access-on-site-300-and-site-400" class="md-nav__link">
+    Step 1 – Verify no internet access on Site-300 and Site-400
   </a>
   
 </li>
@@ -701,8 +701,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1--verify-internet-access-on-site300-and-site-400-vpn-10" class="md-nav__link">
-    Step 1 – Verify internet access on Site300 and Site 400 VPN 10
+  <a href="#step-1--verify-no-internet-access-on-site-300-and-site-400" class="md-nav__link">
+    Step 1 – Verify no internet access on Site-300 and Site-400
   </a>
   
 </li>
@@ -747,23 +747,30 @@
 
 
 <h1 id="task-3---regional-internet-access-for-all-sites">Task 3 - Regional Internet Access for All Sites<a class="headerlink" href="#task-3---regional-internet-access-for-all-sites" title="Permanent link"></a></h1>
-<p>In the Task we will enable regional internet access for Site 300 and 400 on VPN 10 using Site 100 as gateway.</p>
-<h2 id="step-1--verify-internet-access-on-site300-and-site-400-vpn-10">Step 1 – Verify internet access on Site300 and Site 400 VPN 10<a class="headerlink" href="#step-1--verify-internet-access-on-site300-and-site-400-vpn-10" title="Permanent link"></a></h2>
+<p>In the Task we will enable internet access for Site-300 and Site-400 on VPN 10 using Site 100 as gateway.</p>
+<h2 id="step-1--verify-no-internet-access-on-site-300-and-site-400">Step 1 – Verify no internet access on Site-300 and Site-400<a class="headerlink" href="#step-1--verify-no-internet-access-on-site-300-and-site-400" title="Permanent link"></a></h2>
 <ul>
-<li>
-<p>On the RDP session, use <code>mRemoteNG</code> application to logon the console of VM named <code>Site300-Ubuntu-VPN10</code>.  This VM exists on VPN <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/facelessuser/pymdown-extensions/issues/10" title="GitHub Issue: facelessuser/pymdown-extensions #10">#10</a> of this site.  Access the Console of this Ubuntu machine (on VPN 10 segment of site 300) using mRemoteNG.</p>
-</li>
-<li>
-<p>Initially the console may be locked, click on the console and use below credentials to log on:</p>
-<p>Username: <code>ubuntu</code><br/>Password: <code>viptela</code></p>
-</li>
+<li>On the RDP session, launch <code>mRemoteNG</code> application.  This application is used to get Console access to all of the Ubuntu machines (Virtual Machines / hosts) that are located on the respective LANs (VPNs) of the SD-WAN sites.</li>
 </ul>
 <p><img alt="" src="../pics/mRemoteNG.png" /></p>
+<ul>
+<li>To logon the console of VM named <code>Site300-Ubuntu-VPN10</code>, click on it's respective name on <code>mRemoteNG</code> application.  As the name indicates, this VM exists on VPN <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/facelessuser/pymdown-extensions/issues/10" title="GitHub Issue: facelessuser/pymdown-extensions #10">#10</a> of site-300.  </li>
+</ul>
 <p><img alt="" src="../pics/mRemoteNG-1.png" /></p>
 <ul>
-<li>Open Chromium Browser on Desktop of this Ubuntu machine and try to access internet website such as <code>cisco.com</code>.  As expected, access to these websites will fail. </li>
+<li>
+<p>The console of Ubuntu host/VM may be initially locked, click on the console and use below credentials to log on:</p>
+<p>Username: <code>ubuntu</code><br/>
+Password: <code>viptela</code></p>
+</li>
+<li>
+<p>Open Chromium Browser on Desktop of this Ubuntu machine:</p>
+</li>
 </ul>
 <p><img alt="" src="../pics/Ubuntu-Chomium.png" /></p>
+<ul>
+<li>Try to access internet website such as <code>cisco.com</code>.  As expected, access to these websites will fail. </li>
+</ul>
 <p><img alt="" src="../pics/No-Internet.png" /></p>
 <ul>
 <li>Open terminal and try to ping <code>8.8.8.8</code> and press <code>Contrl+C</code> after few seconds to stop the ping.  As expected there will be 100% packet loss.</li>
