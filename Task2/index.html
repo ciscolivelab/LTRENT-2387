@@ -70,6 +70,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#task-2---device-templates" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -473,6 +478,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Task-2 vManage Device Features
@@ -632,6 +639,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -649,17 +658,14 @@
   
 
 
-  <h1>Task-2 vManage Device Features</h1>
-
-<p>#Task 2 - Device Templates</p>
-<p>In this Task we will add cEdeges to their respective Device templates.</p>
+<h1 id="task-2---device-templates">Task 2 - Device Templates<a class="headerlink" href="#task-2---device-templates" title="Permanent link"></a></h1>
+<p>In this Task we will add cEdeges (Site-100, Site-300 and Site-400) to their respective Device templates.  This step is performed by attaching the cEdge to Device templates on the vManage. </p>
 <ul>
 <li>
-<p>Attach vEdge to Device Templates</p>
-<ul>
-<li>Logon to vManage GUI</li>
-<li>Open Chrome and click vManage on Boookmark Bar</li>
-</ul>
+<p>Logon to vManage GUI by launching Google Chrome on the RDP / Jumphost</p>
+</li>
+<li>
+<p>Open Chrome and click <code>vManage</code> on Boookmark Bar</p>
 </li>
 <li>
 <p>Logon to vManage using credential provided</p>
@@ -672,10 +678,12 @@
 <p><img alt="" src="../pics/Chrome.png" />
 <img alt="" src="../pics/Chrome-vManage.png" /></p>
 <ul>
-<li>On vManage, navigate to <strong>Configuration&gt;Templates&gt; Device Template</strong>
-<img alt="" src="../pics/Navigation-Start.png" />
+<li>On vManage, navigate to <strong>Configuration &gt; Templates &gt; Device Templates</strong></li>
+</ul>
+<p><img alt="" src="../pics/Navigation-Start.png" />
 <img alt="" src="../pics/Config-Template.png" /> 
-<img alt="" src="../pics/Device-template.png" /></li>
+<img alt="" src="../pics/Device-template.png" /></p>
+<ul>
 <li>Attach <strong>only</strong> following device template to their respective vEdge</li>
 </ul>
 <table>
@@ -701,19 +709,21 @@
 </tbody>
 </table>
 <p><span style="color:red">
-Note: Please don't add Site200CE1 to any template
+Note: Please don't add Site200-CE1 to any template
 </span></p>
-<p><img alt="" src="../pics/Template-3Dots.png" />
-<img alt="" src="../pics/Attach-Devices.png" />
+<ul>
+<li>Below screenshots are for <code>Site-100 cE1</code> only.  You must repeat these tasks for <code>Site-300</code> and <code>Site-400</code> respectively.</li>
+</ul>
+<p><img alt="" src="../pics/Attach-Devices.png" />
 <img alt="" src="../pics/site100-temp-attach-1.png" />
 <img alt="" src="../pics/site100-temp-attach-2.png" />
 <img alt="" src="../pics/site100-temp-attach-3.png" />
 <img alt="" src="../pics/site100-temp-attach-4.png" />
 <img alt="" src="../pics/site100-temp-attach-5.png" /></p>
 <ul>
-<li>Wait for task to be successfull 
-<img alt="" src="../pics/Config-success.png" /></li>
+<li>Wait for task to be successfull </li>
 </ul>
+<p><img alt="" src="../pics/Config-success.png" /></p>
 
 
 
