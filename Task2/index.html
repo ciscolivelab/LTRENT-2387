@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#task-2---device-templates" class="md-skip">
+        <a href="#task-2---vmanage-device-templates" class="md-skip">
           Skip to content
         </a>
       
@@ -718,21 +718,23 @@
   
 
 
-<h1 id="task-2---device-templates">Task 2 - Device Templates<a class="headerlink" href="#task-2---device-templates" title="Permanent link"></a></h1>
-<p>In this Task we will add cEdeges (Site-100, Site-300 and Site-400) to their respective Device templates.  The device templates have been preconfigured with configurations required for functional SD-WAN Fabric.  The attachment of the cEdge to it's Device templates is performed on the vManage GUI via a web browser. </p>
+<h1 id="task-2---vmanage-device-templates">Task 2 - vManage Device Templates<a class="headerlink" href="#task-2---vmanage-device-templates" title="Permanent link"></a></h1>
+<p>Cisco SD-WAN vManage is a centralized network management system that simplifies the configuration, monitoring, and management of Cisco's SD-WAN infrastructure.</p>
+<p>Cisco vManage Device and Feature templates are key components of the Cisco SD-WAN solution.  These are used to simplify the process of configuring and managing SD-WAN devices in a network. These templates provide a standardized, scalable way to deploy configurations to multiple devices, ensuring consistency and reducing manual errors.</p>
+<p>In this lab vManage has been pre-configured with various Device and Feature Templates.  The pre-configured templates have all the configurations required for a functional SD-WAN Fabric.</p>
+<p>In this task we will attach cEdges (Site-100, Site-300 and Site-400) to their respective vManage Device Templates.  The <code>Attach Device</code> step of attaching a cEdge to it's Device templates is performed on the vManage GUI via a web browser.  This process simplifies network management by enabling efficient scalability and reducing manual configuration errors. It allows for quick deployment of new devices and easy updates to existing ones, all while ensuring that network settings adhere to predefined policies and standards.</p>
 <h2 id="step-1---vmanage-gui">Step 1 - vManage GUI<a class="headerlink" href="#step-1---vmanage-gui" title="Permanent link"></a></h2>
+<p>Cisco SD-WAN vManage is provisioned via a web browser.  We will perform all provisioning via </p>
 <ul>
-<li>Logon to vManage GUI by launching Google Chrome on the RDP / Jumphost</li>
+<li>Logon to vManage GUI by launching <code>Google Chrome</code> web browser on the RDP session (i.e., Jumphost)</li>
 </ul>
 <p><img alt="" src="../pics/Chrome.png" /></p>
 <ul>
-<li>
-<p>Open Chrome and click <code>vManage</code> on the boookmark bar
-<img alt="" src="../pics/Chrome-vManage.png" /></p>
-</li>
-<li>
-<p>Logon to vManage using below credentials: </p>
+<li>After launching Chrome, click on <code>vManage</code> bookmark on the bookmark bar as shown below:</li>
+</ul>
+<p><img alt="" src="../pics/Chrome-vManage.png" /></p>
 <ul>
+<li>Logon to vManage using below credentials: <ul>
 <li>Username: <code>admin</code></li>
 <li>Password: <code>C1sco12345</code></li>
 </ul>
@@ -740,17 +742,15 @@
 </ul>
 <h2 id="step-2---device-template-for-cedges">Step 2 - Device Template for cEdges<a class="headerlink" href="#step-2---device-template-for-cedges" title="Permanent link"></a></h2>
 <ul>
-<li>
-<p>After logging into vManage, click on the three bars at the top left side as shown in below screenshot: 
-<img alt="" src="../pics/Navigation-Start.png" /></p>
-</li>
-<li>
-<p>Then navigate to <strong>Configuration &gt; Templates</strong> as shown below: </p>
-</li>
+<li>After logging into vManage, click on the three bars at the top left side as shown in below screenshot: </li>
+</ul>
+<p><img alt="" src="../pics/Navigation-Start.png" /></p>
+<ul>
+<li>Then navigate to <strong>Configuration &gt; Templates</strong> as shown below: </li>
 </ul>
 <p><img alt="" src="../pics/Config-Template.png" /> </p>
 <ul>
-<li>On the <code>Configuration - Templates</code> page, click on the <strong>Device Templates</strong> as shown below:</li>
+<li>On the <code>Configuration - Templates</code> page, click on the <strong><code>Device Templates</code></strong> as shown below:</li>
 </ul>
 <p><img alt="" src="../pics/Device-template.png" /></p>
 <p>The <code>Device Template</code> page will list various control and cEdge devices.  We will <strong>only</strong> attach the device template to their respective cEdge as per below table.  The cEdge devices can be recognized by their <code>Description</code>:</p>
@@ -784,19 +784,19 @@ Note: Please don't add Site200-CE1 to any template
 </ul>
 <p><img alt="" src="../pics/site100-temp-attach-1.png" /></p>
 <ul>
-<li>Then on <code>Attach Devices</code> page scroll down to or Search for <code>Site100-cE1</code> to select it with the Right arrow (<strong><code>&gt;</code></strong>) as shown below:</li>
+<li>Then on <code>Attach Devices</code> page scroll down to or Search for <strong><code>Site100-cE1</code></strong> to select it with the Right arrow (<strong><code>&gt;</code></strong>) as shown below:</li>
 </ul>
 <p><img alt="" src="../pics/site100-temp-attach-2.png" /></p>
 <ul>
-<li>After selecting the Site100-cE1, click on <code>Attach</code>:</li>
+<li>After selecting the Site100-cE1, click on <strong><code>Attach</code></strong>:</li>
 </ul>
 <p><img alt="" src="../pics/site100-temp-attach-3.png" /></p>
 <ul>
-<li>On the next page, click <code>Next</code>:</li>
+<li>On the next page, click <strong><code>Next</code></strong>:</li>
 </ul>
 <p><img alt="" src="../pics/site100-temp-attach-4.png" /></p>
 <ul>
-<li>And lastly click on <code>Configure Devices</code> to attach the template configurations to cEdge device:</li>
+<li>And lastly click on <strong><code>Configure Devices</code></strong> to attach the template configurations to cEdge device:</li>
 </ul>
 <p><img alt="" src="../pics/site100-temp-attach-5.png" /></p>
 <ul>
@@ -811,7 +811,7 @@ Note: Please don't add Site200-CE1 to any template
 </thead>
 <tbody>
 <tr>
-<td align="left">Above screenshots are for <code>Site-100 cE1</code> only.  You must repeat these tasks for <code>Site300-cE1</code> and <code>Site400-cE1</code>.</td>
+<td align="left">Above screenshots are for <code>Site-100 cE1</code> only.  You must <strong>repeat</strong> these tasks for <code>Site300-cE1</code> and <code>Site400-cE1</code>.</td>
 </tr>
 </tbody>
 </table>
