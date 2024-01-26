@@ -820,14 +820,26 @@
   <img alt="Add Service Route" src="../pics/sig-feat-temp-15.png" /></p>
 </li>
 </ul>
-<p><strong>3. Updating and Configuring Device:</strong>
-* click <strong>Next</strong> and then click <strong>Configure Devices</strong></p>
+<p><strong>3. Updating and Configuring Device:</strong></p>
 <ul>
+<li>
+<p>Click <strong>Next</strong> and then click <strong>Configure Devices</strong></p>
+</li>
 <li>
 <p>Wait till config push is sucessfull to Site100-cE1.  </p>
 </li>
 <li>
 <p>Optional: you may SSH to Site100-cE1 by using <em>MTPutty</em> application on RDP session (Jumphost).  Validate that the service route command <code>ip sdwan route vrf 10 0.0.0.0/0 service sig</code> are pushed by vManage.</p>
+</li>
+</ul>
+<p><strong>4. Verifying Traffic Redirection to Umbrella:</strong></p>
+<ul>
+<li>
+<p>Using <strong>mRemoteNG</strong>, relaunch the console session of the Ubuntu VM <code>Site400-Ubuntu-VPN10</code>.</p>
+</li>
+<li>
+<p>Open the Chromium Web Browser on this VM and navigate to <strong><code>welcome.umbrella.com</code></strong>. The message <code>Welcome to Umbrella</code> indicates successful protection by Umbrella.
+  <img alt="Welcome to Umbrella" src="../pics/Umbrella-welecome.png" /></p>
 </li>
 </ul>
 <p><strong>Conclusion:</strong> 
