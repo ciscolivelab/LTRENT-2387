@@ -761,12 +761,10 @@
 <p><strong>Logging into the Ubuntu VM:</strong></p>
 </li>
 <li>If the console is locked, click on the console screen.</li>
-<li>
-<p>Use the following credentials to log in:</p>
-<ul>
+<li>Use the following credentials to log in:</li>
 <li>Username: <code>ubuntu</code></li>
-<li>Password: <code>viptela</code></li>
-</ul>
+<li>
+<p>Password: <code>viptela</code></p>
 </li>
 <li>
 <p><strong>Testing Internet Browser Access:</strong></p>
@@ -808,12 +806,10 @@
 </li>
 <li>Use MTPutty to SSH into <strong><code>Site400-cE1</code></strong> cEdge.</li>
 <li>Select the saved <code>Putty session</code> for Site400-cE1.</li>
-<li>
-<p>When prompted, enter the following credentials:</p>
-<ul>
+<li>When prompted, enter the following credentials:</li>
 <li>Username: <code>admin</code></li>
-<li>Password: <code>admin</code></li>
-</ul>
+<li>
+<p>Password: <code>admin</code></p>
 </li>
 <li>
 <p><strong>Verifying the Routing Table:</strong></p>
@@ -847,9 +843,7 @@
 </li>
 <li>On the editing page, click on <strong><code>IPv4 Route</code></strong>.</li>
 <li><img alt="IPv4 Route Option" src="../pics/Site400-VPN10-Ftemp-IPv4.png" /></li>
-<li>
-<p>Perform the following configurations in the <code>IPv4 Route</code> section:</p>
-<ul>
+<li>Perform the following configurations in the <code>IPv4 Route</code> section:</li>
 <li>Click <strong><code>New IPv4 Route</code></strong>.</li>
 <li>Enter <strong><code>0.0.0.0/0</code></strong> in <strong>Prefix</strong>.</li>
 <li>Select <strong><code>VPN</code></strong> in <strong>Gateway</strong>.</li>
@@ -857,8 +851,8 @@
 <li>Set <strong>Enable VPN</strong> to <strong><code>On</code></strong>.</li>
 <li><img alt="Configuring New IPv4 Route" src="../pics/Site400-VPN10-Ftemp-IPv4-1.png" /></li>
 <li>Click <strong><code>Add</code></strong> and then <strong><code>Update</code></strong> to save the changes.</li>
-<li><img alt="" src="../pics/Site400-VPN10-Ftemp-IPv4-2.png" /></li>
-</ul>
+<li>
+<p><img alt="" src="../pics/Site400-VPN10-Ftemp-IPv4-2.png" /></p>
 </li>
 <li>
 <p><strong>Applying the Configuration:</strong></p>
@@ -910,15 +904,13 @@
 <li>
 <p><strong>Configuring CLI Add-on Template:</strong></p>
 </li>
-<li>Enter the following information in the template:<ul>
+<li>Enter the following information in the template:</li>
 <li>Template Name: <strong><code>Default-Route-Propagation</code></strong></li>
 <li>Description: <strong><code>Default Route Propagation</code></strong></li>
 <li>In the <code>CLI configuration</code> box, input:
-   <div class="highlight"><pre><span></span><code>router ospf 10 vrf 10
+      <div class="highlight"><pre><span></span><code>router ospf 10 vrf 10
 default-information originate
 </code></pre></div></li>
-</ul>
-</li>
 <li>Click <strong><code>Save</code></strong> after entering the commands.</li>
 <li>
 <p><img alt="Configuring CLI Add-on Template" src="../pics/Default-route-cli3.png" /></p>
@@ -976,7 +968,7 @@ default-information originate
 <p><strong>Performing Traceroute:</strong></p>
 </li>
 <li>In the Terminal application on the Ubuntu VM, execute a <code>traceroute</code> with the following command:
-     <div class="highlight"><pre><span></span><code>traceroute 8.8.8.8
+   <div class="highlight"><pre><span></span><code>traceroute 8.8.8.8
 </code></pre></div></li>
 <li>
 <p><img alt="Traceroute Result on Ubuntu VM" src="../pics/ubuntu-trace-ok.png" /></p>
