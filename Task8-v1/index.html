@@ -9,13 +9,17 @@
       
       
       
+        <link rel="prev" href="../Task7-v1/">
+      
+      
+        <link rel="next" href="../Task9/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>Task 8 - Umbrella Regional Policies - Cisco Live 2024 LTRENT-2387</title>
+        <title>Task-8 Umbrella Policies for Site-100 & 400 - Cisco Live 2024 LTRENT-2387</title>
       
     
     
@@ -100,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task 8 - Umbrella Regional Policies
+              Task-8 Umbrella Policies for Site-100 & 400
             
           </span>
         </div>
@@ -236,13 +240,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../Task1-Connect/" class="md-tabs__link">
+      <a href="../Task1-Connect/" class="md-tabs__link md-tabs__link--active">
         Lab Guide
       </a>
     </li>
@@ -397,14 +403,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
         
@@ -437,7 +445,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Lab Guide
@@ -546,11 +554,73 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Task8/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Task-8 Umbrella Policies for Site-100 & 400
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Task-8 Umbrella Policies for Site-100 & 400
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1---umbrella-web-policy" class="md-nav__link">
+    Step 1 - Umbrella Web Policy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2---create-customs-list-web-policy" class="md-nav__link">
+    Step 2 - Create Customs-list Web Policy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3---web-policy-tester" class="md-nav__link">
+    Step 3 - Web Policy Tester
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4---verify-policies-on-hosts" class="md-nav__link">
+    Step 4 - Verify Policies on Hosts
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -677,20 +747,19 @@
 
 
 <h1 id="task-8---umbrella-regional-policies">Task 8 - Umbrella Regional Policies<a class="headerlink" href="#task-8---umbrella-regional-policies" title="Permanent link"></a></h1>
-<p>This tasks will walk through the steps to create <strong>Web Proxy Policies</strong> that will be enforced on Site-100 and Site-400 (i.e., regional sites).  These policies will:
-* Block web traffic to Financial Institutions<br />
-* Block web traffic to additional websites by creating custom destination list</p>
+<p>In this task we will create Web Proxy Policies on Umbrella to be enforced on Site-100 and Site-400 (regional sites). These policies will aim to block web traffic to Financial Institutions and other specified websites using custom destination lists.</p>
 <h2 id="step-1---umbrella-web-policy">Step 1 - Umbrella Web Policy<a class="headerlink" href="#step-1---umbrella-web-policy" title="Permanent link"></a></h2>
-<p>In this step we will configure Umbrella Web Policy to block traffic to Financial websites from Regional sites:</p>
+<p><strong>Objective:</strong> Configure an Umbrella Web Policy to block traffic to Financial websites from Site-400 and Site-100.</p>
+<p><strong>1. Accessing the Umbrella Dashboard:</strong></p>
 <ul>
-<li>
-<p>On the RDP session (jumphost), logon to Umbrella Dashboard by clicking on Google Chrome Browser bookmark named <code>Umbrella SSO</code>.  It will open the Umbrella dashboard and auto-login using single-sign-on.</p>
-</li>
-<li>
-<p>Go to <strong>Policies &gt; Management &gt; Web Policy</strong> and click <strong>Add</strong> on the top right to add a new <em>Ruleset</em> as shown in below screenshot:</p>
-</li>
+<li>On the RDP session (jumphost), logon to Umbrella Dashboard by clicking on Google Chrome Browser bookmark named <code>Umbrella SSO</code>.  It will open the Umbrella dashboard and auto-login using single-sign-on.</li>
+</ul>
+<p><strong>2. Creating the Web Policy:</strong></p>
+<ul>
+<li>Go to <strong>Policies &gt; Management &gt; Web Policy</strong> and click <strong>Add</strong> on the top right to add a new <em>Ruleset</em> as shown in below screenshot:</li>
 </ul>
 <p><img alt="" src="../pics/umbrella-p5.png" /></p>
+<p><strong>3. Configuring Ruleset Identities:</strong></p>
 <ul>
 <li>On the new "<em>Ruleset Rules</em>" web page, under <strong>Ruleset Settings</strong> scroll down to <strong>Ruleset identities</strong> and Click <strong>Edit</strong> as shown below:</li>
 </ul>
@@ -711,7 +780,7 @@
 </thead>
 <tbody>
 <tr>
-<td align="left">You must only select SITE100 tunnels.  <em>Do not</em> select SITE300 tunnels in this step.</td>
+<td align="left">Select only SITE100 tunnels.  <em>Do not</em> select SITE300 tunnels in this step.</td>
 </tr>
 </tbody>
 </table>
@@ -719,10 +788,12 @@
 <li>Under the <strong>Ruleset Settings</strong>, scroll down to <strong>HTTPS Inspection</strong> section and click <strong>Edit</strong>:</li>
 </ul>
 <p><img alt="" src="../pics/umbrella-s1-p10.png" /></p>
+<p><strong>4. Enabling HTTPS Inspection:</strong></p>
 <ul>
 <li>Select <strong>Enable HTTPS Inspection</strong>, then click <strong>Save</strong>:</li>
 </ul>
 <p><img alt="" src="../pics/umbrella-p18.png" /> </p>
+<p><strong>5. Adding Web Policy Rule:</strong></p>
 <ul>
 <li>After adding the identities, Click <strong>ADD RULE</strong> button.  Give the <strong>Rule Name</strong> of <strong><code>Regional - block Financial</code></strong> and verify the <code>Rule Action</code> is <code>Block</code>:</li>
 </ul>
@@ -743,6 +814,7 @@
 <li>On the Rule click on <strong>Save</strong> icon to save newly added rule as shown in below screenshot:</li>
 </ul>
 <p><img alt="" src="../pics/t8-s1-umbrella-edit-dest-save.png" /></p>
+<p><strong>6. Enabling the Rule:</strong></p>
 <ul>
 <li>By default newly created rules are disabled.  To enable the Rule 1, click three dots (<strong><code>...</code></strong>) at the right side and then toggle <strong>Enable Rule</strong> as shown in below screenshot. </li>
 </ul>
@@ -757,7 +829,8 @@
 <img alt="" src="../pics/umbrella-p19.png" /></li>
 </ul>
 <h2 id="step-2---create-customs-list-web-policy">Step 2 - Create Customs-list Web Policy<a class="headerlink" href="#step-2---create-customs-list-web-policy" title="Permanent link"></a></h2>
-<p>In the previous step, a web policy as per Umbrella classification of Financial services websites has been created.  Now let's create our own website list (using Umbrella <code>Destination List</code>) and then use Web policy to block web traffic to this list i.e., custom URL.  This will be done by adding a new rule under existing Ruleset for regional sites i.e., Ruleset 2.</p>
+<p><strong>Objective:</strong> Create a custom destination list and a web policy to block specific URLs (as per this custom destination list).</p>
+<p><strong>1. Creating Destination List:</strong></p>
 <ul>
 <li>On Umbrella dashboard, navigate to <strong>Policy &gt; Policy Component &gt; Destination lists</strong>, click <strong>Add</strong> on the top right corner:</li>
 </ul>
@@ -779,6 +852,9 @@
 </li>
 </ul>
 </li>
+</ul>
+<p><strong>2. Adding Rule to Ruleset:</strong></p>
+<ul>
 <li>
 <p>Navigate to <strong>Policies &gt; Management &gt; Web Policy</strong> and expand on <strong>RuleSet 2</strong> by clicking on it or by clicking down-arrow:</p>
 <p><img alt="" src="../pics/umbrella-s1-p14.png" /></p>
@@ -801,13 +877,12 @@
 </ul>
 <p><img alt="" src="../pics/umbrella-s1-p17.png" /></p>
 <ul>
-<li>
-<p>Click on <strong>Save</strong> on this newly created rule:
-<img alt="" src="../pics/add-rule-2-save.png" /></p>
-</li>
-<li>
-<p>By default newly created rules are disabled.  To enable the Rule 2, click three dots (<strong><code>...</code></strong>) at the right side and then toggle <strong>Enable Rule</strong> as shown in below screenshot. </p>
-</li>
+<li>Click on <strong>Save</strong> on this newly created rule:
+<img alt="" src="../pics/add-rule-2-save.png" /></li>
+</ul>
+<p><strong>3. Enabling the Custom Rule:</strong></p>
+<ul>
+<li>By default newly created rules are disabled.  To enable the Rule 2, click three dots (<strong><code>...</code></strong>) at the right side and then toggle <strong>Enable Rule</strong> as shown in below screenshot. </li>
 </ul>
 <p><img alt="" src="../pics/rule-2-enable.png" /></p>
 <ul>
@@ -819,7 +894,8 @@
 </ul>
 <p>Now the Umbrella policies for regional sites (site-100 and Site-400) have been configured. </p>
 <h2 id="step-3---web-policy-tester">Step 3 - Web Policy Tester<a class="headerlink" href="#step-3---web-policy-tester" title="Permanent link"></a></h2>
-<p>Let's go through the steps to test the newly created Web policies by using "Policy Tester" on  Umbrella.</p>
+<p><strong>Objective:</strong> Test the newly created Web policies using Umbrella's "Policy Tester".</p>
+<p><strong>1. Running Policy Tests:</strong></p>
 <ul>
 <li>
 <p>On Umbrella Dashboard, navigate to <strong>Policies &gt; Management &gt; Web Policy</strong>.  Click on <strong>Policy Tester</strong> at the top right corner: 
@@ -837,7 +913,7 @@
 </ul>
 <p>The result of this test appears on the page and as expected it shows the Ruleset 2 and rule being matched by the Web policy. </p>
 <ul>
-<li>Next run a test for any of the Site100 tunnel for below destinations:<ul>
+<li>Next run a test for any of the Site100 tunnel for below destination:<ul>
 <li>Under <strong>Destination</strong>, enter <strong><code>www.cnn.com</code></strong>
 <img alt="" src="../pics/web-policy-test-result-regional-2.png" /></li>
 </ul>
@@ -845,22 +921,22 @@
 </ul>
 <p>The result of this test appears on the page and as expected it shows the Ruleset 2 and rule being matched by the Web policy. </p>
 <ul>
-<li>Explore the Web Policy Tester further by testing traffic to different destination website such as cisco.com, google.com etc for Regional sites traffic.</li>
+<li>Explore the Web Policy Tester further by testing traffic to different destination website such as cisco.com, google.com for Regional sites traffic.</li>
 </ul>
 <h2 id="step-4---verify-policies-on-hosts">Step 4 - Verify Policies on Hosts<a class="headerlink" href="#step-4---verify-policies-on-hosts" title="Permanent link"></a></h2>
-<p>Now lets validate the impact of both Firewall and Web Policies from the SD-WAN Site-400 (Regional site).</p>
+<p><strong>Objective:</strong> Confirm the effectiveness of the Web Policies on regional site-400 host.</p>
+<p><strong>1. Confirming Traffic Redirection:</strong></p>
 <ul>
-<li>
-<p>First validate if traffic is being redirected to Umbrella.</p>
-<ul>
-<li>Launch console access to ubuntu <strong>Site400-VPN10</strong> host by using <strong>mRemoteNG</strong> application.  Login with credentials of <code>viptela</code></li>
-<li>Use Chromium Browser to navigate to <code>welcome.umbrella.com</code>.  A green check mark should appear, confirming that traffic from VPN 10 is being successfully redirected to Umbrella.</li>
+<li>First validate if traffic is being redirected to Umbrella.<ul>
+<li>Using <strong>mRemoteNG</strong>, relaunch the console session of the Ubuntu VM <code>Site400-Ubuntu-VPN10</code>.  Login with credentials of <code>viptela</code></li>
+<li>Use Chromium Browser to navigate to <code>welcome.umbrella.com</code>.  A green check mark should appear, confirming that traffic from VPN-10 is being successfully redirected to Umbrella.</li>
 </ul>
 </li>
-<li>
-<p>Verify Web Policy by using Chromium Web Browser on <strong>Site400-VPN10</strong> host.  Just like previous step, use the console of ubuntu <strong>Site400 VPN10</strong> host by using <strong>mRemoteNG</strong> application.</p>
+</ul>
+<p><strong>2. Validating Web Policy:</strong></p>
 <ul>
-<li>Use Chromium to navigate onto traditional websites, such as <code>www.cisco.com</code>.  Access to this website should work.</li>
+<li>Verify Web Policy by using Chromium Web Browser on the console of <code>Site400-Ubuntu-VPN10</code> host by using <strong>mRemoteNG</strong> application.<ul>
+<li>Use Chromium to navigate onto <code>www.cisco.com</code>.  Access to this website should work.</li>
 <li>Use Chromium to navigate to <code>www.cnn.com</code>.  As per our Umbrella Web Policy, this site should be blocked and, as expected, Cisco Umbrella block page will appear.</li>
 <li>Use Chromium to navigate to <code>www.chase.com</code>.  As per our Umbrella Web Policy, this sites should be blocked and, as expected, Cisco Umbrella block page will appear.</li>
 <li>Use Chromium to navigate to <code>www.bankofamerica.com</code>.  As per our Umbrella Web Policy, this sites should be blocked and, as expected, Cisco Umbrella block page will appear.</li>
@@ -868,6 +944,16 @@
 </ul>
 </li>
 </ul>
+<p><strong>Conclusion:</strong></p>
+<p>Upon completing Task 8, robust Web Proxy Policies have been successfully established and enforced on regional sites, Site-100 and Site-400. These policies effectively block web traffic to financial institutions and other specific websites as designated in the custom destination lists. </p>
+<p>Key accomplishments in this task include:</p>
+<ul>
+<li>The configuration of Umbrella Web Policies to restrict access to financial websites, enhancing the security and compliance posture of the regional sites.</li>
+<li>The creation of custom destination lists, demonstrating the flexibility of Umbrella to tailor web access policies to the organization's specific needs.</li>
+<li>Successful testing and validation of these policies using Umbrella's Web Policy Tester, ensuring that the desired web traffic restrictions are in place and functioning as expected.</li>
+<li>Verification of policy enforcement on regional site hosts, confirming that traffic is appropriately redirected and filtered according to the newly implemented policies.</li>
+</ul>
+<p>As a result, Site-100 and Site-400 are now equipped with targeted web access controls, contributing significantly to the overall security framework of the organization's network.</p>
 
 
 
@@ -891,6 +977,42 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../Task7-v1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Task-7 Umbrella Integration to Site-100" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Task-7 Umbrella Integration to Site-100
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Task9/" class="md-footer__link md-footer__link--next" aria-label="Next: Task-9 Monitoring on Umbrella" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Task-9 Monitoring on Umbrella
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
