@@ -926,59 +926,31 @@ default-information originate
 <p><strong>Result:</strong> The default route on VRF/VPN-10 is now configured and propagated from Site-100 across the SD-WAN fabric.</p>
 <h2 id="step-4---verify-internet-connectivity-on-vpn-10-of-site-400">Step 4 - Verify Internet Connectivity on VPN-10 of Site-400<a class="headerlink" href="#step-4---verify-internet-connectivity-on-vpn-10-of-site-400" title="Permanent link"></a></h2>
 <p><strong>Objective:</strong> Verify the successful establishment of internet connectivity on VPN-10 for both Site-400 and Site-300 following the configuration changes.</p>
-<ol>
-<li><strong>Re-launching MTPutty if Needed:</strong></li>
-<li>If the <strong>MTPutty</strong> application is not open, launch it again on your RDP session.</li>
-<li>
-<p><img alt="MTPutty Application" src="../pics/mPutty.png" /></p>
-</li>
-<li>
-<p><strong>SSH/Login to cEdges:</strong></p>
-</li>
-<li>
-<p>SSH/Login to <code>Site400-cE1</code> and <code>Site300-cE1</code> cEdges by clicking on their respective names in the saved <code>Putty sessions</code>.</p>
-</li>
-<li>
-<p><strong>Verifying the Routing Table:</strong></p>
-</li>
-<li>Use the command <code>show ip route vrf 10</code> to verify the routing table for both nodes (Site300-cE1 and Site400-cE1).</li>
-<li>Confirm that both nodes are receiving the <strong>default route</strong> on VRF/VPN-10.</li>
-<li>
-<p><img alt="Routing Table on Site-400" src="../pics/site400-iprroute-2.png" /></p>
-</li>
-<li>
-<p><strong>Checking Internet Access on Site-400:</strong></p>
-</li>
-<li>Log in again to the Ubuntu VM named <code>Site400-Ubuntu-VPN10</code> using the mRemoteNG application.</li>
-<li>Launch the <code>Chromium Web Browser</code> on the Ubuntu VM and navigate to an internet site, such as <code>cisco.com</code>.</li>
-<li>The internet access should now be functioning properly.</li>
-<li>
-<p><img alt="Internet Access on Site-400" src="../pics/Internet-access.png" /></p>
-</li>
-<li>
-<p><strong>Testing Connectivity with Ping:</strong></p>
-</li>
-<li>Open the <code>Terminal</code> application on the Ubuntu VM.</li>
-<li>Issue the ping command <code>ping 8.8.8.8</code>.</li>
-<li>This time, the ping should be successful, indicating internet connectivity.</li>
-<li>
-<p><img alt="Successful Ping on Ubuntu VM" src="../pics/ubuntu-ping-ok.png" /></p>
-</li>
-<li>
-<p><strong>Performing Traceroute:</strong></p>
-</li>
-<li>In the Terminal application on the Ubuntu VM, execute a <code>traceroute</code> with the following command:
-   <div class="highlight"><pre><span></span><code>traceroute 8.8.8.8
-</code></pre></div></li>
-<li>
-<p><img alt="Traceroute Result on Ubuntu VM" src="../pics/ubuntu-trace-ok.png" /></p>
-</li>
-<li>
-<p><strong>Repeating for Site-300:</strong></p>
-</li>
-<li>Repeat the above steps to confirm internet access for VPN-10 of <strong>Site300</strong>.</li>
-<li>This involves verifying the ip route on VPN-10 on <code>Site300-cE1</code> and then checking internet connectivity on the Ubuntu VM <code>Site300-Ubuntu-VPN10</code>.</li>
-</ol>
+<p><strong>1. Re-launching MTPutty if Needed:</strong> 
+- If the <strong>MTPutty</strong> application is not open, launch it again on your RDP session.
+  <img alt="MTPutty Application" src="../pics/mPutty.png" /></p>
+<p><strong>2. SSH/Login to cEdges:</strong> 
+- SSH/Login to <code>Site400-cE1</code> and <code>Site300-cE1</code> cEdges by clicking on their respective names in the saved <code>Putty sessions</code>.</p>
+<p><strong>3. Verifying the Routing Table:</strong> 
+- Use the command <code>show ip route vrf 10</code> to verify the routing table for both nodes (Site300-cE1 and Site400-cE1).
+- Confirm that both nodes are receiving the <strong>default route</strong> on VRF/VPN-10.
+  <img alt="Routing Table on Site-400" src="../pics/site400-iprroute-2.png" /></p>
+<p><strong>4. Checking Internet Access on Site-400:</strong> 
+- Log in again to the Ubuntu VM named <code>Site400-Ubuntu-VPN10</code> using the mRemoteNG application.
+- Launch the <code>Chromium Web Browser</code> on the Ubuntu VM and navigate to an internet site, such as <code>cisco.com</code>.
+- The internet access should now be functioning properly.
+  <img alt="Internet Access on Site-400" src="../pics/Internet-access.png" /></p>
+<p><strong>5. Testing Connectivity with Ping:</strong> 
+- Open the <code>Terminal</code> application on the Ubuntu VM.
+- Issue the ping command <code>ping 8.8.8.8</code>.
+- This time, the ping should be successful, indicating internet connectivity.
+  <img alt="Successful Ping on Ubuntu VM" src="../pics/ubuntu-ping-ok.png" /></p>
+<p><strong>6. Performing Traceroute:</strong> 
+- In the Terminal application on the Ubuntu VM, execute a <code>traceroute</code> with the following command: <code>traceroute 8.8.8.8</code>.
+  <img alt="Traceroute Result on Ubuntu VM" src="../pics/ubuntu-trace-ok.png" /></p>
+<p><strong>7. Repeating for Site-300:</strong> 
+- Repeat the above steps to confirm internet access for VPN-10 of <strong>Site300</strong>.
+- This involves verifying the ip route on VPN-10 on <code>Site300-cE1</code> and then checking internet connectivity on the Ubuntu VM <code>Site300-Ubuntu-VPN10</code>.</p>
 <p><strong>Result:</strong> Internet connectivity on VPN-10 for Site-400 and Site-300 should now be successfully established and verifiable through the above tests.</p>
 
 
