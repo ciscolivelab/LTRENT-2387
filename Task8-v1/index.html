@@ -9,17 +9,13 @@
       
       
       
-        <link rel="prev" href="../Task1-Connect/">
-      
-      
-        <link rel="next" href="../Task3-v1/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>Task-2 vManage Templates - Cisco Live 2024 LTRENT-2387</title>
+        <title>Task 8 - Umbrella Regional Policies - Cisco Live 2024 LTRENT-2387</title>
       
     
     
@@ -71,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#task-2---vmanage-templates" class="md-skip">
+        <a href="#task-8---umbrella-regional-policies" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task-2 vManage Templates
+              Task 8 - Umbrella Regional Policies
             
           </span>
         </div>
@@ -240,15 +236,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../Task1-Connect/" class="md-tabs__link md-tabs__link--active">
+      <a href="../Task1-Connect/" class="md-tabs__link">
         Lab Guide
       </a>
     </li>
@@ -403,16 +397,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
         
@@ -445,7 +437,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Lab Guide
@@ -470,59 +462,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Task-2 vManage Templates
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Task2-v1/" class="md-nav__link">
         Task-2 vManage Templates
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#step-1---vmanage-gui" class="md-nav__link">
-    Step 1 - vManage GUI
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2---device-template-for-cedges" class="md-nav__link">
-    Step 2 - Device Template for cEdges
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -687,15 +631,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1---vmanage-gui" class="md-nav__link">
-    Step 1 - vManage GUI
+  <a href="#step-1---umbrella-web-policy" class="md-nav__link">
+    Step 1 - Umbrella Web Policy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2---device-template-for-cedges" class="md-nav__link">
-    Step 2 - Device Template for cEdges
+  <a href="#step-2---create-customs-list-web-policy" class="md-nav__link">
+    Step 2 - Create Customs-list Web Policy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3---web-policy-tester" class="md-nav__link">
+    Step 3 - Web Policy Tester
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4---verify-policies-on-hosts" class="md-nav__link">
+    Step 4 - Verify Policies on Hosts
   </a>
   
 </li>
@@ -718,104 +676,198 @@
   
 
 
-<h1 id="task-2---vmanage-templates">Task 2 - vManage Templates<a class="headerlink" href="#task-2---vmanage-templates" title="Permanent link"></a></h1>
-<p>Cisco SD-WAN vManage is a centralized network management system that simplifies the configuration, monitoring, and management of Cisco's SD-WAN infrastructure.</p>
-<p>Cisco vManage Device and Feature templates are key components of the Cisco SD-WAN solution. These templates are used to simplify the process of configuring and managing SD-WAN devices in a network, offering a standardized and scalable way to deploy configurations to multiple devices. This approach ensures consistency and reduces the likelihood of manual errors.</p>
-<p>In this lab, vManage has been pre-configured with various Device and Feature Templates. The pre-configured templates contain all the configurations required for a functional SD-WAN Fabric.</p>
-<p>In this task, we will attach cEdges (Site-100, Site-300, and Site-400) to their respective vManage Templates and this is performed on a GUI via a web browser. This process streamlines network management by enabling efficient scalability and reducing manual configuration errors. It allows for the rapid deployment of new devices and easy updates to existing ones, ensuring network settings are in line with predefined policies and standards.</p>
-<h2 id="step-1---vmanage-gui">Step 1 - vManage GUI<a class="headerlink" href="#step-1---vmanage-gui" title="Permanent link"></a></h2>
-<p><strong>Objective:</strong> In this step, we will access the Cisco SD-WAN vManage through a web browser for provisioning. All provisioning tasks will be performed using a Google Chrome browser on the RDP session (i.e., Jumphost).</p>
+<h1 id="task-8---umbrella-regional-policies">Task 8 - Umbrella Regional Policies<a class="headerlink" href="#task-8---umbrella-regional-policies" title="Permanent link"></a></h1>
+<p>This tasks will walk through the steps to create <strong>Web Proxy Policies</strong> that will be enforced on Site-100 and Site-400 (i.e., regional sites).  These policies will:
+* Block web traffic to Financial Institutions<br />
+* Block web traffic to additional websites by creating custom destination list</p>
+<h2 id="step-1---umbrella-web-policy">Step 1 - Umbrella Web Policy<a class="headerlink" href="#step-1---umbrella-web-policy" title="Permanent link"></a></h2>
+<p>In this step we will configure Umbrella Web Policy to block traffic to Financial websites from Regional sites:</p>
 <ul>
 <li>
-<p>Log on to the vManage GUI by launching the <code>Google Chrome</code> web browser, which can be found either on the Desktop or in the Taskbar of your RDP session (Jumphost).
-  <img alt="Chrome Browser Icon" src="../pics/Chrome.png" /></p>
+<p>On the RDP session (jumphost), logon to Umbrella Dashboard by clicking on Google Chrome Browser bookmark named <code>Umbrella SSO</code>.  It will open the Umbrella dashboard and auto-login using single-sign-on.</p>
 </li>
 <li>
-<p>After launching Chrome, click on the <code>vManage</code> bookmark on the bookmark bar.
-  <img alt="vManage Bookmark in Chrome" src="../pics/Chrome-vManage.png" /></p>
+<p>Go to <strong>Policies &gt; Management &gt; Web Policy</strong> and click <strong>Add</strong> on the top right to add a new <em>Ruleset</em> as shown in below screenshot:</p>
 </li>
-<li>
-<p>Log in to vManage using the following credentials:</p>
-</li>
-<li>Username: <code>admin</code></li>
-<li>Password: <code>C1sco12345</code></li>
 </ul>
-<h2 id="step-2---device-template-for-cedges">Step 2 - Device Template for cEdges<a class="headerlink" href="#step-2---device-template-for-cedges" title="Permanent link"></a></h2>
-<p><strong>Objective:</strong> In this step, we will manage the device templates for the cEdge devices in the Cisco SD-WAN vManage. This involves identifying and attaching the correct device templates to their respective cEdge devices as per the specified criteria.</p>
-<p><strong>1. Navigating in vManage:</strong> </p>
+<p><img alt="" src="../pics/umbrella-p5.png" /></p>
 <ul>
-<li>After logging into vManage, click on the three bars at the top left side to open the navigation menu.
-  <img alt="Navigation Start" src="../pics/Navigation-Start.png" /></li>
+<li>On the new "<em>Ruleset Rules</em>" web page, under <strong>Ruleset Settings</strong> scroll down to <strong>Ruleset identities</strong> and Click <strong>Edit</strong> as shown below:</li>
 </ul>
-<p><strong>2. Accessing Device Templates:</strong> </p>
+<p><img alt="" src="../pics/t8-s1-ruleset-identity.png" /></p>
 <ul>
-<li>Navigate to <strong>Configuration &gt; Templates</strong>.
-  <img alt="Configuration Templates" src="../pics/Config-Template.png" /> </li>
+<li>Next on the <strong>Ruleset Identities</strong> web page, under <code>All Identities</code> scroll down to <strong>Tunnels</strong> and Click on number 4 with right arrow i.e., <strong><code>4 &gt;</code></strong> as shown below:</li>
 </ul>
-<p><strong>3. Selecting Device Templates:</strong> </p>
+<p><img alt="" src="../pics/t8-s1-ruleset-identities-tunnels.png" /></p>
 <ul>
-<li>On the <code>Configuration - Templates</code> page, click on <strong><code>Device Templates</code></strong>.
-  <img alt="Device Templates" src="../pics/Device-template.png" /></li>
+<li>On the next page, select the two Tunnels for <strong>SITE100</strong> and Click <strong>SAVE</strong> button as shown below: </li>
 </ul>
-<p><strong>4. Identifying cEdge Devices:</strong> </p>
-<ul>
-<li>The <code>Device Template</code> page lists various control and cEdge devices. We will <strong>only</strong> attach the device template to their respective cEdge as per the following table. The cEdge devices can be recognized by their <code>Description</code>:</li>
-</ul>
+<p><img alt="" src="../pics/t8-s1-ruleset-identities-tunnels-site100.png" /></p>
 <table>
 <thead>
 <tr>
-<th>Description</th>
-<th>vEdge</th>
+<th align="left"><strong>Note:</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Device template of Site100-cE1 with Site ID: 100 and System IP: 1.1.10.1</td>
-<td>Site100-cE1</td>
-</tr>
-<tr>
-<td>Device template of Site300-cE1 with Site ID: 300 and System IP: 1.1.30.1</td>
-<td>Site300-cE1</td>
-</tr>
-<tr>
-<td>Device template of Site400-cE1 with Site ID: 400 and System IP: 1.1.40.1</td>
-<td>Site400-cE1</td>
+<td align="left">You must only select SITE100 tunnels.  <em>Do not</em> select SITE300 tunnels in this step.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Please don't add Site200-CE1 to any template.</p>
-<p><strong>5. Attaching Device Templates:</strong> </p>
+<ul>
+<li>Under the <strong>Ruleset Settings</strong>, scroll down to <strong>HTTPS Inspection</strong> section and click <strong>Edit</strong>:</li>
+</ul>
+<p><img alt="" src="../pics/umbrella-s1-p10.png" /></p>
+<ul>
+<li>Select <strong>Enable HTTPS Inspection</strong>, then click <strong>Save</strong>:</li>
+</ul>
+<p><img alt="" src="../pics/umbrella-p18.png" /> </p>
+<ul>
+<li>After adding the identities, Click <strong>ADD RULE</strong> button.  Give the <strong>Rule Name</strong> of <strong><code>Regional - block Financial</code></strong> and verify the <code>Rule Action</code> is <code>Block</code>:</li>
+</ul>
+<p><img alt="" src="../pics/t8-s1-add-rule.png" /></p>
+<ul>
+<li>Next click on <strong>Add Identity</strong> for this rule.  Enable <strong>Inherit Ruleset Identities</strong> and click <strong>Apply</strong> as shown in below figure:</li>
+</ul>
+<p><img alt="" src="../pics/t8-s1-edit-identity.png" /></p>
+<ul>
+<li>Further on the new rule, click on <strong>Add Destination</strong> and Click on right arrow <strong><code>&gt;</code></strong> next to <strong>Application Settings</strong>:</li>
+</ul>
+<p><img alt="" src="../pics/t8-s1-umbrella-edit-dest.png" /></p>
+<ul>
+<li>Then scroll down to Select <strong>Financial Services</strong> and hit <strong>Apply</strong>:</li>
+</ul>
+<p><img alt="" src="../pics/t8-s1-umbrella-edit-dest-finance.png" /></p>
+<ul>
+<li>On the Rule click on <strong>Save</strong> icon to save newly added rule as shown in below screenshot:</li>
+</ul>
+<p><img alt="" src="../pics/t8-s1-umbrella-edit-dest-save.png" /></p>
+<ul>
+<li>By default newly created rules are disabled.  To enable the Rule 1, click three dots (<strong><code>...</code></strong>) at the right side and then toggle <strong>Enable Rule</strong> as shown in below screenshot. </li>
+</ul>
+<p><img alt="" src="../pics/t8-s1-umbrella-rule-enable.png" /></p>
+<ul>
+<li>Confirm by clicking <strong>Update</strong>:</li>
+</ul>
+<p><img alt="" src="../pics/umbrella-p14.png" /></p>
+<p>Now the rule and ruleset settings are all configured for Regional sites.</p>
+<ul>
+<li>Scroll down and click <strong>Close</strong> as shown in below screenshot
+<img alt="" src="../pics/umbrella-p19.png" /></li>
+</ul>
+<h2 id="step-2---create-customs-list-web-policy">Step 2 - Create Customs-list Web Policy<a class="headerlink" href="#step-2---create-customs-list-web-policy" title="Permanent link"></a></h2>
+<p>In the previous step, a web policy as per Umbrella classification of Financial services websites has been created.  Now let's create our own website list (using Umbrella <code>Destination List</code>) and then use Web policy to block web traffic to this list i.e., custom URL.  This will be done by adding a new rule under existing Ruleset for regional sites i.e., Ruleset 2.</p>
+<ul>
+<li>On Umbrella dashboard, navigate to <strong>Policy &gt; Policy Component &gt; Destination lists</strong>, click <strong>Add</strong> on the top right corner:</li>
+</ul>
+<p><img alt="" src="../pics/umbrella-s1-p11.png" /></p>
 <ul>
 <li>
-<p>Locate the Site100-cE1 device from its description and click on the three dots (<strong><code>...</code></strong>) on the right side.
-  <img alt="Site100 Device Template" src="../pics/site100-temp-attach-1.png" /></p>
+<p>Add this list as per below settings:</p>
+<ul>
+<li>List Name: <code>Custom-Filter</code></li>
+<li>Destination List type: <code>Web Proxy</code> (from drop-down menu)</li>
+<li>Destination: <code>www.cnn.com</code></li>
+<li>
+<p>Click <strong><code>Add</code></strong>
+<img alt="" src="../pics/umbrella-s1-p12.png" /></p>
 </li>
 <li>
-<p>On the <code>Attach Devices</code> page, scroll down to or search for <strong><code>Site100-cE1</code></strong> and select it with the Right arrow (<strong><code>&gt;</code></strong>).
-  <img alt="Attach Site100 Device" src="../pics/site100-temp-attach-2.png" /></p>
-</li>
-<li>
-<p>After selecting the Site100-cE1, click on <strong><code>Attach</code></strong>.
-  <img alt="Attach Button" src="../pics/site100-temp-attach-3.png" /></p>
+<p>Click <strong>Save</strong> after adding destination/domain:
+<img alt="" src="../pics/umbrella-s1-p13.png" /></p>
 </li>
 </ul>
-<p><strong>6. Completing the Attachment Process:</strong> </p>
+</li>
+<li>
+<p>Navigate to <strong>Policies &gt; Management &gt; Web Policy</strong> and expand on <strong>RuleSet 2</strong> by clicking on it or by clicking down-arrow:</p>
+<p><img alt="" src="../pics/umbrella-s1-p14.png" /></p>
+</li>
+<li>
+<p>Let's add a new rule by clicking <strong>ADD RULE</strong> button.  Give the <strong>Rule Name</strong> of <strong><code>Regional - block custom</code></strong> and verify the <code>Rule Action</code> is <code>Block</code>:
+<img alt="" src="../pics/add-rule-2.png" /></p>
+</li>
+<li>
+<p>Next let's also use ruleset identities for this rule.  Click on <strong>Add Identity</strong> for this rule and enable <strong>Inherit Ruleset Identities</strong> and click <strong>Apply</strong> as shown in below figure:</p>
+</li>
+</ul>
+<p><img alt="" src="../pics/add-rule-2-identity.png" /></p>
+<ul>
+<li>Further on the new rule, click on <strong>Add Destination</strong> and CLick on the right arrow  <strong><code>&gt;</code></strong> next to <strong>Destiniation Lists</strong></li>
+</ul>
+<p><img alt="" src="../pics/add-rule-2-dest.png" /></p>
+<ul>
+<li>Select the <strong>Custom-Filter</strong> and then click on <strong>Apply</strong></li>
+</ul>
+<p><img alt="" src="../pics/umbrella-s1-p17.png" /></p>
 <ul>
 <li>
-<p>On the next page, click <strong><code>Next</code></strong>.
-  <img alt="Next Step" src="../pics/site100-temp-attach-4.png" /></p>
+<p>Click on <strong>Save</strong> on this newly created rule:
+<img alt="" src="../pics/add-rule-2-save.png" /></p>
 </li>
 <li>
-<p>Finally, click on <strong><code>Configure Devices</code></strong> to attach the template configurations to the cEdge device.
-  <img alt="Configure Devices" src="../pics/site100-temp-attach-5.png" /></p>
-</li>
-<li>
-<p>Wait for the task to be successful.
-  <img alt="Configuration Success" src="../pics/Config-success.png" /></p>
+<p>By default newly created rules are disabled.  To enable the Rule 2, click three dots (<strong><code>...</code></strong>) at the right side and then toggle <strong>Enable Rule</strong> as shown in below screenshot. </p>
 </li>
 </ul>
-<p><strong>Important Note:</strong> The above screenshots are for <code>Site-100 cE1</code> only. You must <strong>repeat</strong> these tasks for <code>Site300-cE1</code> and <code>Site400-cE1</code>.</p>
-<p><strong>Result:</strong> The device templates for cEdge devices are now correctly configured and attached in vManage, ensuring proper management and configuration of these devices as per the network requirements.</p>
+<p><img alt="" src="../pics/rule-2-enable.png" /></p>
+<ul>
+<li>Confirm by clicking <strong>Update</strong>:</li>
+</ul>
+<p><img alt="" src="../pics/umbrella-p14.png" /></p>
+<ul>
+<li>After saving the rule, You may scroll down under Ruleset settings and click on <strong>Close</strong> button.</li>
+</ul>
+<p>Now the Umbrella policies for regional sites (site-100 and Site-400) have been configured. </p>
+<h2 id="step-3---web-policy-tester">Step 3 - Web Policy Tester<a class="headerlink" href="#step-3---web-policy-tester" title="Permanent link"></a></h2>
+<p>Let's go through the steps to test the newly created Web policies by using "Policy Tester" on  Umbrella.</p>
+<ul>
+<li>
+<p>On Umbrella Dashboard, navigate to <strong>Policies &gt; Management &gt; Web Policy</strong>.  Click on <strong>Policy Tester</strong> at the top right corner: 
+<img alt="" src="../pics/umbrella-web-policy-test.png" /></p>
+</li>
+<li>
+<p>On the <code>Web Policy Tester</code> page,</p>
+<ul>
+<li>Under the <strong>Primary Identity</strong> search box type <strong><code>Site1</code></strong> and then select any of the <strong>Site100</strong> tunnels </li>
+<li>Under <strong>Destination</strong>, enter <strong><code>chase.com</code></strong></li>
+<li>Then click <strong>Run Test</strong> button: 
+<img alt="" src="../pics/web-policy-test-result-regional-1.png" /></li>
+</ul>
+</li>
+</ul>
+<p>The result of this test appears on the page and as expected it shows the Ruleset 2 and rule being matched by the Web policy. </p>
+<ul>
+<li>Next run a test for any of the Site100 tunnel for below destinations:<ul>
+<li>Under <strong>Destination</strong>, enter <strong><code>www.cnn.com</code></strong>
+<img alt="" src="../pics/web-policy-test-result-regional-2.png" /></li>
+</ul>
+</li>
+</ul>
+<p>The result of this test appears on the page and as expected it shows the Ruleset 2 and rule being matched by the Web policy. </p>
+<ul>
+<li>Explore the Web Policy Tester further by testing traffic to different destination website such as cisco.com, google.com etc for Regional sites traffic.</li>
+</ul>
+<h2 id="step-4---verify-policies-on-hosts">Step 4 - Verify Policies on Hosts<a class="headerlink" href="#step-4---verify-policies-on-hosts" title="Permanent link"></a></h2>
+<p>Now lets validate the impact of both Firewall and Web Policies from the SD-WAN Site-400 (Regional site).</p>
+<ul>
+<li>
+<p>First validate if traffic is being redirected to Umbrella.</p>
+<ul>
+<li>Launch console access to ubuntu <strong>Site400-VPN10</strong> host by using <strong>mRemoteNG</strong> application.  Login with credentials of <code>viptela</code></li>
+<li>Use Chromium Browser to navigate to <code>welcome.umbrella.com</code>.  A green check mark should appear, confirming that traffic from VPN 10 is being successfully redirected to Umbrella.</li>
+</ul>
+</li>
+<li>
+<p>Verify Web Policy by using Chromium Web Browser on <strong>Site400-VPN10</strong> host.  Just like previous step, use the console of ubuntu <strong>Site400 VPN10</strong> host by using <strong>mRemoteNG</strong> application.</p>
+<ul>
+<li>Use Chromium to navigate onto traditional websites, such as <code>www.cisco.com</code>.  Access to this website should work.</li>
+<li>Use Chromium to navigate to <code>www.cnn.com</code>.  As per our Umbrella Web Policy, this site should be blocked and, as expected, Cisco Umbrella block page will appear.</li>
+<li>Use Chromium to navigate to <code>www.chase.com</code>.  As per our Umbrella Web Policy, this sites should be blocked and, as expected, Cisco Umbrella block page will appear.</li>
+<li>Use Chromium to navigate to <code>www.bankofamerica.com</code>.  As per our Umbrella Web Policy, this sites should be blocked and, as expected, Cisco Umbrella block page will appear.</li>
+<li>Use Chromium to navigate onto <code>www.facebook.com</code>.  Access to this site should work as expected</li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -839,42 +891,6 @@
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../Task1-Connect/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Task-1 VPN connection" rel="prev">
-            <div class="md-footer__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Task-1 VPN connection
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../Task3-v1/" class="md-footer__link md-footer__link--next" aria-label="Next: Task-3 Internet Access for SD-WAN Site-100 &amp; Site-400" rel="next">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Task-3 Internet Access for SD-WAN Site-100 & Site-400
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
