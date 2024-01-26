@@ -771,8 +771,7 @@
 <p><strong>Objective:</strong> Configure a Firewall Policy on the Umbrella Dashboard to block ICMP traffic.</p>
 <p><strong>1. Accessing the Umbrella Dashboard:</strong></p>
 <ul>
-<li>Log in to the Umbrella Dashboard via the <code>Umbrella SSO</code> bookmark in Google Chrome on the RDP session (jumphost).
-  <img alt="Umbrella Dashboard" src="../pics/umbrella-p1.png" /></li>
+<li>Log in to the Umbrella Dashboard via the <code>Umbrella SSO</code> bookmark in Google Chrome on the RDP session (jumphost).</li>
 </ul>
 <p><strong>2. Creating the Firewall Rule:</strong></p>
 <ul>
@@ -796,15 +795,14 @@
   <img alt="Add Web Policy" src="../pics/umbrella-p5.png" /></p>
 </li>
 <li>
-<p>Click <strong><code>ADD RULE</code></strong> under <strong>Ruleset Rules</strong>.
-  <img alt="Add Rule" src="../pics/umbrella-p6.png" /></p>
+<p>Click <strong><code>ADD RULE</code></strong> under <strong>Ruleset Rules</strong>.</p>
 </li>
 <li>
 <p>Name the rule <strong><code>Block Facebook</code></strong>. The default action is <code>Block</code>. Then click <strong><code>Add Identity</code></strong>.
   <img alt="Add Identity" src="../pics/umbrella-p6.png" /></p>
 </li>
 <li>
-<p>Select <strong><code>Network Tunnels</code></strong> and click <strong>Apply</strong>.  This will result in selecting the two network tunnels between Umbrella cloud and SD-WAN Site-300
+<p>On the <code>IDENTITIES</code> page, scroll down, select the <strong>Network Tunnels</strong> and hit <strong>Apply</strong> as shown in below screenshot.  This will result in selecting the two network tunnels between Umbrella cloud and SD-WAN Site-300:
   <img alt="Select Tunnels" src="../pics/umbrella-p7.png" /></p>
 </li>
 <li>
@@ -812,15 +810,15 @@
   <img alt="Add Destination" src="../pics/umbrella-p8.png" /></p>
 </li>
 <li>
-<p>Click on <strong>Application Settings</strong> (on the right side at the right arrow <strong>&gt;</strong>), then Scroll down to <strong><code>Social Networking</code></strong> and Click on the right arrow <strong>&gt;</strong> of the <strong>Social Networking</strong>.
+<p>Click on <strong>Application Settings</strong> (on the right side at the right arrow <strong><code>&gt;</code></strong>), then Scroll down to <strong><code>Social Networking</code></strong> and Click on the right arrow <strong><code>&gt;</code></strong> of the <strong>Social Networking</strong>.
   <img alt="" src="../pics/umbrella-p9.png" /></p>
 </li>
 <li>
-<p>Next, select <strong>Facebook</strong> and <strong>Facebook Messenger</strong> and hit <strong>Apply</strong>
+<p>Next, select <strong><code>Facebook</code></strong> and <strong><code>Facebook Messenger</code></strong> and hit <strong><code>Apply</code></strong>
 <img alt="" src="../pics/umbrella-p11.png" /></p>
 </li>
 <li>
-<p>On the main Rule screen, Click <strong>Save</strong> at the right side of the newly created Rule:
+<p>On the main Rule screen, Click <strong><code>Save</code></strong> at the right side of the newly created Rule:
 <img alt="" src="../pics/umbrella-p12.png" /></p>
 </li>
 <li>
@@ -832,19 +830,19 @@
 <img alt="" src="../pics/umbrella-p14.png" /></p>
 </li>
 <li>
-<p>Under <strong>Ruleset Settings</strong>, go to the <strong>Ruleset Identities</strong> section and click <strong><code>Edit</code></strong>
+<p>Under <strong>Ruleset Settings</strong>, go to the <strong><code>Ruleset Identities</code></strong> section and click <strong><code>Edit</code></strong>
 <img alt="" src="../pics/umbrella-p15.png" /></p>
 </li>
 <li>
-<p>Select <strong>Tunnels</strong> under <code>All Identities</code> and click <strong>Save</strong>
+<p>Select <strong><code>Tunnels</code></strong> under <code>All Identities</code> and click <strong><code>Save</code></strong>
 <img alt="" src="../pics/umbrella-p16.png" /></p>
 </li>
 <li>
-<p>Under <strong>Ruleset Settings</strong>, go to the <strong>HTTPS Inspection</strong> section and click <strong>Edit</strong> 
+<p>Under <strong>Ruleset Settings</strong>, go to the <strong><code>HTTPS Inspection</code></strong> section and click <strong><code>Edit</code></strong> 
 <img alt="" src="../pics/umbrella-p17.png" /></p>
 </li>
 <li>
-<p>Select <strong>Enable HTTPS Inspection</strong>, then <strong>Save</strong>
+<p>Select <strong><code>Enable HTTPS Inspection</code></strong>, then <strong><code>Save</code></strong>
 <img alt="" src="../pics/umbrella-p18.png" /></p>
 </li>
 <li>
@@ -920,15 +918,15 @@
 <p>On <strong>Destination List Type</strong> select <strong><code>Web Policy</code></strong> from the dropdown menu</p>
 </li>
 <li>
-<p>In the <strong>Destinations</strong> field, enter <strong><code>cnn.com</code></strong> and then click <strong>Add</strong>
+<p>In the <strong>Destinations</strong> field, enter <strong><code>cnn.com</code></strong> and then click <strong><code>Add</code></strong> as shown below:
 <img alt="" src="../pics/umbrella-destination-03.png" /></p>
 </li>
 <li>
-<p>Verify <code>cnn.com</code> is added and Click <strong>Save</strong>
+<p>Verify <code>cnn.com</code> is added and Click <strong><code>Save</code></strong>:
 <img alt="" src="../pics/umbrella-destination-04.png" /></p>
 </li>
 <li>
-<p>Now Navigate to <strong>Policy &gt; Management &gt; Web Policy</strong> and expand on <strong>RuleSet 1</strong>
+<p>Now Navigate to <strong>Policy &gt; Management &gt; Web Policy</strong> and expand on <strong><code>RuleSet 1</code></strong> as shown below:
 <img alt="" src="../pics/umbrella-destination-05.png" /></p>
 </li>
 <li>
@@ -936,11 +934,11 @@
 <img alt="" src="../pics/umbrella-destination-06.png" /></p>
 </li>
 <li>
-<p>Enter Rule name : <strong><code>Custom List</code></strong> and click <strong><code>Add Identity</code></strong>
+<p>Enter <strong>Rule name</strong> : <strong><code>Custom List</code></strong> and click <strong><code>Add Identity</code></strong>
 <img alt="" src="../pics/umbrella-destination-07.png" /> </p>
 </li>
 <li>
-<p>Enable <strong><code>Inherit Ruleset Identities</code></strong> and click <strong><code>Apply</code></strong>
+<p>Enable <strong><code>Inherit Ruleset Identities</code></strong> and click <strong><code>Apply</code></strong> as shown below:
 <img alt="" src="../pics/umbrella-destination-08.png" /> </p>
 </li>
 <li>
@@ -948,11 +946,11 @@
 <img alt="" src="../pics/umbrella-destination-09.png" /> </p>
 </li>
 <li>
-<p>Select <strong>Custom Block List</strong> and then click <strong>Apply</strong> 
+<p>Select <strong><code>Custom Block List</code></strong> and then click <strong><code>Apply</code></strong> 
 <img alt="" src="../pics/umbrella-destination-10.png" /></p>
 </li>
 <li>
-<p>Click <strong>Save</strong> to save this new rule
+<p>Click <strong><code>Save</code></strong> to save this new rule
 <img alt="" src="../pics/umbrella-destination-11.png" /></p>
 </li>
 <li>
