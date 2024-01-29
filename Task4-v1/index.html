@@ -814,12 +814,18 @@
 <p><strong>4. Testing Connectivity on Ubuntu VM:</strong> </p>
 <ul>
 <li>Using <strong>mRemoteNG</strong>, access <code>Site300-Ubuntu-VPN10</code> VM</li>
-<li>Launch <code>Terminal</code> application on this VM and then initiate <code>ping 8.8.8.8</code>.  The ping should be successful.
-  <img alt="Successful Ping" src="../pics/ubuntu-ping-ok.png" /></li>
-<li>Execute a traceroute using the command traceroute 8.8.8.8 and take note of the contrast with the previous task's output. In this instance, the traffic is now being routed through the Global Routing Table (GRT) of the WAN Edge router, specifically to <code>10.2.6.1</code>.
-  <img alt="Traceroute Result" src="../pics/ubuntu-300-trace-int.png" /></li>
-<li>Launch <code>Chromium Web browser</code> and verify Internet access by navigating to <code>www.cisco.com</code> or another website.
-  <img alt="Internet Access" src="../pics/Internet-access.png" /></li>
+<li>
+<p>Launch <code>Terminal</code> application on this VM and then initiate <code>ping 8.8.8.8</code>.  Press <code>Ctrl+C</code> after few seconds.  The ping should be successful.
+  <img alt="Successful Ping" src="../pics/ubuntu-ping-ok.png" /></p>
+</li>
+<li>
+<p>Execute a traceroute using the command <code>traceroute 8.8.8.8</code> on <code>Terminal</code>. Take note of the contrast with the previous task's output on this VM/host.  In this instance, the traffic is now being routed through the Global Routing Table (GRT) of the WAN Edge router, specifically to <code>10.2.6.1</code>.
+  <img alt="Traceroute Result" src="../pics/ubuntu-300-trace-int.png" /></p>
+</li>
+<li>
+<p>Launch <code>Chromium Web browser</code> and verify Internet access by navigating to <code>www.cisco.com</code> or another website.
+  <img alt="Internet Access" src="../pics/Internet-access.png" /></p>
+</li>
 </ul>
 <h2 id="step-3---internet-connectivity-on-other-vpns">Step 3 - Internet Connectivity on other VPNs<a class="headerlink" href="#step-3---internet-connectivity-on-other-vpns" title="Permanent link"></a></h2>
 <p><strong>Objective:</strong> Confirm that only Site300 VPN-10 has Direct Internet Access, while other VPNs like VPN-12 lack internet connectivity.</p>
