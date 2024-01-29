@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wan-edges---internal" class="md-skip">
+        <a href="#wan-edges---internal-ip-addresses-sd-wan-sites" class="md-skip">
           Skip to content
         </a>
       
@@ -431,8 +431,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wan-edges---internal" class="md-nav__link">
-    WAN Edges - Internal
+  <a href="#wan-edges---internal-ip-addresses-sd-wan-sites" class="md-nav__link">
+    WAN Edges - Internal IP Addresses (SD-WAN Sites)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wan-edges--external-ip-addresses-sd-wan-sites" class="md-nav__link">
+    WAN Edges – External IP Addresses (SD-WAN Sites)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controllers" class="md-nav__link">
+    Controllers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hosts-ubuntu-vms-on-sd-wan-sites" class="md-nav__link">
+    Hosts (Ubuntu VMs) on SD-WAN Sites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-credentials-and-connection-details" class="md-nav__link">
+    UI Credentials and Connection Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-credentials-and-connection-details" class="md-nav__link">
+    SSH Credentials and Connection Details
   </a>
   
 </li>
@@ -690,8 +725,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wan-edges---internal" class="md-nav__link">
-    WAN Edges - Internal
+  <a href="#wan-edges---internal-ip-addresses-sd-wan-sites" class="md-nav__link">
+    WAN Edges - Internal IP Addresses (SD-WAN Sites)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wan-edges--external-ip-addresses-sd-wan-sites" class="md-nav__link">
+    WAN Edges – External IP Addresses (SD-WAN Sites)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controllers" class="md-nav__link">
+    Controllers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hosts-ubuntu-vms-on-sd-wan-sites" class="md-nav__link">
+    Hosts (Ubuntu VMs) on SD-WAN Sites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-credentials-and-connection-details" class="md-nav__link">
+    UI Credentials and Connection Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-credentials-and-connection-details" class="md-nav__link">
+    SSH Credentials and Connection Details
   </a>
   
 </li>
@@ -717,7 +787,7 @@
   <h1>Devices Access</h1>
 
 <p>#Address Plan, Connection Details and Credentials</p>
-<h2 id="wan-edges---internal">WAN Edges - Internal<a class="headerlink" href="#wan-edges---internal" title="Permanent link"></a></h2>
+<h2 id="wan-edges---internal-ip-addresses-sd-wan-sites">WAN Edges - Internal IP Addresses (SD-WAN Sites)<a class="headerlink" href="#wan-edges---internal-ip-addresses-sd-wan-sites" title="Permanent link"></a></h2>
 <table>
 <thead>
 <tr>
@@ -754,7 +824,7 @@
 </tr>
 </tbody>
 </table>
-<p>##WAN Edges – External</p>
+<h2 id="wan-edges--external-ip-addresses-sd-wan-sites">WAN Edges – External IP Addresses (SD-WAN Sites)<a class="headerlink" href="#wan-edges--external-ip-addresses-sd-wan-sites" title="Permanent link"></a></h2>
 <table>
 <thead>
 <tr>
@@ -796,39 +866,199 @@
 </tr>
 </tbody>
 </table>
-<p>##Controllers
-|Node|  System  |Site ID|
-|&mdash;|&mdash;|&mdash;|
-|vManage|   1.1.1.1|    1|
-|vBond| 1.1.1.2|    -|
-|vSmart-1|1.1.1.3|  1|
-|vSmart-2|1.1.1.4|  1|</p>
-<p>##3<sup>rd</sup> Party Devices
-|Node|  Type|   Site|   VPN ID |    IP address|
-|&mdash;|&mdash;|&mdash;|&mdash;|&mdash;|
-|Site300-Ubuntu-VPN10|  Host|   300 |10 |10.30.1.10/24|
-|Site300-Ubuntu-VPN12|  Host|   300 |12|10.32.1.10/24|
-|Site400-Ubuntu-VPN10|  Host|   400|10  |10.40.1.10/24|
-|Site400-Ubuntu-VPN12|  Host|   400 |12 |10.42.1.10/24|</p>
-<p>##UI Credentials and Connection Details
-|Node|  IP|Port|Username|Password|
-|&mdash;|&mdash;|&mdash;|&mdash;|&mdash;|
-|vManage|   198.18.133.200|8443|    admin   |C1sco12345|
-|Site300-Ubuntu-VPN10|198.18.133.200|30503|ubuntu|viptela|
-|Site300-Ubuntu-VPN12|198.18.133.200|30504|ubuntu|viptela|
-|Site400-Ubuntu-VPN10|198.18.133.200|30501|ubuntu|viptela|
-|Site400-Ubuntu-VPN12|198.18.133.200|30500|ubuntu|viptela|</p>
-<p>##SSH Credential and Connection Details
-|Node|  IP|Port|Username|Password|
-|&mdash;|&mdash;|&mdash;|&mdash;|&mdash;|
-|vManage|198.18.133.200|19001|admin|C1sco12345|
-|vBond|198.18.133.200|19002|admin|admin|
-|vSmart-1|198.18.133.200|19003|admin|admin|
-|vSmart-2|198.18.133.200|19005|admin|admin|
-|Site100-cE1|198.18.133.200|19007|admin|admin|
-|Site200-cE1|198.18.133.200|19011|admin|admin|
-|Site300-cE1|198.18.133.200|19017|admin|admin|
-Site400-cE1|198.18.133.200|19021|admin| admin|</p>
+<h2 id="controllers">Controllers<a class="headerlink" href="#controllers" title="Permanent link"></a></h2>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>System</th>
+<th>Site ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vManage</td>
+<td>1.1.1.1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>vBond</td>
+<td>1.1.1.2</td>
+<td>-</td>
+</tr>
+<tr>
+<td>vSmart-1</td>
+<td>1.1.1.3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>vSmart-2</td>
+<td>1.1.1.4</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hosts-ubuntu-vms-on-sd-wan-sites">Hosts (Ubuntu VMs) on SD-WAN Sites<a class="headerlink" href="#hosts-ubuntu-vms-on-sd-wan-sites" title="Permanent link"></a></h2>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Type</th>
+<th>Site</th>
+<th>VPN ID</th>
+<th>IP address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Site300-Ubuntu-VPN10</td>
+<td>Host</td>
+<td>300</td>
+<td>10</td>
+<td>10.30.1.10/24</td>
+</tr>
+<tr>
+<td>Site300-Ubuntu-VPN12</td>
+<td>Host</td>
+<td>300</td>
+<td>12</td>
+<td>10.32.1.10/24</td>
+</tr>
+<tr>
+<td>Site400-Ubuntu-VPN10</td>
+<td>Host</td>
+<td>400</td>
+<td>10</td>
+<td>10.40.1.10/24</td>
+</tr>
+<tr>
+<td>Site400-Ubuntu-VPN12</td>
+<td>Host</td>
+<td>400</td>
+<td>12</td>
+<td>10.42.1.10/24</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ui-credentials-and-connection-details">UI Credentials and Connection Details<a class="headerlink" href="#ui-credentials-and-connection-details" title="Permanent link"></a></h2>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>IP</th>
+<th>Port</th>
+<th>Username</th>
+<th>Password</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vManage</td>
+<td>198.18.133.200</td>
+<td>8443</td>
+<td>admin</td>
+<td>C1sco12345</td>
+</tr>
+<tr>
+<td>Site300-Ubuntu-VPN10</td>
+<td>198.18.133.200</td>
+<td>30503</td>
+<td>ubuntu</td>
+<td>viptela</td>
+</tr>
+<tr>
+<td>Site300-Ubuntu-VPN12</td>
+<td>198.18.133.200</td>
+<td>30504</td>
+<td>ubuntu</td>
+<td>viptela</td>
+</tr>
+<tr>
+<td>Site400-Ubuntu-VPN10</td>
+<td>198.18.133.200</td>
+<td>30501</td>
+<td>ubuntu</td>
+<td>viptela</td>
+</tr>
+<tr>
+<td>Site400-Ubuntu-VPN12</td>
+<td>198.18.133.200</td>
+<td>30500</td>
+<td>ubuntu</td>
+<td>viptela</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ssh-credentials-and-connection-details">SSH Credentials and Connection Details<a class="headerlink" href="#ssh-credentials-and-connection-details" title="Permanent link"></a></h2>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>IP</th>
+<th>Port</th>
+<th>Username</th>
+<th>Password</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vManage</td>
+<td>198.18.133.200</td>
+<td>19001</td>
+<td>admin</td>
+<td>C1sco12345</td>
+</tr>
+<tr>
+<td>vBond</td>
+<td>198.18.133.200</td>
+<td>19002</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td>vSmart-1</td>
+<td>198.18.133.200</td>
+<td>19003</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td>vSmart-2</td>
+<td>198.18.133.200</td>
+<td>19005</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td>Site100-cE1</td>
+<td>198.18.133.200</td>
+<td>19007</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td>Site200-cE1</td>
+<td>198.18.133.200</td>
+<td>19011</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td>Site300-cE1</td>
+<td>198.18.133.200</td>
+<td>19017</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td>Site400-cE1</td>
+<td>198.18.133.200</td>
+<td>19021</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+</tbody>
+</table>
 
 
 
