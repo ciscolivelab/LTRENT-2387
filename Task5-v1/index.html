@@ -791,7 +791,7 @@
 
 
 <h1 id="task-5-umbrella-integration-with-site-300">Task 5: Umbrella integration with Site-300<a class="headerlink" href="#task-5-umbrella-integration-with-site-300" title="Permanent link"></a></h1>
-<p>In Task 5, we focus on integrating Site-300 with Cisco Umbrella. This integration is a crucial step in enhancing the network's security posture. By establishing this connection, Site-300 will form both active IPSec tunnels with the Umbrella cloud. As a result, IP traffic from Site-300, particularly for VPN-10, will be routed through Umbrella, allowing for external access (such as Public Cloud, SaaS applications, and the Public Internet) while leveraging Umbrella's security services. This integration not only ensures more secure internet access but also paves the way for future enhancements, including the monitoring and enforcement of security capabilities directly from the Umbrella cloud. </p>
+<p>In Task 5, we focus on integrating Site-300 with Cisco Umbrella. This integration is a crucial step in enhancing the network's security posture. By establishing this connection, Site-300 will form active IPSec tunnels with the Umbrella cloud.  As a result, IP traffic from Site-300, particularly for VPN-10, will be routed through Umbrella, allowing for external access (such as Public Cloud, SaaS applications, and the Public Internet) while leveraging Umbrella's security services. This integration not only ensures more secure internet access but also paves the way for future enhancements, including the monitoring and enforcement of security capabilities directly from the Umbrella cloud. </p>
 <h2 id="step-1---umbrella-organization-id">Step 1 - Umbrella Organization ID<a class="headerlink" href="#step-1---umbrella-organization-id" title="Permanent link"></a></h2>
 <p><strong>Objective:</strong> Obtain the Umbrella Organization ID (Org ID) necessary for integrating Umbrella with Cisco SD-WAN.</p>
 <p><strong>1. Accessing the Umbrella Dashboard:</strong></p>
@@ -815,12 +815,12 @@
 <ul>
 <li>The Umbrella organization (Org) is a distinct entity with its own dashboard. The <strong><code>Org ID</code></strong> is a unique number used to identify each organization and is essential for integrating Umbrella with Cisco SD-WAN.</li>
 <li>
-<p>Once logged into the Umbrella dashboard, extract the <strong><code>[Org ID]</code></strong> from the URL in the address bar. The <strong><code>Org ID</code></strong> appears in the following format:
+<p>Once logged into the Umbrella dashboard, extract the <strong><code>[Org ID]</code></strong> from the URL in the address bar. The <code>Org ID</code> appears in the following format:
 <div class="highlight"><pre><span></span><code>https://dashboard.umbrella.com/o/[Org ID]/#/...
 </code></pre></div></p>
 </li>
 <li>
-<p>Here is an example to illustrate where the <strong><code>Org ID</code></strong> is located in the URL:
+<p>Here is an example to illustrate where the <code>Org ID</code> of <strong><code>1234567</code></strong> is located in the URL:
 <img alt="Umbrella Org ID Example" src="../pics/Umbrella-ord-id-1.png" /></p>
 </li>
 </ul>
