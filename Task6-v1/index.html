@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#task-6-umbrella-policy-for-site-300" class="md-skip">
+        <a href="#task-6-configuring-umbrella-policies-for-site-300" class="md-skip">
           Skip to content
         </a>
       
@@ -776,13 +776,14 @@
   
 
 
-<h1 id="task-6-umbrella-policy-for-site-300">Task 6: Umbrella Policy for Site-300<a class="headerlink" href="#task-6-umbrella-policy-for-site-300" title="Permanent link"></a></h1>
-<p><strong>Introduction:</strong></p>
-<p>In Task 6, we aim to create specific Umbrella Policies for Site-300. These policies will include:</p>
+<h1 id="task-6-configuring-umbrella-policies-for-site-300">Task 6: Configuring Umbrella Policies for Site-300<a class="headerlink" href="#task-6-configuring-umbrella-policies-for-site-300" title="Permanent link"></a></h1>
+<p>In Task 6, our objective is to establish tailored Umbrella Policies for Site-300. These policies encompass the following key elements:</p>
 <ul>
-<li>Using a Firewall Policy on Umbrella to block ICMP traffic to Google's IP address <strong>8.8.8.8</strong>.</li>
-<li>Using a Web Policy on Umbrella to block web traffic to social media websites, specifically Facebook.</li>
+<li>Utilizing a Firewall Policy within Umbrella to block ICMP traffic directed to Google's IP address 8.8.8.8.</li>
+<li>Implementing a Web Policy in Umbrella to restrict web traffic, particularly targeting social media websites, with a specific focus on Facebook.</li>
+<li>Additionally, we will configure a Web Policy to block traffic to a specific website using a custom list within Umbrella.</li>
 </ul>
+<p>These policies enhance the security and control of Site-300's network traffic. Let's proceed with the detailed configuration steps to create and enforce these Umbrella Policies.</p>
 <h2 id="step-1---firewall-policy">Step 1 - Firewall Policy<a class="headerlink" href="#step-1---firewall-policy" title="Permanent link"></a></h2>
 <p><strong>Objective:</strong> Configure a Firewall Policy on the Umbrella Dashboard to block ICMP traffic.</p>
 <p><strong>1. Accessing the Umbrella Dashboard:</strong></p>
@@ -797,11 +798,11 @@
 <li>Select <strong><code>Block</code></strong> under <strong>Rule Action</strong>.
   <img alt="Rule Action" src="../pics/umbrella-p2.png" /></li>
 <li>Choose <strong><code>ICMP</code></strong> under <strong>Rule Criteria &gt; Protocol</strong>.</li>
-<li>Under <strong>Destinations</strong>, select <strong><code>Specify IP</code></strong> and enter the <strong>CIDR IP</strong> Address <code>8.8.8.8</code> and Click <strong>Add</strong>
+<li>Under <strong>Destinations</strong>, select <strong><code>Specify IP</code></strong> from dropdown menu.  Then enter the <strong>CIDR IP Addresses</strong> of <code>8.8.8.8</code> and Click <strong>Add</strong> as shown in below Figure:
   <img alt="Specify IP" src="../pics/umbrella-p3.png" /></li>
-<li>Under <strong>Logging</strong> toggle the <strong><code>Logging Enabled</code></strong> to turn it on and then <strong>Save</strong> the policy.
-  <img alt="Save Policy" src="../pics/umbrella-p4.png" /></li>
+<li>Scroll further down to the <strong>Logging</strong> section, and toggle the <strong><code>Logging Enabled</code></strong> option to turn it on. Then, click on <strong>Save</strong> to save the policy, as illustrated in the figure below.</li>
 </ul>
+<p><img alt="Save Policy" src="../pics/umbrella-p4.png" /></p>
 <h2 id="step-2---web-policy">Step 2 - Web Policy<a class="headerlink" href="#step-2---web-policy" title="Permanent link"></a></h2>
 <p><strong>Objective:</strong> Set up an Umbrella Web Policy to block access to Facebook.</p>
 <p><strong>1. Creating Web Policy:</strong></p>
@@ -814,7 +815,7 @@
 <p>Click <strong><code>ADD RULE</code></strong> under <strong>Ruleset Rules</strong>.</p>
 </li>
 <li>
-<p>Name the rule <strong><code>Block Facebook</code></strong>. The default action is <code>Block</code>. Then click <strong><code>Add Identity</code></strong>.
+<p>Name the rule <strong><code>Block Facebook</code></strong>. The default action is <code>Block</code>. Then click <strong><code>Add Identity</code></strong> as shown in below Figure:
   <img alt="Add Identity" src="../pics/umbrella-p6.png" /></p>
 </li>
 <li>
@@ -826,7 +827,11 @@
   <img alt="Add Destination" src="../pics/umbrella-p8.png" /></p>
 </li>
 <li>
-<p>Click on <strong>Application Settings</strong> (on the right side at the right arrow <strong><code>&gt;</code></strong>), then Scroll down to <strong><code>Social Networking</code></strong> and Click on the right arrow <strong><code>&gt;</code></strong> of the <strong>Social Networking</strong>.
+<p>Click on <strong>Application Settings</strong> (on the right side at the right arrow <strong><code>&gt;</code></strong>) as shown in below Figure:
+  <img alt="Add Destination" src="../pics/umbrella-p8a.png" /></p>
+</li>
+<li>
+<p>Then Scroll down to <strong><code>Social Networking</code></strong> and Click on the right arrow <strong><code>&gt;</code></strong> of the <strong>Social Networking</strong>.
   <img alt="" src="../pics/umbrella-p9.png" /></p>
 </li>
 <li>
@@ -834,11 +839,11 @@
 <img alt="" src="../pics/umbrella-p11.png" /></p>
 </li>
 <li>
-<p>On the main Rule screen, Click <strong><code>Save</code></strong> at the right side of the newly created Rule:
+<p>On the main Rule screen, Click <strong><code>Save</code></strong> at the right side of the newly created Rule as shown in below Figure:
 <img alt="" src="../pics/umbrella-p12.png" /></p>
 </li>
 <li>
-<p>Click three dots (<strong><code>...</code></strong>) and then <strong><code>Enable Rule</code></strong>
+<p>Notice the rule is greyed out i.e., it's not enabled by default.  Click three dots (<strong><code>...</code></strong>) and then <strong><code>Enable Rule</code></strong>
 <img alt="" src="../pics/umbrella-p13.png" /></p>
 </li>
 <li>
@@ -895,7 +900,7 @@
 <p><strong>1. Validating Traffic Redirection:</strong></p>
 <ul>
 <li>
-<p>Launch console access to ubuntu <code>Site300-Ubuntu-VPN10</code> host by using <strong>mRemoteNG</strong> application.</p>
+<p>Relaunch console access to ubuntu <code>Site300-Ubuntu-VPN10</code> host by using <strong>mRemoteNG</strong> application.</p>
 </li>
 <li>
 <p>Access <code>welcome.umbrella.com</code> on this ubuntu host to confirm traffic redirection.  green check mark should appear, confirming that traffic from VPN 10 is being successfully redirected to Umbrella.</p>
@@ -920,7 +925,7 @@
 </li>
 </ul>
 <h2 id="step-5---block-sites-using-destination-list">Step 5 - Block Sites Using Destination List<a class="headerlink" href="#step-5---block-sites-using-destination-list" title="Permanent link"></a></h2>
-<p><strong>Objective:</strong> Create a custom destination list to block specific sites.</p>
+<p><strong>Objective:</strong> Create a custom destination list to block specific websites.</p>
 <p><strong>1. Creating and Applying Custom Block List:</strong></p>
 <ul>
 <li>
@@ -928,7 +933,7 @@
   <img alt="Add Destination List" src="../pics/umbrella-destination-01.png" /></p>
 </li>
 <li>
-<p>Enter <strong>Name</strong> : <strong><code>Custom Block List</code></strong></p>
+<p>Enter <strong>List Name</strong> : <strong><code>Custom Block List</code></strong></p>
 </li>
 <li>
 <p>On <strong>Destination List Type</strong> select <strong><code>Web Policy</code></strong> from the dropdown menu</p>
@@ -962,11 +967,11 @@
 <img alt="" src="../pics/umbrella-destination-09.png" /> </p>
 </li>
 <li>
-<p>Select <strong><code>Custom Block List</code></strong> and then click <strong><code>Apply</code></strong> 
+<p>Select <strong><code>Custom Block List</code></strong> and then click <strong><code>Apply</code></strong> as shown in below Figure:
 <img alt="" src="../pics/umbrella-destination-10.png" /></p>
 </li>
 <li>
-<p>Click <strong><code>Save</code></strong> to save this new rule
+<p>Make sure to Click <strong><code>Save</code></strong> to save this new rule
 <img alt="" src="../pics/umbrella-destination-11.png" /></p>
 </li>
 <li>
@@ -978,14 +983,20 @@
 <img alt="" src="../pics/umbrella-destination-13.png" /></p>
 </li>
 </ul>
+<p>Now, the Web Policy has been successfully updated with a new rule to block access to <code>cnn.com</code> as a custom list. The next step involves verifying this policy.</p>
 <p><strong>2. Testing the Custom Block List:</strong></p>
 <ul>
-<li>Using <strong>mRemoteNG</strong>, relaunch the console session of the Ubuntu VM <code>Site300-Ubuntu-VPN10</code></li>
 <li>
-<p>Use Chromium Web Browser to validate that traffic to <code>cnn.com</code> is now blocked</p>
+<p>Using <strong>mRemoteNG</strong>, relaunch the console session of the Ubuntu VM <code>Site300-Ubuntu-VPN10</code></p>
 </li>
 <li>
-<p>Repeat the steps to block <code>bbc.com</code> and validate on the same host.</p>
+<p>Use the Chromium Web Browser to confirm that traffic to <code>bbc.com</code> functions as expected.</p>
+</li>
+<li>
+<p>Subsequently, employ the Chromium Web Browser to verify that traffic to <code>cnn.com</code> is now successfully blocked.</p>
+</li>
+<li>
+<p>Repeat the procedure in Step 5 to block <code>bbc.com</code> as a custom list, and then validate this change on the same host.</p>
 </li>
 </ul>
 <p><strong>Conclusion:</strong></p>
