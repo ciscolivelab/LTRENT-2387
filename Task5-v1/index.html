@@ -815,25 +815,25 @@
 <ul>
 <li>The Umbrella organization (Org) is a distinct entity with its own dashboard. The <strong><code>Org ID</code></strong> is a unique number used to identify each organization and is essential for integrating Umbrella with Cisco SD-WAN.</li>
 <li>
-<p>Once logged into the Umbrella dashboard, extract the <strong><code>[Org ID]</code></strong> from the URL in the address bar. The <code>Org ID</code> appears in the following format:
+<p>Once logged into the Umbrella dashboard, extract the <strong><code>[Org ID]</code></strong> from the URL in the address bar. The <strong><code>Org ID</code></strong> appears in the following format:
 <div class="highlight"><pre><span></span><code>https://dashboard.umbrella.com/o/[Org ID]/#/...
 </code></pre></div></p>
 </li>
 <li>
-<p>Here is an example to illustrate where the <code>Org ID</code> of <strong><code>1234567</code></strong> is located in the URL:
+<p>Here is an example to illustrate where the <strong><code>Org ID</code></strong> of <strong><code>1234567</code></strong> is located in the URL:
 <img alt="Umbrella Org ID Example" src="../pics/Umbrella-ord-id-1.png" /></p>
 </li>
 </ul>
 <p><strong>Important:</strong> The <strong><code>Org ID</code></strong> is required for later configuration steps in vManage for Umbrella SIG integration.</p>
 <h2 id="step-2---umbrella-api-key">Step 2 - Umbrella API Key<a class="headerlink" href="#step-2---umbrella-api-key" title="Permanent link"></a></h2>
-<p><strong>Objective:</strong> Generate an API token (Key, Secret) from the Umbrella dashboard for use in SD-WAN (vManage) configurations.</p>
+<p><strong>Objective:</strong> Generate API Key and Secret from the Umbrella dashboard for use in SD-WAN (vManage) configurations. These API credentials are used to authenticate requests to the Umbrella API.</p>
 <p><strong>1. Navigating to API Keys Page:</strong></p>
 <ul>
 <li>
 <p>After logging into the Umbrella dashboard, navigate to <strong>Admin &gt; API Keys</strong>.</p>
 </li>
 <li>
-<p>Then click on <strong><code>Legacy Keys</code></strong>.
+<p>Then click on <strong><code>Legacy Keys</code></strong> as shown in below Figure:
   <img alt="Umbrella API Keys Page" src="../pics/Umbrella-keys.png" /></p>
 </li>
 </ul>
@@ -854,7 +854,7 @@
 </thead>
 <tbody>
 <tr>
-<td align="center">Ensure to copy both the <strong><code>Key</code></strong> and <strong><code>Secret</code></strong> as they are displayed only once and will not be visible again.</td>
+<td align="center">Ensure to <strong>copy</strong> both the <strong><code>Key</code></strong> and <strong><code>Secret</code></strong> as they are displayed only once and will not be visible again.</td>
 </tr>
 </tbody>
 </table>
@@ -870,8 +870,13 @@
 <p><strong>2. Editing the SIG Feature Template:</strong></p>
 <ul>
 <li>Type <strong><code>sig</code></strong> in the search bar and find the template named <strong><code>VIP23-SIG-Feature-Template</code></strong>.</li>
-<li>Click the three dots (<strong><code>...</code></strong>) at the right side of this template and select <strong><code>Edit</code></strong>.
-  <img alt="Edit SIG Feature Template" src="../pics/sig-feat-temp-3.png" /></li>
+<li>
+<p>Click the three dots (<strong><code>...</code></strong>) at the right side of this template and select <strong><code>Edit</code></strong>.
+  <img alt="Edit SIG Feature Template" src="../pics/sig-feat-temp-3.png" /></p>
+</li>
+<li>
+<p>Note this template will configure one Active and one backup IPSec tunnel between SD-WAN WAN Edge (Site300-cE1) and Umbrella.</p>
+</li>
 </ul>
 <p><strong>3. Creating Cisco SIG Credentials Template:</strong></p>
 <ul>
@@ -906,8 +911,8 @@
 </ul>
 <p><strong>4. Adding Cisco Secure Internet Gateway Template:</strong></p>
 <ul>
-<li>Click on <strong><code>Cisco Secure Internet Gateway</code></strong> to add this template to the device.</li>
-<li>After adding it, select <strong><code>VIP23-SIG-Feature-Template</code></strong> from the drop-down menu.
+<li>Click on <strong><code>Cisco Secure Internet Gateway</code></strong> to add this template to the device (you can see Figure after below step)</li>
+<li>After adding it, select <strong><code>VIP23-SIG-Feature-Template</code></strong> from the drop-down menu as shown in below Figure:
   <img alt="Adding SIG Template" src="../pics/sig-feat-temp-8.png" /></li>
 </ul>
 <p><strong>5. Confirming Cisco SIG Credentials:</strong></p>
@@ -933,24 +938,39 @@
 <p><strong>Objective:</strong> Confirm that the IPSec tunnels between the Umbrella cloud and SD-WAN Site-300 are operational.</p>
 <p><strong>1. Accessing the Umbrella Dashboard:</strong></p>
 <ul>
-<li>If not already open, launch Google Chrome on the RDP session and click on the <code>Umbrella SSO</code> bookmark to open the Umbrella dashboard.
-  <img alt="Umbrella Dashboard Access" src="../pics/umbrella-tun-unauth.png" /></li>
+<li>If not already open, launch Google Chrome on the RDP session and click on the <code>Umbrella SSO</code> bookmark to open the Umbrella dashboard.</li>
 </ul>
 <p><strong>2. Navigating to Network Tunnels:</strong></p>
 <ul>
-<li>Once logged in to the Umbrella Dashboard, go to <strong>Deployments &gt; Core Identities &gt; Network Tunnels</strong>.
-  <img alt="Network Tunnels" src="../pics/umbrella-tun-unauth.png" /></li>
+<li>
+<p>Once logged in to the Umbrella Dashboard, go to <strong>Deployments &gt; Core Identities &gt; Network Tunnels</strong>.</p>
+</li>
+<li>
+<p>Initially, the tunnels might be in the <code>Unestablished Tunnels</code> state as shown in below Figure:
+  <img alt="Network Tunnels" src="../pics/umbrella-tun-unauth.png" /></p>
+</li>
 </ul>
 <p><strong>3. Checking Tunnel Status:</strong></p>
 <ul>
-<li>Initially, the tunnels might be in the <code>Unestablished Tunnels</code> state. </li>
-<li>It may take a few minutes for the tunnels to become <strong>Active</strong>. Check for the presence of <strong>2 Active Tunnels</strong>.
-  <img alt="Active Tunnels" src="../pics/sig-feat-temp-12.png" /></li>
+<li>After few minutes the tunnels are expected to become <strong>Active</strong>. Check for the presence of <strong>2 Active Tunnels</strong>. <br />
+<img alt="Active Tunnels" src="../pics/sig-feat-temp-12.png" /></li>
 </ul>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Note:</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">In rare circumstances, such as concurrent resource allocation, a lab pod might establish only one <strong>Active</strong> tunnel. You may continue with the lab even if only a single tunnel becomes Active.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>4. Verifying Protection on Ubuntu VM:</strong></p>
 <ul>
 <li>Using the <strong>mRemoteNG</strong> application, launch a console session for the <code>Site300-Ubuntu-VPN10</code> VM.</li>
-<li>Inside the VM, open the <strong>Web Browser</strong> and navigate to <strong><code>welcome.umbrella.com</code></strong>. This step is to verify if Site-300 is protected by Umbrella.
+<li>Inside the VM, open the <strong>Chromimum Web Browser</strong> and navigate to <strong><code>welcome.umbrella.com</code></strong>. This step is to verify if Site-300 is protected by Umbrella.
   <img alt="Umbrella Protection Verification" src="../pics/umbrella-oops.png" /></li>
 </ul>
 <p><strong>5. Understanding the Failure:</strong></p>
@@ -999,11 +1019,19 @@
 </ul>
 <p><strong>6. Checking Traffic Routing:</strong></p>
 <ul>
-<li>In the console session of the Ubuntu VM <code>Site300-Ubuntu-VPN10</code>, run the command:
+<li>
+<p>In the console session of the Ubuntu VM <code>Site300-Ubuntu-VPN10</code>, run the command:
 <div class="highlight"><pre><span></span><code>traceroute 8.8.8.8
-</code></pre></div></li>
+</code></pre></div></p>
+</li>
+<li>
+<p>Can you observe any differences in the traceroute output compared to the earlier task? Please consider the hop count and any other routing details.</p>
+</li>
 </ul>
-<p>Observe the differences in the traceroute output compared to the earlier task. Consider the hop count and other routing details.</p>
+<p><img alt="traceroute" src="../pics/traceroute-site300-tunnel.png" /></p>
+<p><strong>Conclusion</strong>:  </p>
+<p>In Task 5, we successfully integrated Site-300 with Cisco Umbrella, a crucial step in enhancing network security and routing external IP traffic through Umbrella services. This integration establishes both active and backup IPSec tunnels between Site-300 and Umbrella, ensuring robust connectivity and resilience.</p>
+<p>With this accomplished integration, Site-300 is now well-prepared for the next phase of configuring IPSec tunnels and further enhancing network security through the integration with Umbrella Cloud services.</p>
 
 
 
