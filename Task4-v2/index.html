@@ -9,13 +9,17 @@
       
       
       
+        <link rel="prev" href="../Task3-v2/">
+      
+      
+        <link rel="next" href="../Task5-v2/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>Task 11 - Data Loss Prevention - Cisco Live 2024 LTRENT-2387</title>
+        <title>Task-4 Direct Internet Access for SD-WAN Site-300 - Cisco Live 2024 LTRENT-2387</title>
       
     
     
@@ -67,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#task-11---data-loss-prevention" class="md-skip">
+        <a href="#task-4---direct-internet-access-for-site-300" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task 11 - Data Loss Prevention
+              Task-4 Direct Internet Access for SD-WAN Site-300
             
           </span>
         </div>
@@ -236,13 +240,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../Task1-Connect/" class="md-tabs__link">
+      <a href="../Task1-Connect/" class="md-tabs__link md-tabs__link--active">
         Lab Guide
       </a>
     </li>
@@ -413,14 +419,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
         
@@ -455,7 +463,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Lab Guide
@@ -508,11 +516,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Task4-v2/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Task-4 Direct Internet Access for SD-WAN Site-300
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Task-4 Direct Internet Access for SD-WAN Site-300
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1---enable-dia-on-site-300-on-vpn-10" class="md-nav__link">
+    Step 1 - Enable DIA on Site-300 on VPN-10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2---verify-internet-connectivity-on-site-300" class="md-nav__link">
+    Step 2 - Verify Internet Connectivity on Site-300
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3---internet-connectivity-on-other-vpns" class="md-nav__link">
+    Step 3 - Internet Connectivity on other VPNs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -663,36 +726,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1---umbrella-dlp-monitor-policy" class="md-nav__link">
-    Step 1 - Umbrella DLP Monitor Policy
+  <a href="#step-1---enable-dia-on-site-300-on-vpn-10" class="md-nav__link">
+    Step 1 - Enable DIA on Site-300 on VPN-10
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2---sample-file-for-dlp" class="md-nav__link">
-    Step 2 - Sample file for DLP
+  <a href="#step-2---verify-internet-connectivity-on-site-300" class="md-nav__link">
+    Step 2 - Verify Internet Connectivity on Site-300
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3---validate-dlp-monitor-policy" class="md-nav__link">
-    Step 3 - Validate DLP Monitor Policy
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4---umbrella-dlp-block-policy" class="md-nav__link">
-    Step 4 - Umbrella DLP Block Policy
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5---validate-dlp-block-policy" class="md-nav__link">
-    Step 5 - Validate DLP Block Policy
+  <a href="#step-3---internet-connectivity-on-other-vpns" class="md-nav__link">
+    Step 3 - Internet Connectivity on other VPNs
   </a>
   
 </li>
@@ -715,137 +764,93 @@
   
 
 
-<h1 id="task-11---data-loss-prevention">Task 11 - Data Loss Prevention<a class="headerlink" href="#task-11---data-loss-prevention" title="Permanent link"></a></h1>
-<p>Umbrella Data Loss Prevention (DLP) policy helps to protect sensitive data uploaded to the web. It discovers and protects sensitive data stored being exposed outside of an organization.  </p>
-<p>This tasks will walk through the steps to create policy (called Real Time DLP Rule) that will monitor the web proxy traffic and then allow administrators to decide if the content should only be monitored or blocked.  In this case policy to monitor, and then block, files for General Data Protection Regulation (GDPR) classification will be configured.  The General Data Protection Regulation (GDPR) is a regulation in EU law on data protection and privacy.  Files with personal information such as names, addresses, phone numbers etc must be handled with care.  A sample file will be used to test the compliance of GDPR regulation i.e., monitoring and then enforcing/blocking.</p>
-<h2 id="step-1---umbrella-dlp-monitor-policy">Step 1 - Umbrella DLP Monitor Policy<a class="headerlink" href="#step-1---umbrella-dlp-monitor-policy" title="Permanent link"></a></h2>
-<p>In this step we will configure a DLP rule for monitoring GDPR compliance.</p>
+<h1 id="task-4---direct-internet-access-for-site-300">Task 4 - Direct Internet Access for Site-300<a class="headerlink" href="#task-4---direct-internet-access-for-site-300" title="Permanent link"></a></h1>
+<p>In this task, we will enable local Direct Internet Access (DIA) for Site-300. The configuration will route traffic on VPN-10 through this DIA setup. Implementing DIA at Site-300 is a strategic step towards enhancing network security. It will facilitate the setup of IPSec tunnels between Site-300 and the Umbrella Cloud, providing robust security measures from the Umbrella Cloud services. The detailed configuration of IPSec tunnels and their connectivity will be covered in a subsequent task.</p>
+<h2 id="step-1---enable-dia-on-site-300-on-vpn-10">Step 1 - Enable DIA on Site-300 on VPN-10<a class="headerlink" href="#step-1---enable-dia-on-site-300-on-vpn-10" title="Permanent link"></a></h2>
+<p><strong>Objective:</strong> Add a default route in VPN-10 pointing to VPN-0 (Global Routing Table) on the node Site300-cE1 by modifying the VPN-10 template in vManage.</p>
+<p><strong>1. Navigating in vManage:</strong> </p>
 <ul>
-<li>
-<p>On the RDP session (jumphost), logon to Umbrella Dashboard by clicking on Google Chrome Browser bookmark named <code>Umbrella SSO</code>.  It will open the Umbrella dashboard and auto-login using single-sign-on.</p>
-</li>
-<li>
-<p>Navigate to <strong>Policies &gt; Management &gt; Data Loss Prevention Policy</strong>.  Then click <strong>Add Rule</strong> on the right pane and select <strong><code>Real Time Rule</code></strong> to add a new DLP Policy as shown in below screenshot:</p>
-</li>
+<li>On vManage, navigate to <strong>Configuration &gt; Templates</strong>.
+  <img alt="vManage Configuration Templates" src="../pics/Config-Template.png" /> </li>
 </ul>
-<p><img alt="" src="../pics/t11-DLP-add-policy.png" /></p>
+<p><strong>2. Accessing Feature Templates:</strong> </p>
 <ul>
-<li>On the <code>Add New Real Time Rule</code> web page, configure the below settings and as shown in below screenshots<ul>
-<li><code>Rule Name</code>: <strong><code>DLP GDPR</code></strong></li>
-<li>From the <strong><code>Severity</code></strong> dropdown menu select <strong><code>Medium</code></strong></li>
-<li>In <code>Data Classifications</code> section, select <strong><code>Built-in GDPR classification</code></strong>.  Note you can click <code>Preview</code> to view the Data Identifiers</li>
-<li>In the <code>Identities</code>, select <strong><code>Tunnels</code></strong> to use the traffic from all SD-WAN sites</li>
-<li>In the <code>Destination</code> section, click on <strong><code>All Destinations</code></strong></li>
-<li>Within <code>Action</code> section, select <strong><code>Monitor</code></strong> from the dropdown menu</li>
-<li>Click <strong><code>Save</code></strong> at the bottom right</li>
+<li>Click on the <strong><code>Feature Templates</code></strong> tab.
+  <img alt="Feature Templates Tab" src="../pics/Config-Template-Feature.png" /></li>
 </ul>
-</li>
-</ul>
-<p><img alt="" src="../pics/t11-DLP-add-rule-1.png" />
-<img alt="" src="../pics/t11-DLP-add-rule-2.png" />
-<img alt="" src="../pics/t11-DLP-add-rule-3.png" /></p>
-<p>Now the DLP policy to inspect (Monitor) the compliance of GDPR data has been configured.</p>
-<h2 id="step-2---sample-file-for-dlp">Step 2 - Sample file for DLP<a class="headerlink" href="#step-2---sample-file-for-dlp" title="Permanent link"></a></h2>
-<p>In this step a sample file to test the previously configured DLP policy will be downloaded on a VM with hostname of <strong>Site300-Ubuntu-VPN10</strong> on SD-WAN site-300.  This file has sample data that includes items such as Name, Birth date, Gender, address etc.  If this file is published to cloud, then this data in file will result in raising a compliance alarm on Umbrella, as per our policy.</p>
+<p><strong>3. Searching for the Template:</strong> </p>
 <ul>
-<li>
-<p>Launch console access to ubuntu <strong>Site300-Ubuntu-VPN10</strong> host by using <strong>mRemoteNG</strong> application.  Login with credentials of <code>viptela</code>.</p>
-</li>
-<li>
-<p>Use Chromium Browser on this VM to navigate onto website with URL of <strong><code>dlptest.com/sample-data</code></strong>.  </p>
-</li>
-<li>
-<p>Scroll (down) to <code>Sample SSN and CCN Files</code> on this website and then click to download <strong><code>CSV File</code></strong> as shown in below figure.  This file will be automically saved on the <code>Downloads</code> folder on the VM.</p>
-</li>
+<li>Use the search bar to find the template name <strong><code>VPN_10_Site300</code></strong>.</li>
 </ul>
-<p><img alt="" src="../pics/t11-dlp-sample-file.png" /></p>
-<p>Now we have the sample file available on our host VM to test it.</p>
-<h2 id="step-3---validate-dlp-monitor-policy">Step 3 - Validate DLP Monitor Policy<a class="headerlink" href="#step-3---validate-dlp-monitor-policy" title="Permanent link"></a></h2>
-<p>Now validate this DLP policy by publishing this file.  Umbrella will detect the GDPR compliance data violation as per our policy and raise an event in it's reporting.</p>
+<p><strong>4. Editing the Template:</strong> </p>
 <ul>
-<li>
-<p>Launch console access to ubuntu <strong>Site300-Ubuntu-VPN10</strong> host by using <strong>mRemoteNG</strong> application.  Login with credentials of <code>viptela</code></p>
-</li>
-<li>
-<p>Use Chromium Browser to navigate to website: <code>dlptest.com/http-post/</code> </p>
-</li>
-<li>
-<p>On this web page, on Chromium Browser, navigate to <code>File Upload *</code> section.  Click on <strong><code>Drop a file here or click to upload</code></strong> as shown in below screenshot:</p>
-</li>
+<li>Find the template and click on the three dots <strong><code>...</code></strong> on the right side, then select <strong><code>Edit</code></strong>.
+  <img alt="Edit VPN-10 Template" src="../pics/Site400-VPN10-Ftemp-v2.png" /></li>
 </ul>
-<p><img alt="" src="../pics/t11-dlp-sample-file-upload.png" /></p>
+<p><strong>5. Configuring IPv4 Route:</strong> </p>
 <ul>
-<li>On the <code>Open Files</code> page, click on <strong><code>Downloads</code></strong>, then click on <strong><code>sample-data.csv</code></strong> and click <strong><code>Open</code></strong> to upload the file:</li>
+<li>Click on <strong>IPv4 Route</strong>.
+  <img alt="IPv4 Route Section" src="../pics/Site400-VPN10-Ftemp-IPv4.png" /></li>
+<li>In the <code>IPv4 Route</code> section, perform the following configurations:</li>
+<li>Click on <strong><code>New IP Route</code></strong>.</li>
+<li>In <strong>Prefix</strong>: <strong><code>0.0.0.0/0</code></strong></li>
+<li>In <strong>Gateway</strong>: <strong><code>VPN</code></strong></li>
+<li>In <strong>Enable VPN</strong>, select <strong><code>Global</code></strong> from the dropdown menu.
+  <img alt="IPv4 Route Configuration" src="../pics/Site400-VPN10-Ftemp-IPv4-1.png" /></li>
+<li>Set <strong>Enable VPN</strong> to <strong><code>On</code></strong>, click <strong><code>Add</code></strong>, then <strong><code>Update</code></strong>.
+  <img alt="Enable VPN and Add" src="../pics/Site400-VPN10-Ftemp-IPv4-2.png" /></li>
 </ul>
-<p><img alt="" src="../pics/t11-dlp-sample-file-upload-csv.png" /></p>
+<p><strong>6. Applying Configuration Changes:</strong> </p>
 <ul>
-<li>The file will be uploaded successfully.  You will see the message as shown in below screenshot</li>
+<li>Click <strong><code>Next</code></strong>.
+  <img alt="Next Step" src="../pics/Site400-VPN10-Ftemp-IPv4-3a.png" /></li>
+<li>Click <strong><code>Configure Devices</code></strong> to push the configuration from vManage towards cEdge.
+  <img alt="Configure Devices" src="../pics/Site400-VPN10-Ftemp-IPv4-4a.png" /></li>
+<li>Wait and verify that the Config-Push from vManage to cEdge device is successful.
+  <img alt="Configuration Push Success" src="../pics/Site400-VPN10-Ftemp-IPv4-5.png" /></li>
 </ul>
-<p><img alt="" src="../pics/t11-dlp-sample-file-upload-success.png" /></p>
-<p>Now let's navigate to Umbrella to check if a compliance alarm was raised as per our policy.</p>
+<h2 id="step-2---verify-internet-connectivity-on-site-300">Step 2 - Verify Internet Connectivity on Site-300<a class="headerlink" href="#step-2---verify-internet-connectivity-on-site-300" title="Permanent link"></a></h2>
+<p><strong>Objective:</strong> Verify Internet connectivity on Site-300 VPN-10 following the successful configuration in the previous step.</p>
+<p><strong>1. Launching MTPutty (if needed):</strong> </p>
 <ul>
-<li>
-<p>On the RDP session (jumphost), logon to Umbrella Dashboard by clicking on Google Chrome Browser bookmark named <code>Umbrella SSO</code>.  It will open the Umbrella dashboard and auto-login using single-sign-on.</p>
-</li>
-<li>
-<p>Navigate to <strong>Reporting &gt; Additional Reports &gt; Data Loss Prevention</strong>.  On the right pane, you should see an <code>Event Type</code> of <code>Real Time</code> with <code>Severity</code> of <code>Medium</code> and other details related to the File upload to <code>DLP Test</code> website.  </p>
-</li>
-<li>
-<p>Further on the right side of each row, click on the three dots (<strong><code>...</code></strong>) and then click <strong><code>View Full Details</code></strong> to check the various GDPR related violations detected by Umbrella.  Below is a sample screenshot for such event, your view may be little different.</p>
-</li>
+<li>Launch <strong>MTPutty</strong> application on your RDP session (Jumphost) if it is not already open.
+  <img alt="MTPutty Application" src="../pics/mPutty.png" /></li>
 </ul>
-<p><img alt="" src="../pics/t11-dlp-report.png" /></p>
-<p>This event confirms that Umbrella has detected the compliance violation.</p>
-<h2 id="step-4---umbrella-dlp-block-policy">Step 4 - Umbrella DLP Block Policy<a class="headerlink" href="#step-4---umbrella-dlp-block-policy" title="Permanent link"></a></h2>
-<p>Now let's modify the existing DLP policy to Block (instead of Monitor) the content in case of breach of GDPR compliance</p>
+<p><strong>2. SSH to Site-300 cEdge:</strong> </p>
 <ul>
-<li>
-<p>On the RDP session (jumphost), logon to Umbrella Dashboard by clicking on Google Chrome Browser bookmark named <code>Umbrella SSO</code>.  It will open the Umbrella dashboard and auto-login using single-sign-on.</p>
-</li>
-<li>
-<p>Navigate to <strong>Policies &gt; Management &gt; Data Loss Prevention Policy</strong>.   One DLP Rule should appear on the right pane.  Click on the three dots (<strong>&hellip;</strong>) on the right side as shown in below screenshot and then click <strong>Edit Rule</strong>:</p>
-</li>
+<li>Open <strong>MTPutty</strong> and SSH/login to <strong><code>Site300-cE1</code></strong> cEdge.</li>
+<li>Verify VPN-10's routing table for a default route using <code>show ip route vrf 10</code>.
+  <img alt="VPN-10 Routing Table" src="../pics/Site300-int-iproute.png" /></li>
 </ul>
-<p><img alt="" src="../pics/t11-dlp-rule-edit.png" /></p>
+<p><strong>3. Verifying Default Route on Global Routing Table:</strong> </p>
 <ul>
-<li>On the <code>Edit Real Time Rule</code> scroll down to the <code>Action</code> section and select the action of <strong><code>Block</code></strong> from the dropdown menu and click <strong><code>Save</code></strong>:</li>
+<li>Confirm the default route in the Global Routing Table (VPN-0) using <code>show ip route</code>.  It will point to <code>10.2.6.1</code> and <code>10.1.6.1</code> 
+  <img alt="Global Routing Table" src="../pics/Site300-vrf0-iproute.png" /></li>
 </ul>
-<p><img alt="" src="../pics/t11-dlp-rule-edit-save.png" /></p>
-<p>Now this rule has been edited with block action instead of just monitor.</p>
-<h2 id="step-5---validate-dlp-block-policy">Step 5 - Validate DLP Block Policy<a class="headerlink" href="#step-5---validate-dlp-block-policy" title="Permanent link"></a></h2>
-<p>Now validate this DLP policy by publishing the test file previously downloaded on VM/host on Site300.  Umbrella will detect the GDPR compliance data violation as per our policy and block uploading of this file.</p>
+<p><strong>4. Testing Connectivity on Ubuntu VM:</strong> </p>
 <ul>
+<li>Using <strong>mRemoteNG</strong>, access <code>Site300-Ubuntu-VPN10</code> VM</li>
 <li>
-<p>Launch console access to ubuntu <strong>Site300-Ubuntu-VPN10</strong> host by using <strong>mRemoteNG</strong> application.  Login with credentials of <code>viptela</code></p>
+<p>Launch <code>Terminal</code> application on this VM and then initiate <code>ping 8.8.8.8</code>.  Press <code>Ctrl+C</code> after few seconds.  The ping should be successful.
+  <img alt="Successful Ping" src="../pics/ubuntu-ping-ok.png" /></p>
 </li>
 <li>
-<p>Use Chromium Browser to navigate to website: <code>dlptest.com/http-post/</code>.  If you already have this webiste open on Chromium Browser, you must refresh the browser to navigate on to this page again.</p>
+<p>Execute a traceroute using the command <code>traceroute 8.8.8.8</code> on <code>Terminal</code>. Take note of the contrast with the previous task's output on this VM/host.  In this instance, the traffic is now being routed through the Global Routing Table (GRT) of the WAN Edge router (<code>Site300-cE1</code>), specifically to <code>10.2.6.1</code>.
+  <img alt="Traceroute Result" src="../pics/ubuntu-300-trace-int.png" /></p>
 </li>
 <li>
-<p>On this web page, on Chromium Browser, navigate to <code>File Upload *</code> section.  Click on <strong><code>Drop a file here or click to upload</code></strong> as done in previous step in this task.</p>
-</li>
-<li>
-<p>On the <code>Open Files</code> page, click on <strong><code>Downloads</code></strong>, then click on <strong><code>sample-data.csv</code></strong> and click <strong><code>Open</code></strong> to upload the file</p>
-</li>
-<li>
-<p>The file upload will fail.  You will see the message as shown in below screenshot</p>
+<p>Launch <code>Chromium Web browser</code> and verify Internet access by navigating to <code>www.cisco.com</code> or another website.
+  <img alt="Internet Access" src="../pics/Internet-access.png" /></p>
 </li>
 </ul>
-<p><img alt="" src="../pics/t11-dlp-sample-file-upload-fail.png" /></p>
-<p>Now let's navigate to Umbrella to check if a compliance event was raised as per our policy.</p>
+<h2 id="step-3---internet-connectivity-on-other-vpns">Step 3 - Internet Connectivity on other VPNs<a class="headerlink" href="#step-3---internet-connectivity-on-other-vpns" title="Permanent link"></a></h2>
+<p><strong>Objective:</strong> Confirm that only Site300 VPN-10 has Direct Internet Access, while other VPNs like VPN-12 lack internet connectivity.</p>
 <ul>
-<li>
-<p>On the RDP session (jumphost), logon to Umbrella Dashboard by clicking on Google Chrome Browser bookmark named <code>Umbrella SSO</code>.  It will open the Umbrella dashboard and auto-login using single-sign-on.</p>
-</li>
-<li>
-<p>Navigate to <strong>Reporting &gt; Additional Reports &gt; Data Loss Prevention</strong>.  On the right pane, you should see an <code>Event Type</code> of <code>Real Time</code> with <code>Severity</code> of <code>Medium</code> and other details related to the File upload to <code>DLP Test</code> website.  This event should have an action of <strong><code>Blocked</code></strong></p>
-</li>
-<li>
-<p>Further on the right side of each row, click on the three dots (<strong><code>...</code></strong>) and then click <strong><code>View Full Details</code></strong> to check the various GDPR related violations detected by Umbrella.  Below is a sample screenshot for such block event, your view may be little different.</p>
-</li>
+<li>Test internet connectivity on <code>Site300-Ubuntu-VPN12</code> using <strong>mRemoteNG</strong>.</li>
+<li>Perform ping tests and attempt web browsing from the Ubuntu VM on VPN-12, which should fail, indicating no internet access.</li>
 </ul>
-<p><img alt="" src="../pics/t11-dlp-report-block.png" /></p>
-<p>This event confirms that Umbrella has detected the compliance violation and resulted in Blocking the upload of this file. </p>
+<p><strong>Conclusion:</strong>
+Upon successful completion of Task 4, Site-300 has now Direct Internet Access enabled, directing VPN-10 traffic through this newly established route.  This pivotal configuration lays the groundwork for future enhancements, particularly in terms of network security through the integration with Umbrella Cloud.  The foundation is now set for the next phase, which involves setting up and configuring IPSec tunnels to further secure the network infrastructure.</p>
 
 
 
@@ -869,6 +874,42 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../Task3-v2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Task-3 Internet Access for SD-WAN Sites 100 and 400" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Task-3 Internet Access for SD-WAN Sites 100 and 400
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Task5-v2/" class="md-footer__link md-footer__link--next" aria-label="Next: Task-5 Umbrella SIG for Site-300" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Task-5 Umbrella SIG for Site-300
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
