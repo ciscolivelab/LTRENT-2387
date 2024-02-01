@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../Task6-v2/">
+        <link rel="prev" href="../Task7-v2/">
       
       
-        <link rel="next" href="../Task8-v2/">
+        <link rel="next" href="../Task9-v2/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>Task-7 Umbrella SIG for Sites 100 and 400 - Cisco Live 2024 LTRENT-2387</title>
+        <title>Task-8 Umbrella Policies for Sites 100 and 400 - Cisco Live 2024 LTRENT-2387</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#task-7-integrating-umbrella-sig-for-site-100-and-site-400" class="md-skip">
+        <a href="#task-8---umbrella-regional-policies" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task-7 Umbrella SIG for Sites 100 and 400
+              Task-8 Umbrella Policies for Sites 100 and 400
             
           </span>
         </div>
@@ -558,6 +558,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../Task7-v2/" class="md-nav__link">
+        Task-7 Umbrella SIG for Sites 100 and 400
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -570,12 +584,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Task-7 Umbrella SIG for Sites 100 and 400
+          Task-8 Umbrella Policies for Sites 100 and 400
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Task-7 Umbrella SIG for Sites 100 and 400
+        Task-8 Umbrella Policies for Sites 100 and 400
       </a>
       
         
@@ -594,22 +608,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1---ipsec-tunnels-from-site-100-to-umbrella" class="md-nav__link">
-    Step 1 - IPSec Tunnels from Site-100 to Umbrella
+  <a href="#step-1---umbrella-web-policy" class="md-nav__link">
+    Step 1 - Umbrella Web Policy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2---verify-sig-tunnels-on-umbrella" class="md-nav__link">
-    Step 2 - Verify SIG Tunnels on Umbrella
+  <a href="#step-2---create-customs-list-web-policy" class="md-nav__link">
+    Step 2 - Create Customs-list Web Policy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3---redirect-traffic-to-sig-tunnels" class="md-nav__link">
-    Step 3 - Redirect Traffic to SIG Tunnels
+  <a href="#step-3---web-policy-tester" class="md-nav__link">
+    Step 3 - Web Policy Tester
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4---verify-policies-on-hosts" class="md-nav__link">
+    Step 4 - Verify Policies on Hosts
   </a>
   
 </li>
@@ -618,20 +639,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Task8-v2/" class="md-nav__link">
-        Task-8 Umbrella Policies for Sites 100 and 400
-      </a>
     </li>
   
 
@@ -726,22 +733,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1---ipsec-tunnels-from-site-100-to-umbrella" class="md-nav__link">
-    Step 1 - IPSec Tunnels from Site-100 to Umbrella
+  <a href="#step-1---umbrella-web-policy" class="md-nav__link">
+    Step 1 - Umbrella Web Policy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2---verify-sig-tunnels-on-umbrella" class="md-nav__link">
-    Step 2 - Verify SIG Tunnels on Umbrella
+  <a href="#step-2---create-customs-list-web-policy" class="md-nav__link">
+    Step 2 - Create Customs-list Web Policy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3---redirect-traffic-to-sig-tunnels" class="md-nav__link">
-    Step 3 - Redirect Traffic to SIG Tunnels
+  <a href="#step-3---web-policy-tester" class="md-nav__link">
+    Step 3 - Web Policy Tester
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4---verify-policies-on-hosts" class="md-nav__link">
+    Step 4 - Verify Policies on Hosts
   </a>
   
 </li>
@@ -764,119 +778,214 @@
   
 
 
-<h1 id="task-7-integrating-umbrella-sig-for-site-100-and-site-400">Task 7: Integrating Umbrella SIG for Site-100 and Site-400<a class="headerlink" href="#task-7-integrating-umbrella-sig-for-site-100-and-site-400" title="Permanent link"></a></h1>
-<p>In Task 7, we will perform the integration of Umbrella SIG with Site-100. This integration plays a pivotal role in routing traffic towards Umbrella and enforcing Cloud Security policies for both the local Site-100 and the remote Site-400. As a reminder, as per previous IP traffic routing tasks, Internet traffic from Site-400 is also routed through Site-100. Therefore, the Umbrella policies configured and applied to the IPSec tunnels (between Site-100 &amp; Umbrella) will be applied on Site-400 as well and thus impact on network security and control of both of these sites.</p>
-<p>Let's proceed with the detailed steps to implement IPSec tunnels, integrate Umbrella SIG, and redirect traffic effectively to enhance the security posture of these regional sites.</p>
-<h2 id="step-1---ipsec-tunnels-from-site-100-to-umbrella">Step 1 - IPSec Tunnels from Site-100 to Umbrella<a class="headerlink" href="#step-1---ipsec-tunnels-from-site-100-to-umbrella" title="Permanent link"></a></h2>
-<p><strong>Objective:</strong> Create IPSec tunnels between SD-WAN Site-100 and Umbrella Cloud.  This is achieved by implementing the SIG template in <strong>VPN-0</strong> on the device template of node <strong>Site100-cE1</strong> in the <strong>Transport and Management VPN</strong> section on vManage.</p>
-<p><strong>1. Accessing Device Templates:</strong></p>
+<h1 id="task-8---umbrella-regional-policies">Task 8 - Umbrella Regional Policies<a class="headerlink" href="#task-8---umbrella-regional-policies" title="Permanent link"></a></h1>
+<p>In this task we will create Web Proxy Policies on Umbrella to be enforced on Site-100 and Site-400 (regional sites). These policies will aim to block web traffic to Financial Institutions and other specified websites using custom destination lists.</p>
+<h2 id="step-1---umbrella-web-policy">Step 1 - Umbrella Web Policy<a class="headerlink" href="#step-1---umbrella-web-policy" title="Permanent link"></a></h2>
+<p><strong>Objective:</strong> Configure an Umbrella Web Policy to block traffic to Financial websites from Site-400 and Site-100.</p>
+<p><strong>1. Accessing the Umbrella Dashboard:</strong></p>
 <ul>
-<li>Navigate to <strong>Configuration &gt; Templates</strong> and click on <strong>Device Templates</strong> in vManage.
-  <img alt="Device Templates" src="../pics/Device-template.png" /></li>
+<li>On the RDP session (jumphost), logon to Umbrella Dashboard by clicking on Google Chrome Browser bookmark named <code>Umbrella SSO</code>.  It will open the Umbrella dashboard and auto-login using single-sign-on.</li>
 </ul>
-<p><strong>2. Editing Site100-cE1 Template:</strong></p>
+<p><strong>2. Creating the Web Policy:</strong></p>
 <ul>
-<li>Locate the <strong>Site100-cE1</strong> template from the <code>Description</code> field. Then <strong>click</strong> on three dots (<strong><code>...</code></strong>) on the right hand side of this template and click <strong><code>Edit</code></strong>:
-  <img alt="Edit Site100-cE1 Template" src="pics/sig-feat-temp-s100-1-v2.png" /></li>
+<li>Go to <strong>Policies &gt; Management &gt; Web Policy</strong> and click <strong>Add</strong> on the top right to add a new <em>Ruleset</em> as shown in below screenshot:</li>
 </ul>
-<p><strong>3. Configuring Transport and Management VPN:</strong></p>
+<p><img alt="" src="../pics/umbrella-p5.png" /></p>
+<p><strong>3. Configuring Ruleset Identities:</strong></p>
 <ul>
-<li>On the <code>Device Template</code>, Click on <strong>Transport and Management VPN</strong>.
-  <img alt="Transport and Management VPN" src="../pics/sig-feat-temp-s100-2.png" /></li>
+<li>On the new "<em>Ruleset Rules</em>" web page, under <strong>Ruleset Settings</strong> scroll down to <strong>Ruleset identities</strong> and Click <strong>Edit</strong> as shown below:</li>
 </ul>
-<p><strong>4. Adding Cisco Secure Internet Gateway Template:</strong></p>
+<p><img alt="" src="../pics/t8-s1-ruleset-identity.png" /></p>
 <ul>
-<li>Add the <strong><code>Cisco Secure Internet Gateway</code></strong> template by clicking on it, and then select <strong><code>VIP23-SIG-Feature-Template</code></strong> from the dropdown for this template.
-  <img alt="Add SIG Template" src="../pics/sig-feat-temp-8-v2.png" /></li>
+<li>Next on the <strong>Ruleset Identities</strong> web page, under <code>All Identities</code> scroll down to <strong>Tunnels</strong> and Click on number 4 with right arrow i.e., <strong><code>4 &gt;</code></strong> as shown below:</li>
 </ul>
-<p><strong>5. Ensuring Cisco SIG Credentials:</strong></p>
+<p><img alt="" src="../pics/t8-s1-ruleset-identities-tunnels.png" /></p>
 <ul>
-<li>Scroll down to the <strong>Additional Templates</strong> section and confirm the addition of <strong>Cisco SIG Credentials</strong> with value of <strong><code>VIP23-SIG-Credentials</code></strong>.
-  <img alt="Cisco SIG Credentials" src="../pics/sig-feat-temp-9.png" /></li>
+<li>On the next page, select the two Tunnels for <strong>SITE100</strong> and Click <strong>SAVE</strong> button as shown below: </li>
 </ul>
-<p><strong>6. Updating and Configuring Devices:</strong></p>
+<p><img alt="" src="../pics/t8-s1-ruleset-identities-tunnels-site100.png" /></p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Note:</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Select only SITE100 tunnels.  <em>Do not</em> select SITE300 tunnels in this step.</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>
-<p>Click on <strong>Update</strong> to modify the settings.</p>
-</li>
-<li>
-<p>Click <strong>Next</strong> to proceed with the configuration
-  <img alt="Update Settings" src="../pics/sig-feat-temp-s100-3.png" /></p>
-</li>
-<li>
-<p>Click <strong><code>Configure Devices</code></strong> on next page
-  <img alt="Configure Devices" src="../pics/sig-feat-temp-11.png" /></p>
-</li>
-<li>
-<p>Wait for <code>success</code> message for pushing these configuration changes to Site100-cE1.</p>
-</li>
+<li>Under the <strong>Ruleset Settings</strong>, scroll down to <strong>HTTPS Inspection</strong> section and click <strong>Edit</strong>:</li>
 </ul>
-<h2 id="step-2---verify-sig-tunnels-on-umbrella">Step 2 - Verify SIG Tunnels on Umbrella<a class="headerlink" href="#step-2---verify-sig-tunnels-on-umbrella" title="Permanent link"></a></h2>
-<p><strong>Objective:</strong> Confirm the operational status of IPSec tunnels to Site100-cE1 by accessing the Umbrella dashboard.</p>
-<p><strong>1. Accessing Umbrella Dashboard:</strong></p>
+<p><img alt="" src="../pics/umbrella-s1-p10.png" /></p>
+<p><strong>4. Enabling HTTPS Inspection:</strong></p>
 <ul>
-<li>Log in to the Umbrella Dashboard via <code>Umbrella SSO</code> on the RDP session.</li>
+<li>Select <strong>Enable HTTPS Inspection</strong>, then click <strong>Save</strong>:</li>
 </ul>
-<p><strong>2. Checking Tunnel Status:</strong></p>
+<p><img alt="" src="../pics/umbrella-p18.png" /> </p>
+<p><strong>5. Adding Web Policy Rule:</strong></p>
 <ul>
-<li>
-<p>Navigate to <strong>Deployments &gt; Core Identities &gt; Network Tunnels</strong>.</p>
-</li>
-<li>
-<p>Initially, the newly created IPSec tunnels <strong><em>may</em></strong> appear under <strong>Unestablished Tunnels</strong>.<br />
-<img alt="Unestablished Tunnels" src="../pics/sig-feat-temp-s100-4.png" /></p>
-</li>
-<li>
-<p>After a few minutes, they should appear as <strong>Active Tunnels</strong>.
-  <img alt="Active Tunnels" src="../pics/sig-feat-temp-s100-5.png" /></p>
-</li>
+<li>After adding the identities, Click <strong>ADD RULE</strong> button.  Give the <strong>Rule Name</strong> of <strong><code>Regional - block Financial</code></strong> and verify the <code>Rule Action</code> is <code>Block</code>:</li>
 </ul>
-<h2 id="step-3---redirect-traffic-to-sig-tunnels">Step 3 - Redirect Traffic to SIG Tunnels<a class="headerlink" href="#step-3---redirect-traffic-to-sig-tunnels" title="Permanent link"></a></h2>
-<p><strong>Objective:</strong> Direct VPN-10 traffic from SD-WAN Site-100 via IPSec tunnels towards Umbrella by adding a Service route on vManage.</p>
-<p><strong>1. Modifying VPN Template:</strong></p>
+<p><img alt="" src="../pics/t8-s1-add-rule.png" /></p>
 <ul>
-<li>On the vManage GUI, go to <strong>Configuration &gt; Templates &gt; Feature Templates</strong>. </li>
-<li>Search for <strong><code>VPN_10_Site100</code></strong> and <strong><code>Edit</code></strong> the template.
-  <img alt="Edit VPN Template" src="../pics/sig-feat-temp-s100-6-v2.png" /></li>
+<li>Next click on <strong>Add Identity</strong> for this rule.  Enable <strong>Inherit Ruleset Identities</strong> and click <strong>Apply</strong> as shown in below figure:</li>
 </ul>
-<p><strong>2. Adding Service Route:</strong></p>
+<p><img alt="" src="../pics/t8-s1-edit-identity.png" /></p>
 <ul>
-<li>
-<p>Select <strong>Service Route</strong>.
-  <img alt="Service Route" src="../pics/sig-feat-temp-service-route-v2.png" /></p>
-</li>
-<li>
-<p>Click <strong>New Service Route</strong> and add a <strong>Prefix</strong> of <code>0.0.0.0/0</code> pointing to <code>SIG</code> (default).</p>
-</li>
-<li>
-<p>Click <strong>Add</strong> and then click <strong>Update</strong> at the bottom of the page
-  <img alt="Add Service Route" src="../pics/sig-feat-temp-15.png" /></p>
-</li>
+<li>Further on the new rule, click on <strong>Add Destination</strong> and Click on right arrow <strong><code>&gt;</code></strong> next to <strong>Application Settings</strong>:</li>
 </ul>
-<p><strong>3. Updating and Configuring Device:</strong></p>
+<p><img alt="" src="../pics/t8-s1-umbrella-edit-dest.png" /></p>
 <ul>
-<li>
-<p>Click <strong>Next</strong> and then click <strong>Configure Devices</strong></p>
-</li>
-<li>
-<p>Wait till config push is sucessfull to Site100-cE1.  </p>
-</li>
-<li>
-<p>Optional: you may SSH to Site100-cE1 by using <em>MTPutty</em> application on RDP session (Jumphost).  Validate that the service route command <code>ip sdwan route vrf 10 0.0.0.0/0 service sig</code> are pushed by vManage.</p>
-</li>
+<li>Then scroll down to Select <strong>Financial Services</strong> and hit <strong>Apply</strong>:</li>
 </ul>
-<p><strong>4. Verifying Traffic Redirection to Umbrella:</strong></p>
+<p><img alt="" src="../pics/t8-s1-umbrella-edit-dest-finance.png" /></p>
+<ul>
+<li>On the Rule click on <strong>Save</strong> icon to save newly added rule as shown in below screenshot:</li>
+</ul>
+<p><img alt="" src="../pics/t8-s1-umbrella-edit-dest-save.png" /></p>
+<p><strong>6. Enabling the Rule:</strong></p>
+<ul>
+<li>By default newly created rules are disabled.  To enable the Rule 1, click three dots (<strong><code>...</code></strong>) at the right side and then toggle <strong>Enable Rule</strong> as shown in below screenshot. </li>
+</ul>
+<p><img alt="" src="../pics/t8-s1-umbrella-rule-enable.png" /></p>
+<ul>
+<li>Confirm by clicking <strong>Update</strong>:</li>
+</ul>
+<p><img alt="" src="../pics/umbrella-p14.png" /></p>
+<p>Now the rule and ruleset settings are all configured for Regional sites.</p>
+<ul>
+<li>Scroll down and click <strong>Close</strong> as shown in below screenshot
+<img alt="" src="../pics/umbrella-p19.png" /></li>
+</ul>
+<h2 id="step-2---create-customs-list-web-policy">Step 2 - Create Customs-list Web Policy<a class="headerlink" href="#step-2---create-customs-list-web-policy" title="Permanent link"></a></h2>
+<p><strong>Objective:</strong> Create a custom destination list and a web policy to block specific URLs (as per this custom destination list).</p>
+<p><strong>1. Creating Destination List:</strong></p>
+<ul>
+<li>On Umbrella dashboard, navigate to <strong>Policy &gt; Policy Component &gt; Destination lists</strong>, click <strong>Add</strong> on the top right corner:</li>
+</ul>
+<p><img alt="" src="../pics/umbrella-s1-p11.png" /></p>
 <ul>
 <li>
-<p>Using <strong>mRemoteNG</strong>, relaunch the console session of the Ubuntu VM <code>Site400-Ubuntu-VPN10</code>.</p>
+<p>Add this list as per below settings:</p>
+<ul>
+<li>List Name: <code>Custom-Filter</code></li>
+<li>Destination List type: <code>Web Policy</code> (from drop-down menu)</li>
+<li>Destination: <code>www.cnn.com</code></li>
+<li>
+<p>Click <strong><code>Add</code></strong>
+<img alt="" src="../pics/umbrella-s1-p12.png" /></p>
 </li>
 <li>
-<p>Open the Chromium Web Browser on this VM and navigate to <strong><code>welcome.umbrella.com</code></strong>. The message <code>Welcome to Umbrella</code> indicates successful protection by Umbrella.
-  <img alt="Welcome to Umbrella" src="../pics/Umbrella-welecome.png" /></p>
+<p>Click <strong>Save</strong> after adding destination/domain:
+<img alt="" src="../pics/umbrella-s1-p13.png" /></p>
 </li>
 </ul>
-<p><strong>Conclusion:</strong> 
-With these configurations, traffic from Site-100 and Site-400 is now routed towards Umbrella using the IPSec tunnels. The next steps will involve configuring Cloud Security policies for these sites on Umbrella.</p>
+</li>
+</ul>
+<p><strong>2. Adding Rule to Ruleset:</strong></p>
+<ul>
+<li>
+<p>Navigate to <strong>Policies &gt; Management &gt; Web Policy</strong> and expand on <strong>RuleSet 2</strong> by clicking on it or by clicking down-arrow:</p>
+<p><img alt="" src="../pics/umbrella-s1-p14.png" /></p>
+</li>
+<li>
+<p>Let's add a new rule by clicking <strong>ADD RULE</strong> button.  Give the <strong>Rule Name</strong> of <strong><code>Regional - block custom</code></strong> and verify the <code>Rule Action</code> is <code>Block</code>:
+<img alt="" src="../pics/add-rule-2.png" /></p>
+</li>
+<li>
+<p>Next let's also use ruleset identities for this rule.  Click on <strong>Add Identity</strong> for this rule and enable <strong>Inherit Ruleset Identities</strong> and click <strong>Apply</strong> as shown in below figure:</p>
+</li>
+</ul>
+<p><img alt="" src="../pics/add-rule-2-identity.png" /></p>
+<ul>
+<li>Further on the new rule, click on <strong>Add Destination</strong> and CLick on the right arrow  <strong><code>&gt;</code></strong> next to <strong>Destiniation Lists</strong></li>
+</ul>
+<p><img alt="" src="../pics/add-rule-2-dest.png" /></p>
+<ul>
+<li>Select the <strong>Custom-Filter</strong> and then click on <strong>Apply</strong></li>
+</ul>
+<p><img alt="" src="../pics/umbrella-s1-p17.png" /></p>
+<ul>
+<li>Click on <strong>Save</strong> on this newly created rule:
+<img alt="" src="../pics/add-rule-2-save.png" /></li>
+</ul>
+<p><strong>3. Enabling the Custom Rule:</strong></p>
+<ul>
+<li>By default newly created rules are disabled.  To enable the Rule 2, click three dots (<strong><code>...</code></strong>) at the right side and then toggle <strong>Enable Rule</strong> as shown in below screenshot. </li>
+</ul>
+<p><img alt="" src="../pics/rule-2-enable.png" /></p>
+<ul>
+<li>Confirm by clicking <strong>Update</strong>:</li>
+</ul>
+<p><img alt="" src="../pics/umbrella-p14.png" /></p>
+<ul>
+<li>After saving the rule, You may scroll down under Ruleset settings and click on <strong>Close</strong> button.</li>
+</ul>
+<p>Now the Umbrella policies for regional sites (site-100 and Site-400) have been configured. </p>
+<h2 id="step-3---web-policy-tester">Step 3 - Web Policy Tester<a class="headerlink" href="#step-3---web-policy-tester" title="Permanent link"></a></h2>
+<p><strong>Objective:</strong> Test the newly created Web policies using Umbrella's "Policy Tester".</p>
+<p><strong>1. Running Policy Tests:</strong></p>
+<ul>
+<li>
+<p>On Umbrella Dashboard, navigate to <strong>Policies &gt; Management &gt; Web Policy</strong>.  Click on <strong>Policy Tester</strong> at the top right corner: 
+<img alt="" src="../pics/umbrella-web-policy-test.png" /></p>
+</li>
+<li>
+<p>On the <code>Web Policy Tester</code> page,</p>
+<ul>
+<li>Under the <strong>Primary Identity</strong> search box type <strong><code>Site1</code></strong> and then select any of the <strong>Site100</strong> tunnels </li>
+<li>Under <strong>Destination</strong>, enter <strong><code>chase.com</code></strong></li>
+<li>Then click <strong>Run Test</strong> button: 
+<img alt="" src="../pics/web-policy-test-result-regional-1.png" /></li>
+</ul>
+</li>
+</ul>
+<p>The result of this test appears on the page and as expected it shows the Ruleset 2 and rule being matched by the Web policy. </p>
+<ul>
+<li>Next run a test for any of the Site100 tunnel for below destination:<ul>
+<li>Under <strong>Destination</strong>, enter <strong><code>www.cnn.com</code></strong>
+<img alt="" src="../pics/web-policy-test-result-regional-2.png" /></li>
+</ul>
+</li>
+</ul>
+<p>The result of this test appears on the page and as expected it shows the Ruleset 2 and rule being matched by the Web policy. </p>
+<ul>
+<li>Explore the Web Policy Tester further by testing traffic to different destination website such as cisco.com, google.com for Regional sites traffic.</li>
+</ul>
+<h2 id="step-4---verify-policies-on-hosts">Step 4 - Verify Policies on Hosts<a class="headerlink" href="#step-4---verify-policies-on-hosts" title="Permanent link"></a></h2>
+<p><strong>Objective:</strong> Confirm the effectiveness of the Web Policies on regional site-400 host.</p>
+<p><strong>1. Confirming Traffic Redirection:</strong></p>
+<ul>
+<li>First validate if traffic is being redirected to Umbrella.<ul>
+<li>Using <strong>mRemoteNG</strong>, relaunch the console session of the Ubuntu VM <code>Site400-Ubuntu-VPN10</code>.  Login with credentials of <code>viptela</code></li>
+<li>Use Chromium Browser to navigate to <code>welcome.umbrella.com</code>.  A green check mark should appear, confirming that traffic from VPN-10 is being successfully redirected to Umbrella.</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. Validating Web Policy:</strong></p>
+<ul>
+<li>Verify Web Policy by using Chromium Web Browser on the console of <code>Site400-Ubuntu-VPN10</code> host by using <strong>mRemoteNG</strong> application.<ul>
+<li>Use Chromium to navigate onto <code>www.cisco.com</code>.  Access to this website should work.</li>
+<li>Use Chromium to navigate to <code>www.cnn.com</code>.  As per our Umbrella Web Policy, this site should be blocked and, as expected, Cisco Umbrella block page will appear.</li>
+<li>Use Chromium to navigate to <code>www.chase.com</code>.  As per our Umbrella Web Policy, this sites should be blocked and, as expected, Cisco Umbrella block page will appear.</li>
+<li>Use Chromium to navigate to <code>www.bankofamerica.com</code>.  As per our Umbrella Web Policy, this sites should be blocked and, as expected, Cisco Umbrella block page will appear.</li>
+<li>Use Chromium to navigate onto <code>www.facebook.com</code>.  Access to this site should work as expected</li>
+</ul>
+</li>
+</ul>
+<p><strong>Conclusion:</strong></p>
+<p>Upon completing Task 8, robust Web Proxy Policies have been successfully established and enforced on regional sites, Site-100 and Site-400. These policies effectively block web traffic to financial institutions and other specific websites as designated in the custom destination lists. </p>
+<p>Key accomplishments in this task include:</p>
+<ul>
+<li>The configuration of Umbrella Web Policies to restrict access to financial websites, enhancing the security and compliance posture of the regional sites.</li>
+<li>The creation of custom destination lists, demonstrating the flexibility of Umbrella to tailor web access policies to the organization's specific needs.</li>
+<li>Successful testing and validation of these policies using Umbrella's Web Policy Tester, ensuring that the desired web traffic restrictions are in place and functioning as expected.</li>
+<li>Verification of policy enforcement on regional site hosts, confirming that traffic is appropriately redirected and filtered according to the newly implemented policies.</li>
+</ul>
+<p>As a result, Site-100 and Site-400 are now equipped with targeted web access controls, contributing significantly to the overall security framework of the organization's network.</p>
 
 
 
@@ -905,7 +1014,7 @@ With these configurations, traffic from Site-100 and Site-400 is now routed towa
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../Task6-v2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Task-6 Umbrella Policies for Site-300" rel="prev">
+          <a href="../Task7-v2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Task-7 Umbrella SIG for Sites 100 and 400" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -914,20 +1023,20 @@ With these configurations, traffic from Site-100 and Site-400 is now routed towa
                 Previous
               </span>
               <div class="md-ellipsis">
-                Task-6 Umbrella Policies for Site-300
+                Task-7 Umbrella SIG for Sites 100 and 400
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Task8-v2/" class="md-footer__link md-footer__link--next" aria-label="Next: Task-8 Umbrella Policies for Sites 100 and 400" rel="next">
+          <a href="../Task9-v2/" class="md-footer__link md-footer__link--next" aria-label="Next: Task-9 Monitoring on Umbrella" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Task-8 Umbrella Policies for Sites 100 and 400
+                Task-9 Monitoring on Umbrella
               </div>
             </div>
             <div class="md-footer__button md-icon">

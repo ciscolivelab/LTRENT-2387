@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../Task6-v2/">
+        <link rel="prev" href="../Task9-v2/">
       
       
-        <link rel="next" href="../Task8-v2/">
+        <link rel="next" href="../Task11-v2/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>Task-7 Umbrella SIG for Sites 100 and 400 - Cisco Live 2024 LTRENT-2387</title>
+        <title>Task-10 Block Page for Sites 100 and 400 - Cisco Live 2024 LTRENT-2387</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#task-7-integrating-umbrella-sig-for-site-100-and-site-400" class="md-skip">
+        <a href="#task-10---block-page" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task-7 Umbrella SIG for Sites 100 and 400
+              Task-10 Block Page for Sites 100 and 400
             
           </span>
         </div>
@@ -558,66 +558,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Task-7 Umbrella SIG for Sites 100 and 400
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Task7-v2/" class="md-nav__link">
         Task-7 Umbrella SIG for Sites 100 and 400
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#step-1---ipsec-tunnels-from-site-100-to-umbrella" class="md-nav__link">
-    Step 1 - IPSec Tunnels from Site-100 to Umbrella
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2---verify-sig-tunnels-on-umbrella" class="md-nav__link">
-    Step 2 - Verify SIG Tunnels on Umbrella
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3---redirect-traffic-to-sig-tunnels" class="md-nav__link">
-    Step 3 - Redirect Traffic to SIG Tunnels
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -655,11 +600,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Task10-v2/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Task-10 Block Page for Sites 100 and 400
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Task-10 Block Page for Sites 100 and 400
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1---umbrella-web-policy" class="md-nav__link">
+    Step 1 - Umbrella Web Policy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2---verify-new-block-page" class="md-nav__link">
+    Step 2 - Verify new Block Page
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -726,22 +719,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1---ipsec-tunnels-from-site-100-to-umbrella" class="md-nav__link">
-    Step 1 - IPSec Tunnels from Site-100 to Umbrella
+  <a href="#step-1---umbrella-web-policy" class="md-nav__link">
+    Step 1 - Umbrella Web Policy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2---verify-sig-tunnels-on-umbrella" class="md-nav__link">
-    Step 2 - Verify SIG Tunnels on Umbrella
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3---redirect-traffic-to-sig-tunnels" class="md-nav__link">
-    Step 3 - Redirect Traffic to SIG Tunnels
+  <a href="#step-2---verify-new-block-page" class="md-nav__link">
+    Step 2 - Verify new Block Page
   </a>
   
 </li>
@@ -764,119 +750,64 @@
   
 
 
-<h1 id="task-7-integrating-umbrella-sig-for-site-100-and-site-400">Task 7: Integrating Umbrella SIG for Site-100 and Site-400<a class="headerlink" href="#task-7-integrating-umbrella-sig-for-site-100-and-site-400" title="Permanent link"></a></h1>
-<p>In Task 7, we will perform the integration of Umbrella SIG with Site-100. This integration plays a pivotal role in routing traffic towards Umbrella and enforcing Cloud Security policies for both the local Site-100 and the remote Site-400. As a reminder, as per previous IP traffic routing tasks, Internet traffic from Site-400 is also routed through Site-100. Therefore, the Umbrella policies configured and applied to the IPSec tunnels (between Site-100 &amp; Umbrella) will be applied on Site-400 as well and thus impact on network security and control of both of these sites.</p>
-<p>Let's proceed with the detailed steps to implement IPSec tunnels, integrate Umbrella SIG, and redirect traffic effectively to enhance the security posture of these regional sites.</p>
-<h2 id="step-1---ipsec-tunnels-from-site-100-to-umbrella">Step 1 - IPSec Tunnels from Site-100 to Umbrella<a class="headerlink" href="#step-1---ipsec-tunnels-from-site-100-to-umbrella" title="Permanent link"></a></h2>
-<p><strong>Objective:</strong> Create IPSec tunnels between SD-WAN Site-100 and Umbrella Cloud.  This is achieved by implementing the SIG template in <strong>VPN-0</strong> on the device template of node <strong>Site100-cE1</strong> in the <strong>Transport and Management VPN</strong> section on vManage.</p>
-<p><strong>1. Accessing Device Templates:</strong></p>
+<h1 id="task-10---block-page">Task 10 - Block Page<a class="headerlink" href="#task-10---block-page" title="Permanent link"></a></h1>
+<p>This task guides through the process of customizing the block page displayed to users when a web policy is enforced on regional sites, Site-100 and Site-400.</p>
+<h2 id="step-1---umbrella-web-policy">Step 1 - Umbrella Web Policy<a class="headerlink" href="#step-1---umbrella-web-policy" title="Permanent link"></a></h2>
+<p><strong>Objective:</strong> Configure a new block page on the Umbrella Dashboard.</p>
+<p><strong>1. Accessing Block Page Settings:</strong></p>
 <ul>
-<li>Navigate to <strong>Configuration &gt; Templates</strong> and click on <strong>Device Templates</strong> in vManage.
-  <img alt="Device Templates" src="../pics/Device-template.png" /></li>
+<li>On the RDP session (jumphost), logon to Umbrella Dashboard by clicking on Google Chrome Browser bookmark named <code>Umbrella SSO</code>.  It will open the Umbrella dashboard and auto-login using single-sign-on.</li>
 </ul>
-<p><strong>2. Editing Site100-cE1 Template:</strong></p>
+<p><strong>2. Configuring the Block Page:</strong></p>
 <ul>
-<li>Locate the <strong>Site100-cE1</strong> template from the <code>Description</code> field. Then <strong>click</strong> on three dots (<strong><code>...</code></strong>) on the right hand side of this template and click <strong><code>Edit</code></strong>:
-  <img alt="Edit Site100-cE1 Template" src="pics/sig-feat-temp-s100-1-v2.png" /></li>
+<li>Navigate to <strong>Policies &gt; Policy Components &gt; Block Page Appearance</strong>.  Then click <strong>Add</strong> on the top right to add a new <em>Block page</em> as shown in below screenshot:</li>
 </ul>
-<p><strong>3. Configuring Transport and Management VPN:</strong></p>
+<p><img alt="" src="../pics/t10-block-add.png" /></p>
 <ul>
-<li>On the <code>Device Template</code>, Click on <strong>Transport and Management VPN</strong>.
-  <img alt="Transport and Management VPN" src="../pics/sig-feat-temp-s100-2.png" /></li>
+<li>On the <code>Add New Block Page Appearance</code> web page, configure the below settings:<ul>
+<li>Name: <strong><code>Block Page Regional</code></strong></li>
+<li>Click on <strong><code>Block Page Appearance</code></strong> to expand it's settings</li>
+<li>Click on <strong><code>Show a block page with a custom message</code></strong></li>
+<li>In the text box, enter text of <strong><code>Regional Block Page</code></strong> (You may enter your own text here!)</li>
+<li>Click <strong><code>Save</code></strong> at the bottom right</li>
 </ul>
-<p><strong>4. Adding Cisco Secure Internet Gateway Template:</strong></p>
-<ul>
-<li>Add the <strong><code>Cisco Secure Internet Gateway</code></strong> template by clicking on it, and then select <strong><code>VIP23-SIG-Feature-Template</code></strong> from the dropdown for this template.
-  <img alt="Add SIG Template" src="../pics/sig-feat-temp-8-v2.png" /></li>
-</ul>
-<p><strong>5. Ensuring Cisco SIG Credentials:</strong></p>
-<ul>
-<li>Scroll down to the <strong>Additional Templates</strong> section and confirm the addition of <strong>Cisco SIG Credentials</strong> with value of <strong><code>VIP23-SIG-Credentials</code></strong>.
-  <img alt="Cisco SIG Credentials" src="../pics/sig-feat-temp-9.png" /></li>
-</ul>
-<p><strong>6. Updating and Configuring Devices:</strong></p>
-<ul>
-<li>
-<p>Click on <strong>Update</strong> to modify the settings.</p>
-</li>
-<li>
-<p>Click <strong>Next</strong> to proceed with the configuration
-  <img alt="Update Settings" src="../pics/sig-feat-temp-s100-3.png" /></p>
-</li>
-<li>
-<p>Click <strong><code>Configure Devices</code></strong> on next page
-  <img alt="Configure Devices" src="../pics/sig-feat-temp-11.png" /></p>
-</li>
-<li>
-<p>Wait for <code>success</code> message for pushing these configuration changes to Site100-cE1.</p>
 </li>
 </ul>
-<h2 id="step-2---verify-sig-tunnels-on-umbrella">Step 2 - Verify SIG Tunnels on Umbrella<a class="headerlink" href="#step-2---verify-sig-tunnels-on-umbrella" title="Permanent link"></a></h2>
-<p><strong>Objective:</strong> Confirm the operational status of IPSec tunnels to Site100-cE1 by accessing the Umbrella dashboard.</p>
-<p><strong>1. Accessing Umbrella Dashboard:</strong></p>
+<p><img alt="" src="../pics/t10-block-config.png" /></p>
+<p><strong>3. Applying the Block Page to Web Policy</strong></p>
 <ul>
-<li>Log in to the Umbrella Dashboard via <code>Umbrella SSO</code> on the RDP session.</li>
+<li>On Umbrella dashboard, navigate to <strong>Policies &gt; Management &gt; Web Policy</strong> and click on previously configured <strong><code>Ruleset 2</code></strong></li>
 </ul>
-<p><strong>2. Checking Tunnel Status:</strong></p>
+<p><img alt="" src="../pics/t10-block-ruleset.png" /></p>
 <ul>
-<li>
-<p>Navigate to <strong>Deployments &gt; Core Identities &gt; Network Tunnels</strong>.</p>
-</li>
-<li>
-<p>Initially, the newly created IPSec tunnels <strong><em>may</em></strong> appear under <strong>Unestablished Tunnels</strong>.<br />
-<img alt="Unestablished Tunnels" src="../pics/sig-feat-temp-s100-4.png" /></p>
-</li>
-<li>
-<p>After a few minutes, they should appear as <strong>Active Tunnels</strong>.
-  <img alt="Active Tunnels" src="../pics/sig-feat-temp-s100-5.png" /></p>
-</li>
+<li>On the Rule 2 page, navigate to <strong>Ruleset Settings</strong> and scroll down to <strong>Block Page</strong> setting and click <strong><code>Edit</code></strong>:</li>
 </ul>
-<h2 id="step-3---redirect-traffic-to-sig-tunnels">Step 3 - Redirect Traffic to SIG Tunnels<a class="headerlink" href="#step-3---redirect-traffic-to-sig-tunnels" title="Permanent link"></a></h2>
-<p><strong>Objective:</strong> Direct VPN-10 traffic from SD-WAN Site-100 via IPSec tunnels towards Umbrella by adding a Service route on vManage.</p>
-<p><strong>1. Modifying VPN Template:</strong></p>
+<p><img alt="" src="../pics/t10-block-ruleset-page-edit.png" /></p>
 <ul>
-<li>On the vManage GUI, go to <strong>Configuration &gt; Templates &gt; Feature Templates</strong>. </li>
-<li>Search for <strong><code>VPN_10_Site100</code></strong> and <strong><code>Edit</code></strong> the template.
-  <img alt="Edit VPN Template" src="../pics/sig-feat-temp-s100-6-v2.png" /></li>
+<li>On the <code>Block page</code> select <strong>Custom Appearance</strong> and then select <strong><code>Block Page Regional</code></strong> from the dropdown menu and click <strong>Save</strong>: </li>
 </ul>
-<p><strong>2. Adding Service Route:</strong></p>
+<p><img alt="" src="../pics/t10-block-ruleset-block-select.png" /></p>
 <ul>
-<li>
-<p>Select <strong>Service Route</strong>.
-  <img alt="Service Route" src="../pics/sig-feat-temp-service-route-v2.png" /></p>
-</li>
-<li>
-<p>Click <strong>New Service Route</strong> and add a <strong>Prefix</strong> of <code>0.0.0.0/0</code> pointing to <code>SIG</code> (default).</p>
-</li>
-<li>
-<p>Click <strong>Add</strong> and then click <strong>Update</strong> at the bottom of the page
-  <img alt="Add Service Route" src="../pics/sig-feat-temp-15.png" /></p>
-</li>
+<li>Now the newly created <strong><code>Block Page Regional</code></strong> should appear for under the Settings of <code>Ruleset 2</code>:</li>
 </ul>
-<p><strong>3. Updating and Configuring Device:</strong></p>
+<p><img alt="" src="../pics/t10-block-ruleset-final.png" /></p>
+<h2 id="step-2---verify-new-block-page">Step 2 - Verify new Block Page<a class="headerlink" href="#step-2---verify-new-block-page" title="Permanent link"></a></h2>
+<p><strong>Objective:</strong> Validate the new block page for Site-400 and confirm the original block page for Site-300.</p>
+<p><strong>1. Testing on Site-400:</strong></p>
 <ul>
-<li>
-<p>Click <strong>Next</strong> and then click <strong>Configure Devices</strong></p>
-</li>
-<li>
-<p>Wait till config push is sucessfull to Site100-cE1.  </p>
-</li>
-<li>
-<p>Optional: you may SSH to Site100-cE1 by using <em>MTPutty</em> application on RDP session (Jumphost).  Validate that the service route command <code>ip sdwan route vrf 10 0.0.0.0/0 service sig</code> are pushed by vManage.</p>
-</li>
+<li>Launch console access to ubuntu <strong><code>Site400-Ubuntu-VPN10</code></strong> host by using <strong>mRemoteNG</strong> application.  Login with credentials of <code>viptela</code></li>
+<li>Use Chromium Browser to navigate onto traditional websites, such as <code>www.cisco.com</code>.  Access to this website should work.</li>
+<li>Use Chromium Browser to navigate to <code>www.chase.com</code>.  As per our Umbrella Web Policy, this sites should be blocked and, as expected, the newly created Umbrella block page will appear.</li>
 </ul>
-<p><strong>4. Verifying Traffic Redirection to Umbrella:</strong></p>
+<p><strong>2. Testing on Site-300:</strong></p>
+<p>Now lets validate that the original Block page is shown for SD-WAN Site-300.</p>
 <ul>
-<li>
-<p>Using <strong>mRemoteNG</strong>, relaunch the console session of the Ubuntu VM <code>Site400-Ubuntu-VPN10</code>.</p>
-</li>
-<li>
-<p>Open the Chromium Web Browser on this VM and navigate to <strong><code>welcome.umbrella.com</code></strong>. The message <code>Welcome to Umbrella</code> indicates successful protection by Umbrella.
-  <img alt="Welcome to Umbrella" src="../pics/Umbrella-welecome.png" /></p>
-</li>
+<li>Launch console access to ubuntu <strong>Site300-Ubuntu-VPN10</strong> host by using <strong>mRemoteNG</strong> application.  Login with credentials of <code>viptela</code></li>
+<li>Use Chromium Browser to navigate onto traditional websites, such as <code>www.cisco.com</code>.  Access to this website should work.</li>
+<li>Use Chromium Browser to navigate to <code>www.cnn.com</code>.  As per our Umbrella Web Policy, this sites should be blocked and, as expected, the original block page will appear.</li>
 </ul>
-<p><strong>Conclusion:</strong> 
-With these configurations, traffic from Site-100 and Site-400 is now routed towards Umbrella using the IPSec tunnels. The next steps will involve configuring Cloud Security policies for these sites on Umbrella.</p>
+<p><strong>Conclusion:</strong></p>
+<p>With the successful implementation of Task 10, the regional sites now have a customized block page, enhancing the user experience when web policies are enforced. This customization allows for a more tailored approach to displaying block messages, aligning with the specific needs and branding of the organization.</p>
 
 
 
@@ -905,7 +836,7 @@ With these configurations, traffic from Site-100 and Site-400 is now routed towa
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../Task6-v2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Task-6 Umbrella Policies for Site-300" rel="prev">
+          <a href="../Task9-v2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Task-9 Monitoring on Umbrella" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -914,20 +845,20 @@ With these configurations, traffic from Site-100 and Site-400 is now routed towa
                 Previous
               </span>
               <div class="md-ellipsis">
-                Task-6 Umbrella Policies for Site-300
+                Task-9 Monitoring on Umbrella
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Task8-v2/" class="md-footer__link md-footer__link--next" aria-label="Next: Task-8 Umbrella Policies for Sites 100 and 400" rel="next">
+          <a href="../Task11-v2/" class="md-footer__link md-footer__link--next" aria-label="Next: Task-11 Data Loss Prevention" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Task-8 Umbrella Policies for Sites 100 and 400
+                Task-11 Data Loss Prevention
               </div>
             </div>
             <div class="md-footer__button md-icon">

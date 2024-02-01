@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../Task6-v2/">
+        <link rel="prev" href="../Task8-v2/">
       
       
-        <link rel="next" href="../Task8-v2/">
+        <link rel="next" href="../Task10-v2/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>Task-7 Umbrella SIG for Sites 100 and 400 - Cisco Live 2024 LTRENT-2387</title>
+        <title>Task-9 Monitoring on Umbrella - Cisco Live 2024 LTRENT-2387</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#task-7-integrating-umbrella-sig-for-site-100-and-site-400" class="md-skip">
+        <a href="#task-9---monitoring-on-umbrella" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task-7 Umbrella SIG for Sites 100 and 400
+              Task-9 Monitoring on Umbrella
             
           </span>
         </div>
@@ -558,66 +558,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Task-7 Umbrella SIG for Sites 100 and 400
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Task7-v2/" class="md-nav__link">
         Task-7 Umbrella SIG for Sites 100 and 400
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#step-1---ipsec-tunnels-from-site-100-to-umbrella" class="md-nav__link">
-    Step 1 - IPSec Tunnels from Site-100 to Umbrella
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2---verify-sig-tunnels-on-umbrella" class="md-nav__link">
-    Step 2 - Verify SIG Tunnels on Umbrella
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3---redirect-traffic-to-sig-tunnels" class="md-nav__link">
-    Step 3 - Redirect Traffic to SIG Tunnels
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -641,11 +586,80 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Task9-v2/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Task-9 Monitoring on Umbrella
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Task-9 Monitoring on Umbrella
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-traffic-from-sd-wan-sites" class="md-nav__link">
+    Step 1: Traffic from SD-WAN sites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2---activity-reports-for-web-urls" class="md-nav__link">
+    Step 2 - Activity Reports for Web URLs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3---activity-reports-for-firewall" class="md-nav__link">
+    Step 3 - Activity Reports for Firewall
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4---top-destinations-reports" class="md-nav__link">
+    Step 4 - Top Destinations Reports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-step-5---additional-reports" class="md-nav__link">
+    Optional Step 5 - additional reports
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -726,22 +740,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1---ipsec-tunnels-from-site-100-to-umbrella" class="md-nav__link">
-    Step 1 - IPSec Tunnels from Site-100 to Umbrella
+  <a href="#step-1-traffic-from-sd-wan-sites" class="md-nav__link">
+    Step 1: Traffic from SD-WAN sites
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2---verify-sig-tunnels-on-umbrella" class="md-nav__link">
-    Step 2 - Verify SIG Tunnels on Umbrella
+  <a href="#step-2---activity-reports-for-web-urls" class="md-nav__link">
+    Step 2 - Activity Reports for Web URLs
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3---redirect-traffic-to-sig-tunnels" class="md-nav__link">
-    Step 3 - Redirect Traffic to SIG Tunnels
+  <a href="#step-3---activity-reports-for-firewall" class="md-nav__link">
+    Step 3 - Activity Reports for Firewall
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4---top-destinations-reports" class="md-nav__link">
+    Step 4 - Top Destinations Reports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-step-5---additional-reports" class="md-nav__link">
+    Optional Step 5 - additional reports
   </a>
   
 </li>
@@ -764,119 +792,166 @@
   
 
 
-<h1 id="task-7-integrating-umbrella-sig-for-site-100-and-site-400">Task 7: Integrating Umbrella SIG for Site-100 and Site-400<a class="headerlink" href="#task-7-integrating-umbrella-sig-for-site-100-and-site-400" title="Permanent link"></a></h1>
-<p>In Task 7, we will perform the integration of Umbrella SIG with Site-100. This integration plays a pivotal role in routing traffic towards Umbrella and enforcing Cloud Security policies for both the local Site-100 and the remote Site-400. As a reminder, as per previous IP traffic routing tasks, Internet traffic from Site-400 is also routed through Site-100. Therefore, the Umbrella policies configured and applied to the IPSec tunnels (between Site-100 &amp; Umbrella) will be applied on Site-400 as well and thus impact on network security and control of both of these sites.</p>
-<p>Let's proceed with the detailed steps to implement IPSec tunnels, integrate Umbrella SIG, and redirect traffic effectively to enhance the security posture of these regional sites.</p>
-<h2 id="step-1---ipsec-tunnels-from-site-100-to-umbrella">Step 1 - IPSec Tunnels from Site-100 to Umbrella<a class="headerlink" href="#step-1---ipsec-tunnels-from-site-100-to-umbrella" title="Permanent link"></a></h2>
-<p><strong>Objective:</strong> Create IPSec tunnels between SD-WAN Site-100 and Umbrella Cloud.  This is achieved by implementing the SIG template in <strong>VPN-0</strong> on the device template of node <strong>Site100-cE1</strong> in the <strong>Transport and Management VPN</strong> section on vManage.</p>
-<p><strong>1. Accessing Device Templates:</strong></p>
-<ul>
-<li>Navigate to <strong>Configuration &gt; Templates</strong> and click on <strong>Device Templates</strong> in vManage.
-  <img alt="Device Templates" src="../pics/Device-template.png" /></li>
-</ul>
-<p><strong>2. Editing Site100-cE1 Template:</strong></p>
-<ul>
-<li>Locate the <strong>Site100-cE1</strong> template from the <code>Description</code> field. Then <strong>click</strong> on three dots (<strong><code>...</code></strong>) on the right hand side of this template and click <strong><code>Edit</code></strong>:
-  <img alt="Edit Site100-cE1 Template" src="pics/sig-feat-temp-s100-1-v2.png" /></li>
-</ul>
-<p><strong>3. Configuring Transport and Management VPN:</strong></p>
-<ul>
-<li>On the <code>Device Template</code>, Click on <strong>Transport and Management VPN</strong>.
-  <img alt="Transport and Management VPN" src="../pics/sig-feat-temp-s100-2.png" /></li>
-</ul>
-<p><strong>4. Adding Cisco Secure Internet Gateway Template:</strong></p>
-<ul>
-<li>Add the <strong><code>Cisco Secure Internet Gateway</code></strong> template by clicking on it, and then select <strong><code>VIP23-SIG-Feature-Template</code></strong> from the dropdown for this template.
-  <img alt="Add SIG Template" src="../pics/sig-feat-temp-8-v2.png" /></li>
-</ul>
-<p><strong>5. Ensuring Cisco SIG Credentials:</strong></p>
-<ul>
-<li>Scroll down to the <strong>Additional Templates</strong> section and confirm the addition of <strong>Cisco SIG Credentials</strong> with value of <strong><code>VIP23-SIG-Credentials</code></strong>.
-  <img alt="Cisco SIG Credentials" src="../pics/sig-feat-temp-9.png" /></li>
-</ul>
-<p><strong>6. Updating and Configuring Devices:</strong></p>
+<h1 id="task-9---monitoring-on-umbrella">Task 9 - Monitoring on Umbrella<a class="headerlink" href="#task-9---monitoring-on-umbrella" title="Permanent link"></a></h1>
+<p>Task 9 is focused on utilizing Cisco Umbrella reports for monitoring usage, traffic detection, policy enforcement, and SD-WAN integration. This task assumes the completion of all prior tasks involving the integration of SD-WAN sites with Umbrella and the configuration of various policies.</p>
+<h2 id="step-1-traffic-from-sd-wan-sites">Step 1: Traffic from SD-WAN sites<a class="headerlink" href="#step-1-traffic-from-sd-wan-sites" title="Permanent link"></a></h2>
+<p><strong>Objective:</strong> Initiate additional IP and Web traffic for Umbrella monitoring.</p>
+<p><strong>1. Generating Web and IP Traffic:</strong></p>
 <ul>
 <li>
-<p>Click on <strong>Update</strong> to modify the settings.</p>
+<p>On the RDP session, use <code>mRemoteNG</code> application to logon the console of VM named <code>Site300-Ubuntu-VPN10</code>.</p>
 </li>
 <li>
-<p>Click <strong>Next</strong> to proceed with the configuration
-  <img alt="Update Settings" src="../pics/sig-feat-temp-s100-3.png" /></p>
+<p>Launch Chromium web browser and visit the website <code>cisco.com</code>.  This website should be accessible. </p>
 </li>
 <li>
-<p>Click <strong><code>Configure Devices</code></strong> on next page
-  <img alt="Configure Devices" src="../pics/sig-feat-temp-11.png" /></p>
+<p>On the Chromium web browser navigate to <code>facebook.com</code>.  As per earlier configured policy, the traffic to <code>facebook.com</code> should be blocked by Umbrella on Site-300. </p>
 </li>
 <li>
-<p>Wait for <code>success</code> message for pushing these configuration changes to Site100-cE1.</p>
+<p>On the <code>mRemoteNG</code> application launch the <strong>Terminal</strong> application in the RDP session of the <code>Site300-Ubuntu-VPN10</code>.  Then initiate ICMP traffic by issuing below <code>ping</code> command.  After few seconds stop the ping by pressing <code>Ctrl-C</code>.  A 100% success rate in the ping results confirms successful Internet connectivity through Umbrella.</p>
 </li>
 </ul>
-<h2 id="step-2---verify-sig-tunnels-on-umbrella">Step 2 - Verify SIG Tunnels on Umbrella<a class="headerlink" href="#step-2---verify-sig-tunnels-on-umbrella" title="Permanent link"></a></h2>
-<p><strong>Objective:</strong> Confirm the operational status of IPSec tunnels to Site100-cE1 by accessing the Umbrella dashboard.</p>
-<p><strong>1. Accessing Umbrella Dashboard:</strong></p>
+<div class="highlight"><pre><span></span><code>ping 1.1.1.1
+</code></pre></div>
 <ul>
-<li>Log in to the Umbrella Dashboard via <code>Umbrella SSO</code> on the RDP session.</li>
+<li>In the same terminal of the <code>Site300-VPN10</code> host, execute the command below. After a few seconds, halt the ping by pressing <code>Control-C</code>. According to the previous configuration, Umbrella should block this traffic:</li>
 </ul>
-<p><strong>2. Checking Tunnel Status:</strong></p>
+<div class="highlight"><pre><span></span><code>ping 8.8.8.8
+</code></pre></div>
+<p>Next,
+* On the RDP session, use <code>mRemoteNG</code> application to logon the console of VM named <code>Site400-Ubuntu-VPN10</code>. </p>
 <ul>
 <li>
-<p>Navigate to <strong>Deployments &gt; Core Identities &gt; Network Tunnels</strong>.</p>
+<p>From the Chromium Web browser initiate traffic to <code>www.cnn.com</code> and <code>cisco.com</code>.   As per earlier task, the traffic to <code>www.cnn.com</code> should be blocked by Umbrella. </p>
 </li>
 <li>
-<p>Initially, the newly created IPSec tunnels <strong><em>may</em></strong> appear under <strong>Unestablished Tunnels</strong>.<br />
-<img alt="Unestablished Tunnels" src="../pics/sig-feat-temp-s100-4.png" /></p>
-</li>
-<li>
-<p>After a few minutes, they should appear as <strong>Active Tunnels</strong>.
-  <img alt="Active Tunnels" src="../pics/sig-feat-temp-s100-5.png" /></p>
+<p>On the <code>mRemoteNG</code> application launch the <strong>Terminal</strong> application in the RDP session of the <code>Site400-Ubuntu-VPN10</code>.  Then initiate ICMP traffic by issuing below <code>ping</code> command.  After few seconds stop the ping by pressing <code>Ctrl-C</code>.  A 100% success rate in the ping results confirms successful Internet connectivity through Umbrella.</p>
 </li>
 </ul>
-<h2 id="step-3---redirect-traffic-to-sig-tunnels">Step 3 - Redirect Traffic to SIG Tunnels<a class="headerlink" href="#step-3---redirect-traffic-to-sig-tunnels" title="Permanent link"></a></h2>
-<p><strong>Objective:</strong> Direct VPN-10 traffic from SD-WAN Site-100 via IPSec tunnels towards Umbrella by adding a Service route on vManage.</p>
-<p><strong>1. Modifying VPN Template:</strong></p>
-<ul>
-<li>On the vManage GUI, go to <strong>Configuration &gt; Templates &gt; Feature Templates</strong>. </li>
-<li>Search for <strong><code>VPN_10_Site100</code></strong> and <strong><code>Edit</code></strong> the template.
-  <img alt="Edit VPN Template" src="../pics/sig-feat-temp-s100-6-v2.png" /></li>
-</ul>
-<p><strong>2. Adding Service Route:</strong></p>
+<div class="highlight"><pre><span></span><code>ping 1.1.1.1
+</code></pre></div>
+<h2 id="step-2---activity-reports-for-web-urls">Step 2 - Activity Reports for Web URLs<a class="headerlink" href="#step-2---activity-reports-for-web-urls" title="Permanent link"></a></h2>
+<p><strong>Objective:</strong> View web and IP traffic activity reports from SD-WAN branch sites in Umbrella.</p>
+<p><strong>1. Accessing Activity Search:</strong></p>
 <ul>
 <li>
-<p>Select <strong>Service Route</strong>.
-  <img alt="Service Route" src="../pics/sig-feat-temp-service-route-v2.png" /></p>
+<p>On the RDP session (jumphost), access the Umbrella web page by clicking on <code>Umbrella SSO</code> bookmark on Google Chrome browser.</p>
 </li>
 <li>
-<p>Click <strong>New Service Route</strong> and add a <strong>Prefix</strong> of <code>0.0.0.0/0</code> pointing to <code>SIG</code> (default).</p>
-</li>
-<li>
-<p>Click <strong>Add</strong> and then click <strong>Update</strong> at the bottom of the page
-  <img alt="Add Service Route" src="../pics/sig-feat-temp-15.png" /></p>
+<p>Go to <strong>Reporting &gt; Core Reports</strong> and click on <strong>Activity Search</strong>:</p>
 </li>
 </ul>
-<p><strong>3. Updating and Configuring Device:</strong></p>
+<p><img alt="" src="../pics/t9-s1-activity3.png" /></p>
+<p>Here you can view the result of every DNS, URL, and IP request from your various SD-WAN sites and other identities.  Browse through to view some of the past results.</p>
+<p><strong>2. Conducting Advanced Searches:</strong></p>
 <ul>
 <li>
-<p>Click <strong>Next</strong> and then click <strong>Configure Devices</strong></p>
+<p>Click on blue <strong>Filters</strong> button to close the filter tab and then click on <strong>Advanced</strong> button in the <code>Search</code> field/bar.  </p>
 </li>
 <li>
-<p>Wait till config push is sucessfull to Site100-cE1.  </p>
-</li>
-<li>
-<p>Optional: you may SSH to Site100-cE1 by using <em>MTPutty</em> application on RDP session (Jumphost).  Validate that the service route command <code>ip sdwan route vrf 10 0.0.0.0/0 service sig</code> are pushed by vManage.</p>
+<p>On the <code>Advanced Search</code> page, navigate to to the <strong><code>URL</code></strong> section and enter <code>cnn.com</code>.  Then click <strong>Apply</strong> as shown in below screenshot:</p>
 </li>
 </ul>
-<p><strong>4. Verifying Traffic Redirection to Umbrella:</strong></p>
+<p><img alt="" src="../pics/t9-s1-adv-url.png" /></p>
+<p>You will now see all the search results matching URL of <code>cnn.com</code>.  Below is an example screenshot for these results (your view may be different):</p>
+<p><img alt="" src="../pics/t9-s1-adv-cnn-results.png" /></p>
+<p>As per these search results:</p>
+<ul>
+<li>Note that the search results shows all <strong><em>Web</em></strong> Requests related to <code>cnn.com</code> i.e., Secure Web Gateway (or Web Proxy) of Umbrella logged these requests.</li>
+<li>Use the Scroll bar at the bottom to move right and review the various fields such as <code>Action</code>, <code>Categories</code> and <code>Ruleset or Rule</code> fields of the results (each row) shown on this page.</li>
+<li>Further on the right side of each row, click on the three dots (<strong><code>...</code></strong>) and then click <strong><code>View Full Details</code></strong> to see detailed info as shown in below screenshot:</li>
+</ul>
+<p><img alt="" src="../pics/t9-s1-adv-cnn-results-adv.png" /></p>
+<p>In summary the info in Activty search results matches the configurations performed in earlier tasks!</p>
+<ul>
+<li>Click on <strong>Advanced</strong> button in the <code>Search</code> field again.  On the <code>Advanced Search</code> page, enter <code>facebook.com</code> as the second <strong><code>URL</code></strong> and click <strong>Apply</strong> button as shown below:</li>
+</ul>
+<p><img alt="" src="../pics/t9-s1-adv-url2.png" /></p>
+<ul>
+<li>View the updated Activity results.  Below screenshot is an example for such result and your data may vary:</li>
+</ul>
+<p><img alt="" src="../pics/t9-s1-adv-results.png" /></p>
+<ul>
+<li>In the search result, review the various fields such as <code>Action</code>, <code>Categories</code> and <code>Ruleset or Rule</code> fields of the results (each row) shown on this page and verify that results match the configurations performed in earlier tasks.</li>
+</ul>
+<h2 id="step-3---activity-reports-for-firewall">Step 3 - Activity Reports for Firewall<a class="headerlink" href="#step-3---activity-reports-for-firewall" title="Permanent link"></a></h2>
+<p><strong>Objective:</strong> Review Umbrella's monitoring results for Firewall traffic.</p>
+<p><strong>1. Reviewing Traffic to Specific IPs:</strong></p>
 <ul>
 <li>
-<p>Using <strong>mRemoteNG</strong>, relaunch the console session of the Ubuntu VM <code>Site400-Ubuntu-VPN10</code>.</p>
+<p>In the Umbrella Dashboard on Google Chrome, clear the existing <code>Advanced</code> Filter by clicking on <strong><code>CLEAR</code></strong> button or click on cross (<strong><code>X</code></strong>) next to the URL field on this page.  Thus Web filters for <code>cnn.com</code> and <code>facebook.com</code> are cleared from Activity Search page.  Alternatively, just navigate back to <strong>Reporting &gt; Core Reports &gt; Activity Search</strong>.</p>
 </li>
 <li>
-<p>Open the Chromium Web Browser on this VM and navigate to <strong><code>welcome.umbrella.com</code></strong>. The message <code>Welcome to Umbrella</code> indicates successful protection by Umbrella.
-  <img alt="Welcome to Umbrella" src="../pics/Umbrella-welecome.png" /></p>
+<p>Next, Click on <strong>Advanced</strong> button in the <code>Search</code> field/bar.</p>
+</li>
+<li>
+<p>On the <code>Advanced Search</code> page, navigate to the <strong><code>IP Address</code></strong> section, enter <strong><code>1.1.1.1</code></strong> and hit <strong>Apply</strong>:
+<img alt="" src="../pics/t9-activity-IP.png" /></p>
+</li>
+<li>
+<p>Now you can review the search results for all traffic related to IP address of <code>1.1.1.1</code> that is detected by Umbrella Firewall (FW).  Below is an example of this search result - your result may vary:</p>
+</li>
+</ul>
+<p><img alt="" src="../pics/t9-activity-IP1-result.png" /></p>
+<ul>
+<li>
+<p>Next, <code>Clear</code> these search results and remove the filter for <code>1.1.1.1</code>. </p>
+</li>
+<li>
+<p>Create a new <code>Advanced Search</code> filter for <strong><code>IP Address</code></strong> of <strong><code>8.8.8.8</code></strong> (using the same procedure as above).  </p>
+</li>
+<li>
+<p>Revew the search results IP address of <code>8.8.8.8</code>.  Below is an example of screenshot for this search (note your result may be different).  As per <code>Actions</code> field, you will see both <code>Allowed</code> and <code>Blocked</code>.  Why do you see both of these actions?  </p>
+</li>
+</ul>
+<p><em>Tip: Have a look at details of these packets by clicking on <code>view Full Details</code> and then review the <code>Protocol</code> field (ICMP, UDP)!</em></p>
+<p><img alt="" src="../pics/t9-activity-IP8-result.png" /></p>
+<h2 id="step-4---top-destinations-reports">Step 4 - Top Destinations Reports<a class="headerlink" href="#step-4---top-destinations-reports" title="Permanent link"></a></h2>
+<p><strong>Objective:</strong> Analyze the most active destinations in traffic on the Umbrella Dashboard.</p>
+<p><strong>1. Viewing Top Destinations:</strong></p>
+<ul>
+<li>
+<p>On Umbrella Dashboard, navgiate to <strong>Reporting &gt; Additional Reports &gt; Top Destinations</strong>.  It will show the most visited destinations.   </p>
+</li>
+<li>
+<p>In previous tasks, on Ubuntu Virtual Machines at the SD-WAN sites, you had browsed to various websites.  As Ubuntu VM settings the DNS queries will be routed via DNS Resolver with IP address of <code>1.1.1.1</code>.  Below Figure shows an example screenshot from a lab system.  <em>Note:</em> Your screen may not have the same output. Click on <strong><code>1.1.1.1</code></strong> among the list of destinations as shown below:</p>
+</li>
+</ul>
+<p><img alt="" src="../pics/t9-s4-top-dest.png" /></p>
+<p><strong>2. Investigating Specific Destinations:</strong></p>
+<ul>
+<li>Once <code>1.1.1.1</code> is clicked it will show below screenshot.  Click on <strong><code>VIEW 1.1.1.1 IN INVESTIGATE</code></strong> to view more details of this IP address as shown below</li>
+</ul>
+<p><img alt="" src="../pics/t9-s4-investigate.png" /></p>
+<ul>
+<li>The investigate page shows more details about this IP address as shown in below screenshot.  Click on <strong>Talos</strong> to view the reputation and other intelligence from Cisco Talos about this IP address.
+<img alt="" src="../pics/t9-s4-talos.png" /></li>
+</ul>
+<p>Here is the screenshot from Cisco Talos about this IP address
+<img alt="" src="../pics/t9-s4-talos-reput.png" /></p>
+<h2 id="optional-step-5---additional-reports">Optional Step 5 - additional reports<a class="headerlink" href="#optional-step-5---additional-reports" title="Permanent link"></a></h2>
+<p><strong>Objective:</strong> Explore various other reports available on the Umbrella Dashboard.</p>
+<ul>
+<li>
+<p>Navigate to <strong>Reporting &gt; Additional Request &gt; Top Identities</strong> to view the traffic by various Identities.  As expected, the Network tunnels (four) will be shown here.  <code>Allowed</code> or <code>Blocked</code> Responses by specific Traffic type can also be viewed on this page by clicking under the <code>Responses</code>.   You can vew the Tunnel and site with most traffic and the respective count (i.e. number of <code>Requests</code>) in your lab pod on this page.</p>
+</li>
+<li>
+<p>Navigate to <strong>Reporting &gt; Additional Request &gt; Total Request</strong> to view Traffic by type (<code>Firewall</code>, <code>DNS</code>, <code>Web</code>, All) and Responses (<code>Allowed</code>, <code>Blocked</code>).  You can check for Allowed or Blocked by Traffic type can be viewed on this page by clicking under the <code>Responses</code> </p>
+</li>
+<li>
+<p>Navigate to <strong>Reporting &gt; Additional Request &gt; Top Categories</strong> to view the traffic by various categories such as Advertisements, Search Engines etc.  Note traffic size and number of requests by various categories is shown in these reports.</p>
 </li>
 </ul>
 <p><strong>Conclusion:</strong> 
-With these configurations, traffic from Site-100 and Site-400 is now routed towards Umbrella using the IPSec tunnels. The next steps will involve configuring Cloud Security policies for these sites on Umbrella.</p>
+Task 9's completion marks a significant milestone in leveraging Cisco Umbrella's robust monitoring capabilities. Throughout this task, we have successfully navigated the intricacies of Umbrella's reporting features, gaining insights into various aspects of network traffic and policy enforcement.</p>
+<p>Key takeaways from this task include:</p>
+<ul>
+<li><strong>Effective Monitoring:</strong> The ability to monitor web and IP traffic from SD-WAN sites, providing visibility into network activities and policy impacts.</li>
+<li><strong>Policy Enforcement Validation:</strong> Confirmation of the effectiveness of Umbrella policies, as seen in the blocking or allowing of specific web and IP traffic.</li>
+<li><strong>Advanced Reporting:</strong> Utilization of Umbrella's advanced reporting features, such as Activity Search and Top Destinations, to filter and analyze network traffic data.</li>
+<li><strong>Strategic Insights:</strong> Gathering strategic insights from the data, enabling informed decision-making for future network and security enhancements.</li>
+</ul>
+<p>As we conclude this task, it's evident that the integration of Umbrella into the network infrastructure offers not just enhanced security but also invaluable data for continuous network optimization and threat mitigation. This task underscores the critical role of active monitoring and reporting in maintaining a secure and efficient network.</p>
 
 
 
@@ -905,7 +980,7 @@ With these configurations, traffic from Site-100 and Site-400 is now routed towa
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../Task6-v2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Task-6 Umbrella Policies for Site-300" rel="prev">
+          <a href="../Task8-v2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Task-8 Umbrella Policies for Sites 100 and 400" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -914,20 +989,20 @@ With these configurations, traffic from Site-100 and Site-400 is now routed towa
                 Previous
               </span>
               <div class="md-ellipsis">
-                Task-6 Umbrella Policies for Site-300
+                Task-8 Umbrella Policies for Sites 100 and 400
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Task8-v2/" class="md-footer__link md-footer__link--next" aria-label="Next: Task-8 Umbrella Policies for Sites 100 and 400" rel="next">
+          <a href="../Task10-v2/" class="md-footer__link md-footer__link--next" aria-label="Next: Task-10 Block Page for Sites 100 and 400" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Task-8 Umbrella Policies for Sites 100 and 400
+                Task-10 Block Page for Sites 100 and 400
               </div>
             </div>
             <div class="md-footer__button md-icon">
