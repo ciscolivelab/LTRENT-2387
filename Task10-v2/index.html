@@ -795,14 +795,14 @@
 <p><strong>Objective:</strong> Validate the new block page for Site-400 and confirm the original block page for Site-300.</p>
 <p><strong>1. Testing on Site-400:</strong></p>
 <ul>
-<li>Launch console access to ubuntu <strong><code>Site400-Ubuntu-VPN10</code></strong> host by using <strong>mRemoteNG</strong> application.  Login with credentials of <code>viptela</code></li>
+<li>Launch console access to ubuntu <strong><code>Site400-Ubuntu-VPN10</code></strong> host by using <strong>mRemoteNG</strong> application.  Login with credentials of <code>admin</code></li>
 <li>Use Chromium Browser to navigate onto traditional websites, such as <code>www.cisco.com</code>.  Access to this website should work.</li>
 <li>Use Chromium Browser to navigate to <code>www.chase.com</code>.  As per our Umbrella Web Policy, this sites should be blocked and, as expected, the newly created Umbrella block page will appear.</li>
 </ul>
 <p><strong>2. Testing on Site-300:</strong></p>
 <p>Now lets validate that the original Block page is shown for SD-WAN Site-300.</p>
 <ul>
-<li>Launch console access to ubuntu <strong>Site300-Ubuntu-VPN10</strong> host by using <strong>mRemoteNG</strong> application.  Login with credentials of <code>viptela</code></li>
+<li>Launch console access to ubuntu <strong>Site300-Ubuntu-VPN10</strong> host by using <strong>mRemoteNG</strong> application.  Login with credentials of <code>admin</code></li>
 <li>Use Chromium Browser to navigate onto traditional websites, such as <code>www.cisco.com</code>.  Access to this website should work.</li>
 <li>Use Chromium Browser to navigate to <code>www.cnn.com</code>.  As per our Umbrella Web Policy, this sites should be blocked and, as expected, the original block page will appear.</li>
 </ul>
