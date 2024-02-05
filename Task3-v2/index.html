@@ -565,6 +565,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#step-5---import-umbrella-root-certificate-into-chromium" class="md-nav__link">
+    Step 5 - Import Umbrella Root Certificate into Chromium
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -756,6 +763,13 @@
         <li class="md-nav__item">
   <a href="#step-4---verify-internet-connectivity-on-vpn-10-of-site-400" class="md-nav__link">
     Step 4 - Verify Internet Connectivity on VPN-10 of Site-400
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5---import-umbrella-root-certificate-into-chromium" class="md-nav__link">
+    Step 5 - Import Umbrella Root Certificate into Chromium
   </a>
   
 </li>
@@ -969,19 +983,25 @@ default-information originate
 <li>In the Terminal application on the Ubuntu VM, execute a <code>traceroute</code> with the following command: <code>traceroute 8.8.8.8</code>.  After a few seconds you may press <code>Ctrl+C</code> to stop the traceroute as latter routers will not respond to traceroute.  Observe that internet traffic is routed through <code>Site100-cE2</code> and then to <code>Site100-cE1</code>.  In the below sample Figure the <code>Site100-cE1</code> WAN Edge routers appears with it's IP address of <code>10.10.1.1</code>.  Your output of this command may vary since there are two SD-WAN Fabric (IPSec) tunnels betwen <code>Site400-cE1</code> and <code>Site100-cE2</code> i.e., biz-internet (GigE-1) and mpls (GigE-2) transport.  And their IP addresses are <code>10.2.3.2</code> (GigE-1) and <code>10.1.3.2</code> (GigE-2) respectively.<br />
 <img alt="Traceroute Result on Ubuntu VM" src="../pics/ubuntu-trace-ok-v2.png" /></li>
 </ul>
-<p><strong>7. Import Umbrella Root Certificate into Chromium</strong></p>
-<p>Advanced Cisco Umbrella features, such as SSL Decryption through the intelligent proxy and the ability to block your own custom URLs require that you install the Cisco Umbrella root certificate. Other features, such as File Inspection, gain greater efficacy from having the certificate present as Umbrella is able to proxy and block more traffic. </p>
-<p>It step is required to proceed with all other subsequent upcoming tasks.</p>
+<p><strong>7. Repeating for Site-300:</strong> </p>
 <ul>
-<li>Open Chromium and open the following <strong>Link</strong> and download <strong>Umbrella Root Certificate</strong></li>
+<li>Repeat the above steps to confirm internet access for VPN-10 of <strong>Site300</strong>.</li>
+<li>This involves verifying the ip route on VPN-10 on <code>Site300-cE1</code> and then checking internet connectivity on the Ubuntu VM <code>Site300-Ubuntu-VPN10</code>.</li>
 </ul>
-<p><code>Link goes here</code></p>
+<h2 id="step-5---import-umbrella-root-certificate-into-chromium">Step 5 - Import Umbrella Root Certificate into Chromium<a class="headerlink" href="#step-5---import-umbrella-root-certificate-into-chromium" title="Permanent link"></a></h2>
+<p>Advanced Cisco Umbrella features, such as SSL Decryption through the intelligent proxy and the ability to block your own custom URLs, require that you install the Cisco Umbrella root certificate. Other features, such as File Inspection, gain greater efficacy from having the certificate present as Umbrella is able to proxy and block more traffic. </p>
+<p>It step is required to proceed with all other subsequent upcoming tasks.</p>
+<p><strong>1. Download and Install Root Cert on Site-400:</strong> </p>
 <ul>
 <li>
 <p>Open <code>mRemoteNG</code> and connect to console of <code>Site400-Ubuntu-VPN10</code></p>
 </li>
 <li>
-<p>Launch <strong>Chromium</strong> and go to it's <code>Settings</code>
+<p>Launch Chromium and open the following Link <strong><code>http://tinyurl.com/umbrellacert</code></strong> and Download <strong>Umbrella Root Certificate</strong> by clicking on the <strong><code>Download raw file</code></strong> icon as shown below:
+<img alt="" src="../pics/download-raw-file.png" /></p>
+</li>
+<li>
+<p>Now on the <strong>Chromium</strong> navigate to it's <code>Settings</code>
 <img alt="Chromium-Settings" src="../pics/chromium-step1.png" /></p>
 </li>
 <li>
@@ -1016,10 +1036,10 @@ default-information originate
 <img alt="Chromium-Download-All Open" src="../pics/chromium-step9.png" />  </p>
 </li>
 </ul>
-<p><strong>8. Repeating for Site-300:</strong> </p>
+<p>Now the certificate should installed.</p>
+<p><strong>2. Repeating for Site-300:</strong> </p>
 <ul>
-<li>Repeat the above steps to confirm internet access for VPN-10 of <strong>Site300</strong>.</li>
-<li>This involves verifying the ip route on VPN-10 on <code>Site300-cE1</code> and then checking internet connectivity on the Ubuntu VM <code>Site300-Ubuntu-VPN10</code>.</li>
+<li>Repeat the above steps to install root certificate on <strong>Site300</strong> Ubuntu VM <code>Site300-Ubuntu-VPN10</code></li>
 </ul>
 <p><strong>Conclusion:</strong> Internet connectivity on VPN-10 for Site-400 and Site-300 should now be successfully established and verifiable through the above tests.</p>
 
