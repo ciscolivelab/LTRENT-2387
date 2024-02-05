@@ -572,6 +572,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#step-6---clear-chromium-cache" class="md-nav__link">
+    Step 6 - Clear Chromium cache
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -770,6 +777,13 @@
         <li class="md-nav__item">
   <a href="#step-5---import-umbrella-root-certificate-into-chromium" class="md-nav__link">
     Step 5 - Import Umbrella Root Certificate into Chromium
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6---clear-chromium-cache" class="md-nav__link">
+    Step 6 - Clear Chromium cache
   </a>
   
 </li>
@@ -989,7 +1003,7 @@ default-information originate
 <li>This involves verifying the ip route on VPN-10 on <code>Site300-cE1</code> and then checking internet connectivity on the Ubuntu VM <code>Site300-Ubuntu-VPN10</code>.</li>
 </ul>
 <h2 id="step-5---import-umbrella-root-certificate-into-chromium">Step 5 - Import Umbrella Root Certificate into Chromium<a class="headerlink" href="#step-5---import-umbrella-root-certificate-into-chromium" title="Permanent link"></a></h2>
-<p>Advanced Cisco Umbrella features, such as SSL Decryption through the intelligent proxy and the ability to block your own custom URLs, require that you install the Cisco Umbrella root certificate. Other features, such as File Inspection, gain greater efficacy from having the certificate present as Umbrella is able to proxy and block more traffic. </p>
+<p><strong>Objective:</strong> Advanced Cisco Umbrella features, such as SSL Decryption through the intelligent proxy and the ability to block your own custom URLs, require that you install the Cisco Umbrella root certificate. Other features, such as File Inspection, gain greater efficacy from having the certificate present as Umbrella is able to proxy and block more traffic. </p>
 <p>It step is required to proceed with all other subsequent upcoming tasks.</p>
 <p><strong>1. Download and Install Root Cert on Site-400:</strong> </p>
 <ul>
@@ -1038,6 +1052,33 @@ default-information originate
 </ul>
 <p>Now the certificate should installed.</p>
 <p><strong>2. Repeating for Site-300:</strong> </p>
+<ul>
+<li>Repeat the above steps to install root certificate on <strong>Site300</strong> Ubuntu VM <code>Site300-Ubuntu-VPN10</code></li>
+</ul>
+<h2 id="step-6---clear-chromium-cache">Step 6 - Clear Chromium cache<a class="headerlink" href="#step-6---clear-chromium-cache" title="Permanent link"></a></h2>
+<p><strong>Objective:</strong> Clear the Browser data on Chromium browser on Ubuntu VMs by clearing the cache.</p>
+<p><strong>1. Clear cache on Site-400</strong></p>
+<ul>
+<li>
+<p>Relaunch the console of <code>Site400-Ubuntu-VPN10</code> by using <code>mRemoteNG</code> application</p>
+</li>
+<li>
+<p>Click on the three dots on the right of the Chromium browser and click on <strong><code>Setting</code></strong></p>
+</li>
+<li>
+<p>Click on <strong><code>Privacy and Security</code></strong> on the left side</p>
+</li>
+<li>
+<p>Click on <strong><code>Clear browsing data</code></strong></p>
+</li>
+<li>
+<p>On the next screen, select the <code>Time range</code> of <strong><code>All time</code></strong> from the dropdown menu</p>
+</li>
+<li>
+<p>Make sure all options are selected (default) and then click <strong><code>Clear data</code></strong> to clear all cache from Chromium browser</p>
+</li>
+</ul>
+<p><strong>2. Repeating for Site-300</strong></p>
 <ul>
 <li>Repeat the above steps to install root certificate on <strong>Site300</strong> Ubuntu VM <code>Site300-Ubuntu-VPN10</code></li>
 </ul>
