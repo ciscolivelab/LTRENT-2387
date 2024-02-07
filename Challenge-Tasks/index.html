@@ -822,10 +822,12 @@
 <h2 id="optional-super-challenge-task-5---only-route-facebook-from-site-400-to-umbrella-sig">Optional Super Challenge Task 5 - Only route Facebook from Site-400 to Umbrella SIG<a class="headerlink" href="#optional-super-challenge-task-5---only-route-facebook-from-site-400-to-umbrella-sig" title="Permanent link"></a></h2>
 <p>This task is more involved.  However it can be a fun exercise if you want do perform it.   </p>
 <p><strong>Objective:</strong> As per our existing setup all traffic from Site-400 is being routed towards Umbrella SIG.  We want to change this behavior and only route traffic to <code>facebook.com</code> towards Umbrella SIG.  And don't want to protect other traffic from Umbrella.  Though we are talking about traffic to facebook in this step however more real world use case will be traffic like VoIP/Video to be not sent towards Umbrella SIG.</p>
-<p>Here are the high level steps for this task:
-* On vManage: create new Device Templates for vSmart-1 and vSmart-2 on vManage (hint use CLI Template to match existing CLI configs of each vSmart)
-* Attach both vSmarts to respective Device Template
-* Remove existing Service Route on Site-100 to route all traffic to SIG </p>
+<p>Here are the high level steps for this task:</p>
+<ul>
+<li>On vManage: create new Device Templates for vSmart-1 and vSmart-2 on vManage (hint use CLI Template to match existing CLI configs of each vSmart)</li>
+<li>Attach both vSmarts to respective Device Template</li>
+<li>Remove existing Service Route on Site-100 to route all traffic to SIG </li>
+</ul>
 <p>Centralized Data Policy tips:</p>
 <ul>
 <li>Traffic Data policy to Match traffic from Site-400 on VPN-10 (as the source IP traffic: source-data-prefix-list) </li>
