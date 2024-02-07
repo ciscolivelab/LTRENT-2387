@@ -931,7 +931,7 @@ Throughout the task, we will conduct a series of verifications and tests. These 
 </ul>
 <p><strong>Result:</strong> By completing these steps, VPN-10 on Site-100 will be configured to route its internet traffic through the Global Routing Table (VPN-0), enabling internet access.</p>
 <h2 id="step-3---default-route-propagation-from-site-100-on-vpn-10">Step 3 - Default Route Propagation from Site-100 on VPN-10<a class="headerlink" href="#step-3---default-route-propagation-from-site-100-on-vpn-10" title="Permanent link"></a></h2>
-<p><strong>Objective:</strong> Configure the propagation of a default route on VPN-10 from Site100-cE1, utilizing OSPF, to its peer router, Site100-cE2. This default route is subsequently distributed across the SD-WAN Fabric sites, enabling the routing of internet traffic through VPN-10 via Site100-cE1. Site100-cE1, in turn, directs this traffic through its Global Routing Table (VPN-0).</p>
+<p><strong>Objective:</strong> Configure the propagation of a default route on VPN-10 from Site100-cE1, utilizing OSPF, to its peer router, Site100-cE2. This default route is subsequently distributed across the SD-WAN Fabric sites, enabling the routing of internet traffic through VPN-10 via Site100-cE2. The Site100-cE2 then routes the internet traffic to Site100-cE1 - which in turns directs this traffic through its Global Routing Table (VPN-0).</p>
 <p><strong>1. Navigating in vManage:</strong> </p>
 <ul>
 <li>In vManage, go to <strong>Configuration &gt; Templates</strong>.
