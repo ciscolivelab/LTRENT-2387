@@ -795,7 +795,7 @@
 <h1 id="task-6-configuring-umbrella-policies-for-site-300">Task 6: Configuring Umbrella Policies for Site-300<a class="headerlink" href="#task-6-configuring-umbrella-policies-for-site-300" title="Permanent link"></a></h1>
 <p>In Task 6, our objective is to establish tailored Umbrella Policies for Site-300. These policies encompass the following key elements:</p>
 <ul>
-<li>Utilizing a Firewall Policy within Umbrella to block ICMP traffic directed to Google's IP address 8.8.8.8.</li>
+<li>Utilizing a Firewall Policy within Umbrella to block ICMP traffic directed to Google's DNS IP address 8.8.8.8.</li>
 <li>Implementing a Web Policy in Umbrella to restrict web traffic, particularly targeting social media websites, with a specific focus on Facebook.</li>
 <li>Additionally, we will configure a Web Policy to block traffic to a specific website using a custom list within Umbrella.</li>
 </ul>
@@ -871,7 +871,7 @@
 <img alt="" src="../pics/umbrella-p15.png" /></p>
 </li>
 <li>
-<p>Select <strong><code>Tunnels</code></strong> under <code>All Identities</code> and click <strong><code>Save</code></strong>
+<p>Select <strong><code>Tunnels</code></strong> (to select both Site 300 tunnels) under <code>All Identities</code> and click <strong><code>Save</code></strong>
 <img alt="" src="../pics/umbrella-p16.png" /></p>
 </li>
 <li>
@@ -898,7 +898,7 @@
 <li>
 <p>On the <code>Web Policy Tester</code> page,</p>
 <ul>
-<li>Under the <strong>Primary Identity</strong> search box type <strong><code>Site</code></strong> and then select any of the tunnels for <strong>Site300</strong> </li>
+<li>Under the <strong>Primary Identity</strong> search box type <strong><code>Site</code></strong> and then select any of the Active tunnels for <strong>Site300</strong> </li>
 <li>Under <strong>Destination</strong>, enter <strong><code>facebook.com</code></strong></li>
 <li>Then click <strong>Run Test</strong> button: 
   <img alt="Run Test" src="../pics/umbrella-web-policy-test-result.png" /></li>
