@@ -807,11 +807,11 @@
 
 
 <h1 id="task-3---internet-access-for-all-sites">Task 3 - Internet Access for All Sites<a class="headerlink" href="#task-3---internet-access-for-all-sites" title="Permanent link"></a></h1>
-<p>In this task, our primary goal is to enable internet access for VPN-10 at Site-100. We will achieve this by routing the VPN-10 traffic through the Global Routing Table. The process involves a series of structured steps:</p>
+<p>In this task, our primary goal is to enable internet access on VPN-10 through Site-100 for all sites (i.e., Site-100, Site-300 &amp; Site-400). We will achieve this by routing the VPN-10 traffic through the Global Routing Table on Site-100. The process involves a series of structured steps:</p>
 <p><strong>1. Enabling Internet Access for VPN-10 on Site-100:</strong> 
 We will start by configuring Site-100 to allow VPN-10 traffic to access the internet through the Global Routing Table. This is a crucial step in ensuring that Site-100 can serve as a gateway for internet access.</p>
 <p><strong>2. Propagating the Default Route:</strong> 
-The next significant step is to propagate a default route from Site-100-cE1 on OSPF, within VRF-10. By doing this, we essentially enable Site-400 and Site-300 to use Site-100 as their default gateway on VPN-10. </p>
+The next significant step is to propagate a default route from Site100-cE1 on OSPF, within VRF-10. By doing this, we essentially enable Site-400 and Site-300 to use Site100-cE2 as their default gateway on VPN-10.  Site100-cE2 will then route all internet traffic via Site100-cE1.</p>
 <p><strong>3. Routing Internet Traffic via Site-100:</strong> 
 Consequently, both Site-400 and Site-300 will begin routing their internet traffic through Site-100. This is achieved by efficiently utilizing the SD-WAN Fabric, which facilitates the traffic flow between these sites.</p>
 <p><strong>4. Verification and Testing:</strong> 
