@@ -821,6 +821,8 @@
 <p><img alt="Save Policy" src="../pics/umbrella-p4.png" /></p>
 <h2 id="step-2---web-policy">Step 2 - Web Policy<a class="headerlink" href="#step-2---web-policy" title="Permanent link"></a></h2>
 <p><strong>Objective:</strong> Set up an Umbrella Web Policy to block access to Facebook.</p>
+<p>The Web policy is made up of rulesets &amp; their rules, identities and destinations.  Rulesets are sort of "containers” for the rules.  Identify is basically an entity that Umbrella protects through policies and monitors through reports.  In our setup, Network Tunnels are the identities.  While destination is a URL or fully qualified domain name.</p>
+<p>A Ruleset settings match on identity, while rules match on both identity and destination.  Once the Web policy matches against a ruleset, it evaluates that ruleset's rules. And once a ruleset match is made, the Web policy stops evaluating against other rulesets.</p>
 <p><strong>1. Creating Web Policy:</strong></p>
 <ul>
 <li>
@@ -1002,6 +1004,9 @@
 <p>Now, the Web Policy has been successfully updated with a new rule to block access to <code>cnn.com</code> as a custom list. The next step involves verifying this policy.</p>
 <p><strong>2. Testing the Custom Block List:</strong></p>
 <ul>
+<li>
+<p>As per procedure in Step 3 above, use <strong>Policy Tester</strong> on Umbrella Dashboard by navigating to <strong>Policies &gt; Management &gt; Web Policy</strong> to verify the traffic to <code>cnn.com</code> is blocked.</p>
+</li>
 <li>
 <p>Using <strong>mRemoteNG</strong>, relaunch the console session of the Ubuntu VM <code>Site300-Ubuntu-VPN10</code></p>
 </li>
