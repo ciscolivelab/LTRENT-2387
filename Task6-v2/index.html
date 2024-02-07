@@ -802,6 +802,7 @@
 <p>These policies enhance the security and control of Site-300's network traffic. Let's proceed with the detailed configuration steps to create and enforce these Umbrella Policies.</p>
 <h2 id="step-1---firewall-policy">Step 1 - Firewall Policy<a class="headerlink" href="#step-1---firewall-policy" title="Permanent link"></a></h2>
 <p><strong>Objective:</strong> Configure a Firewall Policy on the Umbrella Dashboard to block ICMP traffic.</p>
+<p>Umbrella firewall policy describes the active configuration of the Umbrella Cloud Delivered Fireall (CDFW).  It allows us to create any number of rules in a firewall policy to control the traffic in the networks.  The firewall policy allows to detect or block threats and attacks.</p>
 <p><strong>1. Accessing the Umbrella Dashboard:</strong></p>
 <ul>
 <li>Log in to the Umbrella Dashboard via the <code>Umbrella SSO</code> bookmark in Google Chrome on the RDP session (jumphost).</li>
@@ -821,7 +822,7 @@
 <p><img alt="Save Policy" src="../pics/umbrella-p4.png" /></p>
 <h2 id="step-2---web-policy">Step 2 - Web Policy<a class="headerlink" href="#step-2---web-policy" title="Permanent link"></a></h2>
 <p><strong>Objective:</strong> Set up an Umbrella Web Policy to block access to Facebook.</p>
-<p>The Web policy is made up of rulesets &amp; their rules, identities and destinations.  Rulesets are sort of "containers” for the rules.  Identify is basically an entity that Umbrella protects through policies and monitors through reports.  In our setup, Network Tunnels are the identities.  While destination is a URL or fully qualified domain name.</p>
+<p>In Umbrella, the Web policy is made up of rulesets &amp; their rules, identities and destinations.  Rulesets are sort of "containers” for the rules.  Identify is basically an entity that Umbrella protects through policies and monitors through reports.  In our setup, Network Tunnels are the identities.  While destination is a URL or fully qualified domain name.</p>
 <p>A Ruleset settings match on identity, while rules match on both identity and destination.  Once the Web policy matches against a ruleset, it evaluates that ruleset's rules. And once a ruleset match is made, the Web policy stops evaluating against other rulesets.</p>
 <p><strong>1. Creating Web Policy:</strong></p>
 <ul>
