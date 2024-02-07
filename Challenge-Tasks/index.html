@@ -803,14 +803,18 @@
 <li><em>Hint - Task 5</em></li>
 </ul>
 <h2 id="challenge-task-3---customer-umbrella-policies-for-site-400">Challenge Task 3 - Customer Umbrella Policies for Site 400<a class="headerlink" href="#challenge-task-3---customer-umbrella-policies-for-site-400" title="Permanent link"></a></h2>
+<p>Create a new Frewall policy for Site 400 to block FTP access to any outbound connections (Hint: FTP connects on port 21)</p>
 <ul>
-<li>Create a new Frewall policy for Site 400 to block FTP access to any outbound connections. Any connection to port 21<ul>
-<li>FTP client <strong>FileZilla</strong>(FZ) is already installed on <code>Site-400-Ubuntu-VPN10</code></li>
-<li>For Testing Connect to ftp.gnu.org</li>
+<li>Use mRemoteNG to connect to console of Ubuntu VM on Site-400 in VPN-10.</li>
+<li>Install FTP client <strong>FileZilla</strong> using below command</li>
 </ul>
-</li>
-<li>Create a new <strong>Destination List</strong> and block tiktok.com</li>
+<div class="highlight"><pre><span></span><code>sudo apt install filezilla
+</code></pre></div>
+<ul>
+<li>For Testing Connect to <code>ftp.gnu.org</code> by using FileZilla client or use default ftp client on the Terminal</li>
 </ul>
+<p>Also block Web Traffic to <code>tiktok.com</code>:
+* Hint: Create a new <strong>Destination List</strong> and block web traffic to <code>tiktok.com</code> </p>
 <h2 id="challenge-task-4---custom-block-page-for-site-400">Challenge Task 4 - Custom Block Page for Site-400<a class="headerlink" href="#challenge-task-4---custom-block-page-for-site-400" title="Permanent link"></a></h2>
 <ul>
 <li>Customize the block page displayed to users for Site-400 when a web policy is enforced on this site.  This custom block page must:<ul>
