@@ -765,8 +765,8 @@
 
 
 <h1 id="task-4---direct-internet-access-for-site-300">Task 4 - Direct Internet Access for Site-300<a class="headerlink" href="#task-4---direct-internet-access-for-site-300" title="Permanent link"></a></h1>
-<p>In this task, we will enable local Direct Internet Access (DIA) for Site-300. The configuration will route traffic on VPN-10 through this DIA setup. Implementing DIA at Site-300 is a strategic step towards enhancing network security. It will facilitate the setup of IPSec tunnels between Site-300 and the Umbrella Cloud, providing robust security measures from the Umbrella Cloud services. The detailed configuration of IPSec tunnels and their connectivity will be covered in a subsequent task.</p>
-<p>Below Figure gives the overview of the topology that we aim to achieve in this task:</p>
+<p>In previous task, all sites (including Site-300) were configured for Internet access via Site-100.  In this task, we will enable local Direct Internet Access (DIA) for Site-300.  The configuration will route Internet traffic on VPN-10 through this DIA setup.  Implementing DIA at Site-300 is a strategic step towards enhancing network security.  It will facilitate the setup of IPSec tunnels between Site-300 and the Umbrella Cloud, providing robust security measures from the Umbrella Cloud services. The detailed configuration of IPSec tunnels and their connectivity will be covered in a subsequent task.</p>
+<p>Below Figure gives the overview of the Internet traffic routing for Site-300 that we aim to achieve in this task.  Note there will be no change in routing of Internet traffic for Site-400.</p>
 <p><img alt="Task Topology" src="../pics/task4-topology.png" /></p>
 <h2 id="step-1---enable-dia-on-site-300-on-vpn-10">Step 1 - Enable DIA on Site-300 on VPN-10<a class="headerlink" href="#step-1---enable-dia-on-site-300-on-vpn-10" title="Permanent link"></a></h2>
 <p><strong>Objective:</strong> Add a default route in VPN-10 pointing to VPN-0 (Global Routing Table) on the node Site300-cE1 by modifying the VPN-10 template in vManage.</p>
